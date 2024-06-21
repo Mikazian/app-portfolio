@@ -1,0 +1,24 @@
+/** Texte **/
+
+@font-face {
+    font-family: 'LaguSans-Bold';
+    src: url('../assets/fonts/Lagu-Sans-Bold.ttf')
+}
+
+@font-face {
+    font-family: 'LaguSans-Medium';
+    src: url('../assets/fonts/Lagu-Sans-Medium.ttf')
+}
+
+/** Titre **/
+
+@font-face {
+    font-family: 'NeuePlak-NarrowBold';
+    src: url('../assets/fonts/NeuePlak-NarrowBold.ttf')
+}
+
+@font-face {
+    font-family: 'NeuePlak-NarrowBlack';
+    src: url('../assets/fonts/NeuePlak-NarrowBlack.ttf')
+}
+
