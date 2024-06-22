@@ -1,29 +1,42 @@
-/** @type {import('tailwindcss').Config} */
+import theme from "./src/style/index.ts";
+
+/** @type {import("tailwindcss").Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  safelist: [
+    {
+      pattern: /^h-/,
+    },
+    {
+      pattern: /^w-/,
+    },
+    {
+      pattern: /^bg-/,
+    },
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#EC6559",
-        secondary: "#545E77",
-        background: "#111116",
-        foreground: "#16171F",
-        undeground: "#030104",
-        onbackground: "#CBCBCB",
-        border: "#202130",
-        borderlight: "#AEC6E3",
-        light: "#F5F5F5",
-      }
+        primary: theme.colors.primary,
+        secondary: theme.colors.secondary,
+        background: theme.colors.background,
+        foreground: theme.colors.foreground,
+        underground: theme.colors.underground,
+        onbackground: theme.colors.onbackground,
+        border: theme.colors.border,
+        borderlight: theme.colors.borderlight,
+        light: theme.colors.light,
+      },
+      fontSize: {
+        xss: "0.65rem",
+      },
     },
     fontFamily: {
-      'title-black': ['NeuePlak-NarrowBlack'],
-      'title-bold': ['NeuePlak-NarrowBold'],
-      'text-bold': ['LaguSans-Bold'],
-      'text-medium': ['LaguSans-Medium'],
+      "title-black": ["NeuePlak-NarrowBlack"],
+      "title-bold": ["NeuePlak-NarrowBold"],
+      "text-bold": ["LaguSans-Bold"],
+      "text-medium": ["LaguSans-Medium"],
     },
   },
   plugins: [],
-}
+};
