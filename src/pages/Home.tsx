@@ -1,7 +1,11 @@
+import Text from "../components/common/Text";
+
 const Home = () => {
   return (
     <div>
-      <h1 className="text-primary font-title-bold">Home</h1>
+      <Text as="h1" style="text-primary uppercase">
+        Coucou
+      </Text>
     </div>
   );
 };
