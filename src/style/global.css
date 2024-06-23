@@ -1,5 +1,7 @@
 @import "./fonts.css";
 @import "./transition.css";
+@import "./navbar.css";
+@import "./burger.css";
 
 @tailwind base;
 @tailwind components;
