@@ -8,14 +8,18 @@ const Transition = () => {
   const [isReady, setIsReady] = useState(false);
 
   useLayoutEffect(() => {
-    const timer = setTimeout(() => {
+    const loadingTimer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
 
-    setTimeout(() => {
+    const readyTimer = setTimeout(() => {
       setIsReady(true);
     }, 1300);
-    return () => clearTimeout(timer);
+
+    return () => {
+      clearTimeout(loadingTimer);
+      clearTimeout(readyTimer);
+    };
   }, []);
 
   return (
