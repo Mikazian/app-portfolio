@@ -1,12 +1,13 @@
 import Text from "../components/common/Text";
+import MainLayout from "../components/layout/MainLayout";
 
 const Home = () => {
   return (
-    <div>
+    <MainLayout>
       <Text as="h1" style="text-primary uppercase">
         Coucou
       </Text>
-    </div>
+    </MainLayout>
   );
 };
 

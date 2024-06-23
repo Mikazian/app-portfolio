@@ -30,6 +30,9 @@ export default {
       fontSize: {
         xss: "0.65rem",
       },
+      transitionProperty: {
+        height: "height",
+      },
     },
     fontFamily: {
       "title-black": ["NeuePlak-NarrowBlack"],
