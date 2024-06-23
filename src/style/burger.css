@@ -1,0 +1,32 @@
+@layer components {
+  .burger-bar,
+  .burger-bar:before,
+  .burger-bar:after {
+    @apply relative block w-6 h-[2px] rounded-full bg-light duration-500 ease-in-out;
+  }
+
+  .burger-bar:before,
+  .burger-bar:after {
+    @apply content-[''] absolute left-0;
+  }
+
+  .burger-bar:before {
+    @apply -translate-y-2;
+  }
+
+  .burger-bar:after {
+    @apply translate-y-2;
+  }
+
+  .show-nav .burger-bar {
+    @apply bg-transparent;
+  }
+
+  .show-nav .burger-bar:before {
+    transform: rotate(45deg);
+  }
+
+  .show-nav .burger-bar:after {
+    transform: rotate(-45deg);
+  }
+}
