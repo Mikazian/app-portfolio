@@ -4,9 +4,7 @@ import MainLayout from "../components/layout/MainLayout";
 const About = () => {
   return (
     <MainLayout>
-      <div className="pt-20">
-        <Text as="h1">About page</Text>
-      </div>
+      <Text as="h1">About page</Text>
     </MainLayout>
   );
 };

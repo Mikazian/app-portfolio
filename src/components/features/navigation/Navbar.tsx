@@ -11,6 +11,8 @@ import BurgerMenu from "./BurgerMenu";
  */
 const Navbar = (): JSX.Element => {
   const navigate = useNavigate();
+
+  const [activeNavbar, setActiveNavbar] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
 
   const handleToggleMenu = useCallback(() => {
@@ -28,9 +30,24 @@ const Navbar = (): JSX.Element => {
     return () => window.removeEventListener("resize", handleResize);
   }, [toggleNav]);
 
+  useEffect(() => {
+    const handleGhangeBackground = () => {
+      if (window.scrollY >= 40) {
+        setActiveNavbar(true);
+      } else {
+        setActiveNavbar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleGhangeBackground);
+    return () => window.removeEventListener("scroll", handleGhangeBackground);
+  }, []);
+
   return (
-    <nav className={`navbar ${toggleNav ? "show-nav" : ""}`}>
-      <Link to="/" className="h-12">
+    <nav
+      className={`navbar ${activeNavbar ? "active" : ""} ${toggleNav ? "show-nav" : ""} `}
+    >
+      <Link to="/" className="relative z-20 h-12">
         <Image src="img-logo" alt="logo" style="h-full object-cover" />
       </Link>
 

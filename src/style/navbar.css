@@ -3,8 +3,16 @@
     @apply flex flex-wrap justify-between items-center fixed z-30 h-20 w-full px-4 md:px-20;
   }
 
+  .navbar:after {
+    @apply content-[''] bg-foreground block w-full h-0 absolute left-0 top-0 transition-all duration-500 ease-in-out;
+  }
+
+  .navbar.active:after {
+    @apply h-full;
+  }
+
   .navbar-links {
-    @apply flex flex-col justify-center items-center fixed right-[-100vw] w-0 bottom-0 h-screen gap-10 bg-foreground/80 backdrop-blur-sm invisible transition-all duration-700 md:right-auto md:w-auto md:visible md:flex-row md:h-auto md:bottom-auto md:bg-transparent md:relative md:backdrop-blur-none;
+    @apply flex flex-col justify-center items-center fixed right-[-100vw] w-0 bottom-0 h-screen gap-10 bg-foreground/80 backdrop-blur-sm invisible transition-all duration-700 md:right-auto md:w-auto md:visible md:flex-row md:h-auto md:bottom-auto md:bg-transparent md:relative md:backdrop-blur-none z-20;
   }
 
   .show-nav .navbar-links {

@@ -4,9 +4,7 @@ import MainLayout from "../components/layout/MainLayout";
 const Gallery = () => {
   return (
     <MainLayout>
-      <div className="pt-20">
-        <Text as="h1">Gallery page</Text>
-      </div>
+      <Text as="h1">Gallery page</Text>
     </MainLayout>
   );
 };

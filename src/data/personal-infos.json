@@ -1,0 +1,12 @@
+[
+  {
+    "firstName": "Mike",
+    "lastName": "Xiong",
+    "birthDate": "1993-09-07",
+    "email": "tchylon.xiong@gmail.com",
+    "phone": "+33 6 58 46 57 71",
+    "nationality": "Français",
+    "biography": "Salut ! Moi, c'est Mike Xiong, développeur et graphiste situé en France. Passionné par le développement web et le design, je combine mes compétences artistiques et techniques pour créer des sites web et des applications à la fois conviviaux et esthétiques. J'adore coder et créer des œuvres digitales, et je mets toute cette passion dans chaque projet que j'entreprends, pour y apporter une touche créative et unique.",
+    "picture": "img-profile.jpg"
+  }
+]
