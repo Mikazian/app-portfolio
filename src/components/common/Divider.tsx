@@ -1,20 +1,11 @@
 import type { ColorKeysType } from "../../types/interfaces/theme";
 
-interface VerticalProps {
-  height: string;
-  width?: never;
+interface DividerProps {
+  height?: string;
+  width?: string;
   color?: ColorKeysType;
-  isVertical: true;
+  isVertical?: boolean;
 }
-
-interface HorizontalProps {
-  height?: never;
-  width: string;
-  color?: ColorKeysType;
-  isVertical?: false;
-}
-
-type DividerProps = VerticalProps | HorizontalProps;
 
 const Divider = ({
   height,

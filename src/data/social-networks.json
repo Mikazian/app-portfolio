@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/mike-xiong-572a5626a/",
+    "icon": "svg-linkedin"
+  },
+  {
+    "id": "2",
+    "name": "GitHub",
+    "url": "https://github.com/Mikazian",
+    "icon": "svg-github"
+  },
+  {
+    "id": "3",
+    "name": "Instagram",
+    "url": "https://www.instagram.com/mikazian/",
+    "icon": "svg-instagram"
+  }
+]

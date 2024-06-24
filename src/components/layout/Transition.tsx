@@ -24,7 +24,7 @@ const Transition = () => {
 
   return (
     <div
-      className={`lines ${isLoaded ? "finish" : undefined} ${isReady ? "ready" : undefined}`}
+      className={`lines ${isLoaded ? "finish" : ""} ${isReady ? "ready" : ""}`}
     >
       <div className="content">
         {Array.from({ length: 5 }).map((_, index) => (
