@@ -1,8 +1,6 @@
 import socialNetworks from "../data/social-networks.json";
 import { AppIconSvgType } from "../types/enums/app-icon.enum";
 
-import Icon from "../components/common/Icon";
-
 type IconNameType = AppIconSvgType;
 
 interface SocialNetworksType {
@@ -20,18 +18,7 @@ const useSocialNetworks = () => {
     icon: network.icon as IconNameType,
   }));
 
-  const socialNetworksList = networks.map((item) => (
-    <li
-      key={item.id}
-      className="scale-100 hover:scale-125 transition-all duration-300 ease-in-out"
-    >
-      <a href={item.url} target="_blank" rel="noopener noreferrer">
-        <Icon name={item.icon} />
-      </a>
-    </li>
-  ));
-
-  return { networks, socialNetworksList };
+  return { networks };
 };
 
 export default useSocialNetworks;

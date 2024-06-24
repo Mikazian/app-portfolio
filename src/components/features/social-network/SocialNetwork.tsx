@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import Text from "../../common/Text";
 import Divider from "../../common/Divider";
 import useSocialNetworks from "../../../hooks/useSocialNetworks";
+import Icon from "../../common/Icon";
 
 const SocialNetwork = () => {
-  const [isVertical, setIsVertical] = useState<boolean>();
+  const [isVertical, setIsVertical] = useState<boolean>(
+    window.innerWidth <= 1024 ? false : true
+  );
 
-  const { socialNetworksList } = useSocialNetworks();
+  const { networks } = useSocialNetworks();
 
   useEffect(() => {
     const handleChangeOrientation = () => {
@@ -31,7 +34,18 @@ const SocialNetwork = () => {
         Me suivre
       </Text>
       <Divider height="12" width="12" isVertical={isVertical} />
-      <ul className="flex flex-row lg:flex-col gap-5">{socialNetworksList}</ul>
+      <ul className="flex flex-row lg:flex-col gap-5">
+        {networks.map((network) => (
+          <li
+            key={network.id}
+            className="scale-100 hover:scale-125 transition-all duration-300 ease-in-out"
+          >
+            <a href={network.url} target="_blank" rel="noopener noreferrer">
+              <Icon name={network.icon} />
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
