@@ -3,7 +3,7 @@ import MainLayout from "../components/layout/MainLayout";
 
 const Contact = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Contact">
       <Text as="h1">Contact page</Text>
     </MainLayout>
   );
