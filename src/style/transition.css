@@ -101,6 +101,10 @@
     @apply left-auto right-0 w-[1000%];
   }
 
+  .lines .line-col:last-child:after {
+    @apply w-[1000%];
+  }
+
   .lines.finish .line-col:after {
     @apply h-0;
   }

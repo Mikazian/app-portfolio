@@ -12,7 +12,7 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
   return (
     <>
       <Navbar />
-      {/* <header className="flex items-center justify-center h-screen relative z-20">
+      <header className="flex items-center justify-center h-screen relative z-20">
         <Text
           as="h1"
           style="font-title-black text-6xl uppercase tracking-wider text-center"
@@ -22,9 +22,9 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
       </header>
       <main className="min-h-[calc(100vh-96px)] relative z-20 mx-auto w-11/12 md:w-3/4 lg:w-3/6 lg:min-h-screen">
         {children}
-      </main> */}
+      </main>
       <Transition />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

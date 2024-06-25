@@ -10,11 +10,11 @@ const HomeLayout = ({ children }: HomeLayoutProps) => {
   return (
     <>
       <Navbar />
-      {/* <header className="relative z-20 mx-auto w-full pt-20 h-screen">
+      <header className="relative z-20 mx-auto w-full pt-20 h-screen">
         {children}
-      </header> */}
+      </header>
       <Transition />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
