@@ -3,7 +3,7 @@ import MainLayout from "../components/layout/MainLayout";
 
 const Project = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Projets">
       <Text as="h1">Project page</Text>
     </MainLayout>
   );

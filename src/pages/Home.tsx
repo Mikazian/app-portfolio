@@ -1,127 +1,25 @@
 import Text from "../components/common/Text";
-import MainLayout from "../components/layout/MainLayout";
+import HomeLayout from "../components/layout/HomeLayout";
 
 const Home = () => {
   return (
-    <MainLayout>
-      <Text as="h1">
-        Home page Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-        id quis, consequatur minus sapiente pariatur dicta sunt, facere,
-        dignissimos iste eius eveniet explicabo eaque harum molestiae dolores
-        alias maxime numquam? Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Eaque hic fugiat ullam dolore doloremque aspernatur
-        quibusdam, sint facere porro autem quas eum quam illum eos magnam
-        distinctio nam. Quidem, adipisci! Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Doloribus ut ex exercitationem, incidunt
-        tenetur eos, laudantium minus quos, ipsa asperiores odit sunt vel cum
-        beatae corrupti accusantium at necessitatibus odio. Home page Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Animi id quis,
-        consequatur minus sapiente pariatur dicta sunt, facere, dignissimos iste
-        eius eveniet explicabo eaque harum molestiae dolores alias maxime
-        numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-        hic fugiat ullam dolore doloremque aspernatur quibusdam, sint facere
-        porro autem quas eum quam illum eos magnam distinctio nam. Quidem,
-        adipisci! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Doloribus ut ex exercitationem, incidunt tenetur eos, laudantium minus
-        quos, ipsa asperiores odit sunt vel cum beatae corrupti accusantium at
-        necessitatibus odio. Home page Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Animi id quis, consequatur minus sapiente pariatur
-        dicta sunt, facere, dignissimos iste eius eveniet explicabo eaque harum
-        molestiae dolores alias maxime numquam? Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Eaque hic fugiat ullam dolore doloremque
-        aspernatur quibusdam, sint facere porro autem quas eum quam illum eos
-        magnam distinctio nam. Quidem, adipisci! Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Doloribus ut ex exercitationem, incidunt
-        tenetur eos, laudantium minus quos, ipsa asperiores odit sunt vel cum
-        beatae corrupti accusantium at necessitatibus odio. Home page Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Animi id quis,
-        consequatur minus sapiente pariatur dicta sunt, facere, dignissimos iste
-        eius eveniet explicabo eaque harum molestiae dolores alias maxime
-        numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-        hic fugiat ullam dolore doloremque aspernatur quibusdam, sint facere
-        porro autem quas eum quam illum eos magnam distinctio nam. Quidem,
-        adipisci! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Doloribus ut ex exercitationem, incidunt tenetur eos, laudantium minus
-        quos, ipsa asperiores odit sunt vel cum beatae corrupti accusantium at
-        necessitatibus odio. Home page Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Animi id quis, consequatur minus sapiente pariatur
-        dicta sunt, facere, dignissimos iste eius eveniet explicabo eaque harum
-        molestiae dolores alias maxime numquam? Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Eaque hic fugiat ullam dolore doloremque
-        aspernatur quibusdam, sint facere porro autem quas eum quam illum eos
-        magnam distinctio nam. Quidem, adipisci! Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Doloribus ut ex exercitationem, incidunt
-        tenetur eos, laudantium minus quos, ipsa asperiores odit sunt vel cum
-        beatae corrupti accusantium at necessitatibus odio. Home page Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Animi id quis,
-        consequatur minus sapiente pariatur dicta sunt, facere, dignissimos iste
-        eius eveniet explicabo eaque harum molestiae dolores alias maxime
-        numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-        hic fugiat ullam dolore doloremque aspernatur quibusdam, sint facere
-        porro autem quas eum quam illum eos magnam distinctio nam. Quidem,
-        adipisci! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Doloribus ut ex exercitationem, incidunt tenetur eos, laudantium minus
-        quos, ipsa asperiores odit sunt vel cum beatae corrupti accusantium at
-        necessitatibus odio. Home page Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Animi id quis, consequatur minus sapiente pariatur
-        dicta sunt, facere, dignissimos iste eius eveniet explicabo eaque harum
-        molestiae dolores alias maxime numquam? Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Eaque hic fugiat ullam dolore doloremque
-        aspernatur quibusdam, sint facere porro autem quas eum quam illum eos
-        magnam distinctio nam. Quidem, adipisci! Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Doloribus ut ex exercitationem, incidunt
-        tenetur eos, laudantium minus quos, ipsa asperiores odit sunt vel cum
-        beatae corrupti accusantium at necessitatibus odio. Home page Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Animi id quis,
-        consequatur minus sapiente pariatur dicta sunt, facere, dignissimos iste
-        eius eveniet explicabo eaque harum molestiae dolores alias maxime
-        numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-        hic fugiat ullam dolore doloremque aspernatur quibusdam, sint facere
-        porro autem quas eum quam illum eos magnam distinctio nam. Quidem,
-        adipisci! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Doloribus ut ex exercitationem, incidunt tenetur eos, laudantium minus
-        quos, ipsa asperiores odit sunt vel cum beatae corrupti accusantium at
-        necessitatibus odio. Home page Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Animi id quis, consequatur minus sapiente pariatur
-        dicta sunt, facere, dignissimos iste eius eveniet explicabo eaque harum
-        molestiae dolores alias maxime numquam? Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Eaque hic fugiat ullam dolore doloremque
-        aspernatur quibusdam, sint facere porro autem quas eum quam illum eos
-        magnam distinctio nam. Quidem, adipisci! Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Doloribus ut ex exercitationem, incidunt
-        tenetur eos, laudantium minus quos, ipsa asperiores odit sunt vel cum
-        beatae corrupti accusantium at necessitatibus odio. Home page Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Animi id quis,
-        consequatur minus sapiente pariatur dicta sunt, facere, dignissimos iste
-        eius eveniet explicabo eaque harum molestiae dolores alias maxime
-        numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-        hic fugiat ullam dolore doloremque aspernatur quibusdam, sint facere
-        porro autem quas eum quam illum eos magnam distinctio nam. Quidem,
-        adipisci! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Doloribus ut ex exercitationem, incidunt tenetur eos, laudantium minus
-        quos, ipsa asperiores odit sunt vel cum beatae corrupti accusantium at
-        necessitatibus odio. Home page Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Animi id quis, consequatur minus sapiente pariatur
-        dicta sunt, facere, dignissimos iste eius eveniet explicabo eaque harum
-        molestiae dolores alias maxime numquam? Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Eaque hic fugiat ullam dolore doloremque
-        aspernatur quibusdam, sint facere porro autem quas eum quam illum eos
-        magnam distinctio nam. Quidem, adipisci! Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Doloribus ut ex exercitationem, incidunt
-        tenetur eos, laudantium minus quos, ipsa asperiores odit sunt vel cum
-        beatae corrupti accusantium at necessitatibus odio. Home page Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Animi id quis,
-        consequatur minus sapiente pariatur dicta sunt, facere, dignissimos iste
-        eius eveniet explicabo eaque harum molestiae dolores alias maxime
-        numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
-        hic fugiat ullam dolore doloremque aspernatur quibusdam, sint facere
-        porro autem quas eum quam illum eos magnam distinctio nam. Quidem,
-        adipisci! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Doloribus ut ex exercitationem, incidunt tenetur eos, laudantium minus
-        quos, ipsa asperiores odit sunt vel cum beatae corrupti accusantium at
-        necessitatibus odio.
-      </Text>
-    </MainLayout>
+    <HomeLayout>
+      <div className="flex items-center px-20 h-full">
+        <Text
+          as="h1"
+          style="font-title-bold text-4xl translate-x-32 -translate-y-32"
+        >
+          <span className="content-[''] before:w-12 before:h-px before:bg-light before:block flex items-center gap-4">
+            Hey! Je suis
+          </span>
+          <span className="block uppercase text-primary font-title-black text-[6.9rem] leading-none my-4">
+            Mike <br />
+            Xiong
+          </span>
+          Développeur Full Stack & Designer
+        </Text>
+      </div>
+    </HomeLayout>
   );
 };
 
