@@ -1,9 +1,8 @@
 import personalInfos from "../data/personal-infos.json";
+import { ProfileType } from "../types/interfaces/profile";
 
-const useProfile = () => {
-  const profile = personalInfos[0];
+export const useProfile = () => {
+  const profile: ProfileType = personalInfos[0];
 
   return { profile };
 };
-
-export default useProfile;

@@ -4,6 +4,7 @@ import LogoImg from "./images/logo.png";
 /** SVG **/
 import MailSvg from "./icons/global/mail.svg";
 import PhoneSvg from "./icons/global/phone.svg";
+import CopySvg from "./icons/global/copy.svg";
 import LinkedinSvg from "./icons/social-networks/linkedin.svg";
 import GithubSvg from "./icons/social-networks/github.svg";
 import InstagramSvg from "./icons/social-networks/instagram.svg";
@@ -18,6 +19,7 @@ export const assets = {
     //Global
     "svg-mail": MailSvg,
     "svg-phone": PhoneSvg,
+    "svg-copy": CopySvg,
 
     // Réseaux sociaux
     "svg-linkedin": LinkedinSvg,
