@@ -10,11 +10,14 @@ import "./style/global.css";
 
 /** Context **/
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { CopyProvider } from "./contexts/CopyContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <CopyProvider>
+        <RouterProvider router={router} />
+      </CopyProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

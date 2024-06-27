@@ -3,6 +3,7 @@ export const AppIconSvgPrefix = "svg";
 export const AppIconSvgBaseEnum = [
   "mail",
   "phone",
+  "copy",
   "linkedin",
   "github",
   "instagram",

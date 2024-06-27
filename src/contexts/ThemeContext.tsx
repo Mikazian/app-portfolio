@@ -1,4 +1,4 @@
-import { createContext, useMemo } from "react";
+import { createContext, useContext, useMemo } from "react";
 import theme from "../style/index";
 import { AppTheme } from "../types/interfaces/theme";
 
@@ -19,6 +19,14 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
+};
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error("useTheme doit être utilisé au sein d'un ThemeProvider");
+  }
+  return context;
 };
 
 export default ThemeContext;

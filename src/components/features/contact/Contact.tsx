@@ -1,5 +1,5 @@
-import useProfile from "../../../hooks/useProfile";
-import { useTheme } from "../../../hooks/useTheme";
+import { useTheme } from "../../../contexts";
+import { useProfile } from "../../../hooks";
 
 import Icon from "../../common/Icon";
 import Text from "../../common/Text";

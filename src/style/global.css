@@ -2,6 +2,8 @@
 @import "./transition.css";
 @import "./navbar.css";
 @import "./burger.css";
+@import "./progress-bar.css";
+@import "./copy.css";
 
 @tailwind base;
 @tailwind components;

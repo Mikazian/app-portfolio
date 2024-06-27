@@ -1,5 +1,5 @@
 import socialNetworks from "../data/social-networks.json";
-import { AppIconSvgType } from "../types/enums/app-icon.enum";
+import { AppIconSvgType } from "../types/enums";
 
 type IconNameType = AppIconSvgType;
 
@@ -10,7 +10,7 @@ interface SocialNetworksType {
   icon: IconNameType;
 }
 
-const useSocialNetworks = () => {
+export const useSocialNetworks = () => {
   const networks: SocialNetworksType[] = socialNetworks.map((network) => ({
     id: network.id,
     name: network.name,
@@ -20,5 +20,3 @@ const useSocialNetworks = () => {
 
   return { networks };
 };
-
-export default useSocialNetworks;
