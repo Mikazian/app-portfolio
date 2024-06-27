@@ -6,7 +6,16 @@ interface UserHeaderCardProps {
   jobs: JobType[];
 }
 
-const UserHeaderCard = ({ profile, jobs }: UserHeaderCardProps) => {
+/**
+ * Composant Header de la carte profil utilisateur
+ * @param profile - Informations du profil utilisateur
+ * @param jobs - Liste des emplois
+ * @returns {JSX.Element}
+ */
+const UserHeaderCard = ({
+  profile,
+  jobs,
+}: UserHeaderCardProps): JSX.Element => {
   return (
     <header className="flex flex-col gap-6 sm:flex-row sm:items-center">
       <div className="h-40 w-40 rounded-full bg-primary self-center">

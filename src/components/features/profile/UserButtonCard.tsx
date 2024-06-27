@@ -10,7 +10,13 @@ interface UserButtonCardProps {
   icon: AppIconSvgType;
 }
 
-const UserButtonCard = ({ text, icon }: UserButtonCardProps) => {
+/**
+ * Composant Bouton de profil utilisateur
+ * @param text - Texte du bouton
+ * @param icon - Icone du bouton
+ * @returns {JSX.Element}
+ */
+const UserButtonCard = ({ text, icon }: UserButtonCardProps): JSX.Element => {
   const theme = useTheme();
   const { isCopied, copyToClipboard } = useCopy();
 

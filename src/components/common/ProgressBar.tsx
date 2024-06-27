@@ -2,7 +2,12 @@ interface ProgressBarProps {
   isActive: boolean;
 }
 
-const ProgressBar = ({ isActive }: ProgressBarProps) => {
+/**
+ * Composant Barre de progression
+ * @param isActive - Etat de la barre de progression
+ * @returns {JSX.Element}
+ */
+const ProgressBar = ({ isActive }: ProgressBarProps): JSX.Element => {
   return <div className={`progress-bar ${isActive ? "active" : ""}`} />;
 };
 

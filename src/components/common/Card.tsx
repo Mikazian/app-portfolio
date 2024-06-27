@@ -3,7 +3,13 @@ interface CardProps {
   style?: string;
 }
 
-const Card = ({ children, style }: CardProps) => {
+/**
+ * Composant Card
+ * @param children - Contenu de la carte
+ * @param style - Style de la carte
+ * @returns {JSX.Element}
+ */
+const Card = ({ children, style }: CardProps): JSX.Element => {
   return (
     <div className={`bg-foreground border border-border p-4 ${style}`}>
       {children}

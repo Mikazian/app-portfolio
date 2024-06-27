@@ -1,6 +1,10 @@
 import Button from "../../common/Button";
 
-const UserFooterCard = () => {
+/**
+ * Composant Footer de la carte profil utilisateur
+ * @returns JSX.Element
+ */
+const UserFooterCard = (): JSX.Element => {
   return (
     <footer className="text-right">
       <Button

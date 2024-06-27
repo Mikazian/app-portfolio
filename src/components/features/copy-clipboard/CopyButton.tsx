@@ -7,7 +7,16 @@ interface CopyButtonProps {
   disabled?: boolean;
 }
 
-const CopyButton = ({ onClick, disabled = false }: CopyButtonProps) => {
+/**
+ * Composant Bouton de copie
+ * @param onClick - Action au clic
+ * @param disabled - Etat du bouton
+ * @returns {JSX.Element}
+ */
+const CopyButton = ({
+  onClick,
+  disabled = false,
+}: CopyButtonProps): JSX.Element => {
   const theme = useTheme();
 
   return (

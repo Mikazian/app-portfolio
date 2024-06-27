@@ -7,7 +7,12 @@ interface UserContentCardProps {
   profile: ProfileType;
 }
 
-const UserContentCard = ({ profile }: UserContentCardProps) => {
+/**
+ * Composant Contenu de la carte profil utilisateur
+ * @param profile - Informations du profil utilisateur
+ * @returns {JSX.Element}
+ */
+const UserContentCard = ({ profile }: UserContentCardProps): JSX.Element => {
   return (
     <>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">

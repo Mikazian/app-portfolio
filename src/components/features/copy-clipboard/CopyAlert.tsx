@@ -4,7 +4,11 @@ import ProgressBar from "../../common/ProgressBar";
 import Text from "../../common/Text";
 import CopyButton from "./CopyButton";
 
-const CopyAlert = () => {
+/**
+ * Composant Alerte de copie
+ * @returns {JSX.Element}
+ */
+const CopyAlert = (): JSX.Element => {
   const { showCopyAlert } = useCopy();
 
   return (
