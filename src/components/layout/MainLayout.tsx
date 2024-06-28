@@ -30,7 +30,7 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
           {title}
         </Text>
       </header>
-      <main className="min-h-[calc(100vh-96px)] relative z-20 px-4 mx-auto w-full max-w-[856px] lg:min-h-screen lg:px-0">
+      <main className="min-h-[calc(100vh-96px)] relative z-20 px-4 mx-auto w-full max-w-[855px] lg:min-h-screen lg:px-0 translate-x-[0.2px]">
         {children}
       </main>
       <CopyAlert />

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "label": "Concepteur d'Application (CDA)",
+    "degree": "Titre RNCP bac+4",
+    "year": "2024"
+  },
+  {
+    "id": "2",
+    "label": "Développeur Web et Web Mobile (DWWM)",
+    "degree": "Titre RNCP bac+2",
+    "year": "2023"
+  },
+  {
+    "id": "3",
+    "label": "Communication Graphique",
+    "degree": "BAC PRO",
+    "year": "2012"
+  },
+  {
+    "id": "4",
+    "label": "Signalétique, Enseigne et Décor",
+    "degree": "CAP",
+    "year": "2010"
+  }
+]
