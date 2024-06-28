@@ -19,7 +19,7 @@ const UserCard = (): JSX.Element => {
       <section className="flex flex-col grow gap-8">
         <UserHeaderCard profile={profile} jobs={userJobs} />
 
-        <Divider width="100%" color="border" />
+        <Divider width="100%" />
 
         <UserContentCard profile={profile} />
         <UserFooterCard />

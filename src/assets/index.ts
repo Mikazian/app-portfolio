@@ -7,6 +7,8 @@ import PhoneSvg from "./icons/global/phone.svg";
 import CopySvg from "./icons/global/copy.svg";
 import SunSvg from "./icons/global/sun.svg";
 import MoonSvg from "./icons/global/moon.svg";
+import DegreeSvg from "./icons/global/degree.svg";
+import ArrowSvg from "./icons/global/arrow.svg";
 import LinkedinSvg from "./icons/social-networks/linkedin.svg";
 import GithubSvg from "./icons/social-networks/github.svg";
 import InstagramSvg from "./icons/social-networks/instagram.svg";
@@ -24,6 +26,8 @@ export const assets = {
     "svg-copy": CopySvg,
     "svg-sun": SunSvg,
     "svg-moon": MoonSvg,
+    "svg-degree": DegreeSvg,
+    "svg-arrow": ArrowSvg,
 
     // Réseaux sociaux
     "svg-linkedin": LinkedinSvg,
