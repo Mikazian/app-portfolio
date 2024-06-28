@@ -1,6 +1,6 @@
 @layer components {
   .btn-copy {
-    @apply relative rounded-md border border-border p-1 transition-all duration-300 ease-in-out;
+    @apply relative rounded-md border border-divider p-1 transition-transform duration-300 ease-in-out;
   }
 
   .btn-copy.active:hover {
@@ -8,7 +8,7 @@
   }
 
   .btn-copy.active:after {
-    @apply content-['Copier'] absolute left-1/2 -bottom-9 translate-x-[-50%] text-xs bg-secondary px-2 pt-2 pb-1.5 rounded-md opacity-0 transition-all duration-300 ease-in-out delay-100;
+    @apply content-['Copier'] absolute left-1/2 -bottom-9 translate-x-[-50%] text-light text-xs bg-secondary px-2 pt-2 pb-1.5 rounded-md opacity-0 transition-all duration-300 ease-in-out delay-100;
   }
 
   .btn-copy.active:hover:after {

@@ -9,6 +9,7 @@ const UserFooterCard = (): JSX.Element => {
     <footer className="text-right">
       <Button
         type="button"
+        // TODO: Ajouter le téléchargement du PDF
         onClick={() => console.log("pressed")}
         style="text-lg"
       >

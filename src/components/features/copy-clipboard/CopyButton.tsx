@@ -1,5 +1,3 @@
-import { useTheme } from "../../../contexts";
-
 import Icon from "../../common/Icon";
 
 interface CopyButtonProps {
@@ -17,8 +15,6 @@ const CopyButton = ({
   onClick,
   disabled = false,
 }: CopyButtonProps): JSX.Element => {
-  const theme = useTheme();
-
   return (
     <button
       type="button"
@@ -28,7 +24,7 @@ const CopyButton = ({
     >
       <Icon
         name="svg-copy"
-        color={theme.colors.light}
+        color="var(--onbackground)"
         style={`btn-icon ${disabled ? "" : "active"}`}
       />
     </button>

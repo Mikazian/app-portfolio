@@ -47,7 +47,7 @@
     -moz-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
     -webkit-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
     -o-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    @apply content-[''] absolute top-0 left-0 w-px h-0 bg-border transition-height delay-0;
+    @apply content-[''] absolute top-0 left-0 w-px h-0 bg-divider transition-height delay-0;
   }
 
   /* Avant */
@@ -94,7 +94,7 @@
     -moz-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
     -webkit-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
     -o-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    @apply content-[''] absolute left-0 top-0 w-full h-full bg-border z-40 transition-height;
+    @apply content-[''] absolute left-0 top-0 w-full h-full bg-divider z-40 transition-height;
   }
 
   .lines .line-col:first-child:after {

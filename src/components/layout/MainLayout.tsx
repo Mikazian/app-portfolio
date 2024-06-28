@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import Navbar from "../features/navigation/Navbar";
 import Transition from "./Transition";
 import Footer from "../common/Footer";
@@ -10,6 +13,12 @@ interface MainLayoutProps {
 }
 
 const MainLayout = ({ children, title }: MainLayoutProps) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <Navbar />
@@ -21,7 +30,7 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
           {title}
         </Text>
       </header>
-      <main className="min-h-[calc(100vh-96px)] relative z-20 px-4 mx-auto w-full max-w-[854.5px] lg:min-h-screen lg:px-0">
+      <main className="min-h-[calc(100vh-96px)] relative z-20 px-4 mx-auto w-full max-w-[856px] lg:min-h-screen lg:px-0">
         {children}
       </main>
       <CopyAlert />

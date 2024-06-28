@@ -35,7 +35,7 @@ const UserHeaderCard = ({
             style="font-title-bold text-4xl text-primary leading-tight text-center sm:text-left"
           >
             {index === jobs.length - 1 && (
-              <span className="text-light">& </span>
+              <span className="text-onbackground">& </span>
             )}
             {job.label}
           </Text>

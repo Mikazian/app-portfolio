@@ -1,18 +1,22 @@
 @layer components {
   .navbar {
-    @apply flex flex-wrap justify-between items-center fixed z-30 h-20 w-full px-4 md:px-20;
+    @apply flex flex-wrap justify-between items-center fixed z-30 h-20 w-full px-4 md:px-8 lg:px-20;
   }
 
   .navbar:after {
-    @apply content-[''] bg-foreground block w-full h-0 absolute left-0 top-0 transition-all duration-500 ease-in-out;
+    @apply content-[''] bg-foreground block w-full h-0 absolute left-0 top-0 border-b border-dividerlight transition-height duration-500 ease-in-out;
   }
 
   .navbar.active:after {
     @apply h-full;
   }
 
+  .logo {
+    @apply relative z-20 h-12;
+  }
+
   .navbar-links {
-    @apply flex flex-col justify-center items-center fixed right-[-100vw] w-0 bottom-0 h-screen gap-10 bg-foreground/80 backdrop-blur-sm invisible transition-all duration-700 md:right-auto md:w-auto md:visible md:flex-row md:h-auto md:bottom-auto md:bg-transparent md:relative md:backdrop-blur-none z-20;
+    @apply flex flex-col justify-center text-onbackground items-center fixed right-[-100vw] w-0 bottom-0 h-screen gap-10 bg-foreground backdrop-blur-sm invisible transition-transform duration-700 md:right-auto md:w-auto md:visible md:flex-row md:h-auto md:bottom-auto md:bg-transparent md:relative md:backdrop-blur-none z-20;
   }
 
   .show-nav .navbar-links {
@@ -35,7 +39,7 @@
   .show-nav .slide-2,
   .show-nav .slide-3,
   .show-nav .slide-4 {
-    @apply transition-all duration-700;
+    @apply transition-transform duration-700;
   }
 
   .show-nav .slide-1 {
@@ -61,5 +65,9 @@
 
   .navbar-item:last-child:after {
     @apply hidden;
+  }
+
+  .theme {
+    @apply flex flex-row-reverse md:flex-row items-center gap-3;
   }
 }
