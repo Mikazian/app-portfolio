@@ -4,6 +4,8 @@ export const AppIconSvgBaseEnum = [
   "mail",
   "phone",
   "copy",
+  "sun",
+  "moon",
   "linkedin",
   "github",
   "instagram",

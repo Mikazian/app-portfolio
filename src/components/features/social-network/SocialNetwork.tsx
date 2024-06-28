@@ -41,7 +41,7 @@ const SocialNetwork = () => {
             className="scale-100 hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <Icon name={network.icon} />
+              <Icon name={network.icon} color="var(--onbackground)" />
             </a>
           </li>
         ))}

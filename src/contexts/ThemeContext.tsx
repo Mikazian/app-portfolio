@@ -1,17 +1,37 @@
-import { createContext, useContext, useMemo } from "react";
-import theme from "../style/index";
-import { AppTheme } from "../types/interfaces/theme";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+
+type Theme = "light" | "dark";
+
+interface ThemeContextValue {
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}
 
 interface ThemeProviderProps {
   children: React.ReactNode;
+  defaultTheme?: Theme;
 }
 
-export const ThemeContext = createContext<AppTheme>(theme);
+export const ThemeContext = createContext<ThemeContextValue | undefined>(
+  undefined
+);
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+export const ThemeProvider = ({
+  children,
+  defaultTheme = "dark",
+}: ThemeProviderProps) => {
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+  }, [theme]);
+
   const value = useMemo(
     () => ({
-      colors: theme.colors,
+      theme,
+      setTheme,
     }),
     [theme]
   );

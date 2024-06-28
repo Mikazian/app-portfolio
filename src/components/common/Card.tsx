@@ -11,7 +11,7 @@ interface CardProps {
  */
 const Card = ({ children, style }: CardProps): JSX.Element => {
   return (
-    <div className={`bg-foreground border border-border p-4 ${style}`}>
+    <div className={`bg-foreground border border-divider p-4 ${style}`}>
       {children}
     </div>
   );

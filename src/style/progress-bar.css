@@ -1,6 +1,6 @@
 @layer components {
   .progress-bar {
-    @apply h-1 bg-border w-full;
+    @apply h-1 bg-divider w-full;
   }
 
   .progress-bar:after {

@@ -5,13 +5,10 @@ export const useClipboard = (timeoutDuration: number = 2000) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [showCopyAlert, setShowCopyAlert] = useState<boolean>(false);
 
-  console.log("showCopyAlert", showCopyAlert);
-
   const copyToClipboard = useCallback(
     async (value: string) => {
       try {
         await navigator.clipboard.writeText(value);
-        console.log("value", value);
         setIsCopied(true);
         setError(undefined);
         setShowCopyAlert(true);
