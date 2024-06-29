@@ -1,0 +1,332 @@
+[
+  {
+    "development": [
+      {
+        "id": "1",
+        "name": "React",
+        "icon": "svg-react",
+        "labels": [
+          {
+            "name": "Frontend"
+          },
+          {
+            "name": "Web"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "React Native",
+        "icon": "svg-reactnative",
+        "labels": [
+          {
+            "name": "Frontend"
+          },
+          {
+            "name": "iOS"
+          },
+          {
+            "name": "Android"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "TypeScript",
+        "icon": "svg-typescript",
+        "labels": [
+          {
+            "name": "Langage"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Redux",
+        "icon": "svg-redux",
+        "labels": [
+          {
+            "name": "Frontend"
+          },
+          {
+            "name": "Librairie"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Express JS",
+        "icon": "svg-expressjs",
+        "labels": [
+          {
+            "name": "Backend"
+          },
+          {
+            "name": "Framework"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "Nest JS",
+        "icon": "svg-nestjs",
+        "labels": [
+          {
+            "name": "Backend"
+          },
+          {
+            "name": "Framework"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "name": "MySQL",
+        "icon": "svg-mysql",
+        "labels": [
+          {
+            "name": "Base de données"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "name": "Docker",
+        "icon": "svg-docker",
+        "labels": [
+          {
+            "name": "DevOps"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "name": "Tailwind CSS",
+        "icon": "svg-tailwindcss",
+        "labels": [
+          {
+            "name": "Frontend"
+          },
+          {
+            "name": "Framework"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "name": "Bootstrap",
+        "icon": "svg-bootstrap",
+        "labels": [
+          {
+            "name": "Frontend"
+          },
+          {
+            "name": "Framework"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Git / Github",
+        "icon": "svg-github",
+        "labels": [
+          {
+            "name": "Outil de développement"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "name": "JavaScript",
+        "icon": "svg-javascript",
+        "labels": [
+          {
+            "name": "Langage"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "name": "HTML",
+        "icon": "svg-html",
+        "labels": [
+          {
+            "name": "Langage"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "name": "CSS",
+        "icon": "svg-css",
+        "labels": [
+          {
+            "name": "Langage"
+          }
+        ]
+      }
+    ],
+    "design": [
+      {
+        "id": "1",
+        "name": "Adobe Photoshop",
+        "icon": "svg-photoshop",
+        "labels": [
+          {
+            "name": "Création graphique"
+          },
+          {
+            "name": "Retouche photo"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Adobe Illustrator",
+        "icon": "svg-illusttrator",
+        "labels": [
+          {
+            "name": "Création graphique"
+          },
+          {
+            "name": "Vectorisation"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Adobe Indesign",
+        "icon": "svg-indesign",
+        "labels": [
+          {
+            "name": "Mise en page"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Adobe Premiere Pro",
+        "icon": "svg-premierepro",
+        "labels": [
+          {
+            "name": "Montage vidéo"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Adobe After Effect",
+        "icon": "svg-aftereffect",
+        "labels": [
+          {
+            "name": "Animation"
+          },
+          {
+            "name": "Effet Spéciaux"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "Adobe Animate",
+        "icon": "svg-animate",
+        "labels": [
+          {
+            "name": "Animation"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "name": "Adobe XD",
+        "icon": "svg-xd",
+        "labels": [
+          {
+            "name": "Conception UI/UX"
+          },
+          {
+            "name": "Prototypage"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "name": "Figma",
+        "icon": "svg-figma",
+        "labels": [
+          {
+            "name": "Conception UI/UX"
+          },
+          {
+            "name": "Prototypage"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "name": "Clip Studio Paint",
+        "icon": "svg-cliptudiopaint",
+        "labels": [
+          {
+            "name": "Création graphique"
+          },
+          {
+            "name": "Illustration"
+          }
+        ]
+      }
+    ],
+    "softSkills": [
+      {
+        "id": "1",
+        "name": "Travail en équipe",
+        "icon": "svg-teamwork"
+      },
+      {
+        "id": "2",
+        "name": "Résolution de problème",
+        "icon": "svg-problem-solving"
+      },
+      {
+        "id": "3",
+        "name": "Adaptabilité",
+        "icon": "svg-adaptability"
+      },
+      {
+        "id": "4",
+        "name": "Curiosité",
+        "icon": "svg-curiosity"
+      },
+      {
+        "id": "5",
+        "name": "Créativité",
+        "icon": "svg-creativity"
+      },
+      {
+        "id": "6",
+        "name": "Esprit critique",
+        "icon": "svg-critical-thinking"
+      },
+      {
+        "id": "7",
+        "name": "Patience",
+        "icon": "svg-patience"
+      },
+      {
+        "id": "8",
+        "name": "Persévérance",
+        "icon": "svg-perseverance"
+      },
+      {
+        "id": "9",
+        "name": "Flexibilité",
+        "icon": "svg-flexibility"
+      },
+      {
+        "id": "10",
+        "name": "Auto-apprentissage",
+        "icon": "svg-self-learning"
+      }
+    ]
+  }
+]

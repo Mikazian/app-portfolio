@@ -13,6 +13,12 @@ export const AppIconSvgBaseEnum = [
   "instagram",
   "react",
   "typescript",
+  "animation",
+  "api",
+  "code",
+  "database",
+  "ui-ux",
+  "responsive",
 ] as const;
 
 export const AppIconSvgEnum = AppIconSvgBaseEnum.map(

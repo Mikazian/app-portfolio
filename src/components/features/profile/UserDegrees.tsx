@@ -1,5 +1,6 @@
 import { useDegree } from "../../../hooks";
 
+import SectionLayout from "../../layout/SectionLayout";
 import Card from "../../common/Card";
 import Divider from "../../common/Divider";
 import Icon from "../../common/Icon";
@@ -9,13 +10,7 @@ const UserDefress = () => {
   const { userDegrees } = useDegree();
 
   return (
-    <section className="flex flex-col gap-10 mt-40">
-      <Text
-        as="h2"
-        style="flex items-center gap-4 font-title-bold text-4xl bedore:content-[''] before:block before:h-px before:w-12 before:bg-primary before:-translate-y-px"
-      >
-        Diplômes
-      </Text>
+    <SectionLayout title="Certifications">
       <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
         {userDegrees.map((degree) => (
           <Card key={degree.id}>
@@ -46,7 +41,7 @@ const UserDefress = () => {
           </Card>
         ))}
       </div>
-    </section>
+    </SectionLayout>
   );
 };
 

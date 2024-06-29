@@ -3,7 +3,7 @@ import MainLayout from "../components/layout/MainLayout";
 
 const Gallery = () => {
   return (
-    <MainLayout title="Gallerie">
+    <MainLayout title="Galerie">
       <Text as="h1">Gallery page</Text>
     </MainLayout>
   );
