@@ -14,6 +14,12 @@ import GithubSvg from "./icons/social-networks/github.svg";
 import InstagramSvg from "./icons/social-networks/instagram.svg";
 import ReactSvg from "./icons/technologies/react.svg";
 import TypescriptSvg from "./icons/technologies/typescript.svg";
+import AnimationSvg from "./icons/specialities/animation.svg";
+import ApiSvg from "./icons/specialities/api.svg";
+import CodeSvg from "./icons/specialities/code.svg";
+import DatabaseSvg from "./icons/specialities/database.svg";
+import UiUxSvg from "./icons/specialities/ui-ux.svg";
+import ResponsiveSvg from "./icons/specialities/responsive.svg";
 
 export const assets = {
   images: {
@@ -37,5 +43,13 @@ export const assets = {
     // Technologies
     "svg-react": ReactSvg,
     "svg-typescript": TypescriptSvg,
+
+    // Spécialités
+    "svg-animation": AnimationSvg,
+    "svg-api": ApiSvg,
+    "svg-code": CodeSvg,
+    "svg-database": DatabaseSvg,
+    "svg-ui-ux": UiUxSvg,
+    "svg-responsive": ResponsiveSvg,
   },
 };

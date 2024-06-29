@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "label": "Conception UI/UX",
+    "icon": "svg-ui-ux",
+    "description": "Conception ergonomique et esthétique des interfaces utilisateur."
+  },
+  {
+    "id": "2",
+    "label": "Développement de composants",
+    "icon": "svg-code",
+    "description": "Création de composants modulaires et réutilisables."
+  },
+  {
+    "id": "3",
+    "label": "Responsive design",
+    "icon": "svg-responsive",
+    "description": "Création de sites et applications optimisés pour tous les appareils."
+  },
+  {
+    "id": "4",
+    "label": "Animation",
+    "icon": "svg-animation",
+    "description": "Intégration d'animations et de transitions fluides pour une meilleure expérience utilisateur."
+  },
+  {
+    "id": "5",
+    "label": "Développement d'API REST",
+    "icon": "svg-api",
+    "description": "Conception et implémentation d'API RESTful robustes et maintenables."
+  },
+  {
+    "id": "6",
+    "label": "Gestion de base de données",
+    "icon": "svg-database",
+    "description": "Conception et gestion de bases de données relationnelles et non relationnelles."
+  }
+]

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+  <path fill="currentColor" d="M19.06,9.13h-3.06c-.51,0-.93.45-.93,1.01v.49h4.92v-.49c0-.56-.42-1.01-.93-1.01Z"/>
+  <rect fill="currentColor" x="15.07" y="11.59" width="4.92" height="3.27"/>
+  <path fill="currentColor" d="M15.07,16.33c0,.56.42,1.01.93,1.01h3.06c.51,0,.93-.45.93-1.01v-.51h-4.92v.51Z"/>
+  <path fill="currentColor" d="M9.09,5.16c-.3.35-.49.82-.49,1.33v4.83H2.32v-6.14l6.78-.02Z"/>
+  <path fill="currentColor" d="M8.6,15.75h-2.98c-.2,0-.36.17-.36.39v.05h-1c-.17,0-.31.15-.31.34v.46c0,.19.14.34.31.34h4.53c-.12-.26-.19-.55-.19-.86v-.73Z"/>
+  <path fill="currentColor" d="M8.6,14.5v-2.32H1.4V4.15h11.97v.4h1.29v-.76c0-.62-.46-1.13-1.04-1.13H1.05C.48,2.66.01,3.16.01,3.79v10.12c0,.62.46,1.13,1.04,1.13h7.55v-.54Z"/>
+  <path fill="currentColor" d="M17.64,6.49c0-.47-.35-.86-.79-.86h-6.47c-.43,0-.79.38-.79.86v.57h8.04v-.57Z"/>
+  <path fill="currentColor" d="M14.07,15.95v-1.44h-4.47v1.98c0,.47.35.86.79.86h3.93c-.15-.3-.25-.64-.25-1.01v-.38Z"/>
+  <path fill="currentColor" d="M17.64,8.05v-.15h-8.04v5.77h4.47v-3.52c0-1.16.87-2.1,1.93-2.1h1.64Z"/>
+</svg>

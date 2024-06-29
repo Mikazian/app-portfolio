@@ -63,7 +63,7 @@ const Navbar = (): JSX.Element => {
             <Link to="/projects">Projets</Link>
           </li>
           <li className="navbar-item slide-3">
-            <Link to="/gallery">Gallerie</Link>
+            <Link to="/gallery">Galerie</Link>
           </li>
           <li className="navbar-item slide-4">
             <Button
