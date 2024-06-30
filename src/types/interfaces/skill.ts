@@ -12,14 +12,7 @@ export interface DesignSkill {
   label: string;
 }
 
-export interface SoftSkills {
-  id: string;
-  name: string;
-  icon: string;
-}
-
 export interface SkillType {
   development: DevelopmentSkill[];
   design: DesignSkill[];
-  softSkills: SoftSkills[];
 }
