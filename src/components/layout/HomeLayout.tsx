@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import Navbar from "../features/navigation/Navbar";
 import Transition from "./Transition";
 import Footer from "../common/Footer";
@@ -7,12 +10,16 @@ interface HomeLayoutProps {
 }
 
 const HomeLayout = ({ children }: HomeLayoutProps) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <Navbar />
-      <header className="relative z-20 mx-auto w-full pt-20 h-screen">
-        {children}
-      </header>
+      <header className="relative z-20 w-full h-screen px-4">{children}</header>
       <Transition />
       <Footer />
     </>

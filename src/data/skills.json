@@ -1,0 +1,146 @@
+[
+  {
+    "development": [
+      {
+        "id": "1",
+        "name": "React",
+        "icon": "svg-react",
+        "label": "Web"
+      },
+      {
+        "id": "2",
+        "name": "React Native",
+        "icon": "svg-react",
+        "label": "Mobile iOS/Android"
+      },
+      {
+        "id": "3",
+        "name": "TypeScript",
+        "icon": "svg-typescript",
+        "label": "Langage"
+      },
+      {
+        "id": "4",
+        "name": "Redux",
+        "icon": "svg-redux",
+        "label": "Librairie"
+      },
+      {
+        "id": "5",
+        "name": "Express JS",
+        "icon": "svg-expressjs",
+        "label": "Framework"
+      },
+      {
+        "id": "6",
+        "name": "Nest JS",
+        "icon": "svg-nestjs",
+        "label": "Framework"
+      },
+      {
+        "id": "7",
+        "name": "MySQL",
+        "icon": "svg-mysql",
+        "label": "Base de données"
+      },
+      {
+        "id": "8",
+        "name": "Docker",
+        "icon": "svg-docker",
+        "label": "DevOps"
+      },
+      {
+        "id": "9",
+        "name": "Tailwind CSS",
+        "icon": "svg-tailwindcss",
+        "label": "Framework"
+      },
+      {
+        "id": "10",
+        "name": "Git / Github",
+        "icon": "svg-github",
+        "label": "Versioning"
+      },
+      {
+        "id": "11",
+        "name": "JavaScript",
+        "icon": "svg-javascript",
+        "label": "Langage"
+      },
+      {
+        "id": "12",
+        "name": "HTML5",
+        "icon": "svg-html",
+        "label": "Langage"
+      },
+      {
+        "id": "13",
+        "name": "CSS3",
+        "icon": "svg-css",
+        "label": "Langage"
+      },
+      {
+        "id": "14",
+        "name": "Jest",
+        "icon": "svg-jest",
+        "label": "Test"
+      }
+    ],
+    "design": [
+      {
+        "id": "1",
+        "name": "Photoshop",
+        "icon": "svg-photoshop",
+        "label": "Retouche photo"
+      },
+      {
+        "id": "2",
+        "name": "Illustrator",
+        "icon": "svg-illustrator",
+        "label": "Vectorisation"
+      },
+      {
+        "id": "3",
+        "name": "Indesign",
+        "icon": "svg-indesign",
+        "label": "Mise en page"
+      },
+      {
+        "id": "4",
+        "name": "Premiere Pro",
+        "icon": "svg-premiere-pro",
+        "label": "Montage vidéo"
+      },
+      {
+        "id": "5",
+        "name": "After Effect",
+        "icon": "svg-after-effects",
+        "label": "Effets Spéciaux"
+      },
+      {
+        "id": "6",
+        "name": "Animate",
+        "icon": "svg-animate",
+        "label": "Animation"
+      },
+      {
+        "id": "7",
+        "name": "XD",
+        "icon": "svg-xd",
+        "label": "Prototypage"
+      },
+      {
+        "id": "8",
+        "name": "Figma",
+        "icon": "svg-figma",
+        "label": "Prototypage"
+      },
+      {
+        "id": "9",
+        "name": "Clip Studio Paint",
+        "icon": "svg-clip-studio-paint",
+        "label": "Illustration"
+      }
+    ]
+  }
+]

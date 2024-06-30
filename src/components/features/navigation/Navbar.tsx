@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../common/Button";
 import Image from "../../common/Image";
 import BurgerMenu from "./BurgerMenu";
+import { useTheme } from "../../../contexts";
+import ThemeSwitcher from "./ThemeSwitcher";
+import Divider from "../../common/Divider";
 
 /***
  * Composant Barre de Navigation
@@ -11,6 +14,7 @@ import BurgerMenu from "./BurgerMenu";
  */
 const Navbar = (): JSX.Element => {
   const navigate = useNavigate();
+  const { theme, setTheme } = useTheme();
 
   const [activeNavbar, setActiveNavbar] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
@@ -45,34 +49,42 @@ const Navbar = (): JSX.Element => {
 
   return (
     <nav
-      className={`navbar ${activeNavbar ? "active" : ""} ${toggleNav ? "show-nav" : ""} `}
+      className={`navbar ${activeNavbar ? "active" : "inactive"} ${toggleNav ? "show-nav" : "hidde-nav"} `}
     >
-      <Link to="/" className="relative z-20 h-12">
-        <Image src="img-logo" alt="logo" style="h-full object-cover" />
+      <Link to="/" className="logo">
+        <Image src="img-logo-white" alt="logo" style="h-full object-cover" />
       </Link>
+      <div className="flex items-center gap-6">
+        <ul className="navbar-links">
+          <li className="navbar-item slide-1">
+            <Link to="/about-me">À propos de moi</Link>
+          </li>
+          <li className="navbar-item slide-2">
+            <Link to="/projects">Projets</Link>
+          </li>
+          <li className="navbar-item slide-3">
+            <Link to="/gallery">Galerie</Link>
+          </li>
+          <li className="navbar-item slide-4">
+            <Button
+              type="button"
+              onClick={() => navigate("/contact")}
+              style="text-xl md:text-xs"
+            >
+              Me contacter
+            </Button>
+          </li>
+        </ul>
 
-      <ul className="navbar-links">
-        <li className="navbar-item slide-1">
-          <Link to="/about-me">À propos de moi</Link>
-        </li>
-        <li className="navbar-item slide-2">
-          <Link to="/projects">Projets</Link>
-        </li>
-        <li className="navbar-item slide-3">
-          <Link to="/gallery">Gallerie</Link>
-        </li>
-        <li className="navbar-item slide-4">
-          <Button
-            type="button"
-            onClick={() => navigate("/contact")}
-            style="text-xl md:text-xs"
-          >
-            Me contacter
-          </Button>
-        </li>
-      </ul>
-
-      <BurgerMenu onClick={handleToggleMenu} />
+        <div className="theme">
+          <Divider height="10" isVertical />
+          <ThemeSwitcher
+            icon={theme === "dark" ? "svg-moon" : "svg-sun"}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
+        </div>
+        <BurgerMenu onClick={handleToggleMenu} />
+      </div>
     </nav>
   );
 };

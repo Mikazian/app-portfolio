@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
+import { useSocialNetworks } from "../../../hooks";
 
 import Text from "../../common/Text";
 import Divider from "../../common/Divider";
-import useSocialNetworks from "../../../hooks/useSocialNetworks";
 import Icon from "../../common/Icon";
 
-const SocialNetwork = () => {
+/**
+ * Composant des réseaux sociaux
+ * @returns {JSX.Element}
+ */
+const SocialNetwork = (): JSX.Element => {
   const [isVertical, setIsVertical] = useState<boolean>(
     window.innerWidth <= 1024 ? false : true
   );
@@ -29,7 +33,7 @@ const SocialNetwork = () => {
   }, []);
 
   return (
-    <section className="flex flex-row justify-end items-center gap-4 lg:flex-col lg:fixed lg:bottom-0 lg:right-0 lg:mb-5 lg:mr-7 lg:w-[25px]">
+    <section className="flex flex-row justify-end items-center gap-4 lg:flex-col lg:fixed lg:bottom-0 lg:right-0 lg:mb-5 lg:mr-7 lg:w-[25px] relative z-20">
       <Text style="translate-y-0.5 lg:absolute lg:origin-left lg:rotate-90 lg:top-0 lg:left-0 uppercase text-sm lg:mb-6 lg:translate-x-3 lg:-translate-y-24 text-nowrap">
         Me suivre
       </Text>
@@ -41,7 +45,7 @@ const SocialNetwork = () => {
             className="scale-100 hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <Icon name={network.icon} />
+              <Icon name={network.icon} color="var(--onbackground)" />
             </a>
           </li>
         ))}

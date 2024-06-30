@@ -1,13 +1,11 @@
-import { AppIconSvgType } from "../../types/enums/app-icon.enum";
+import { AppIconSvgType } from "../../types/enums";
 import { SvgIconSet } from "./SvgIconSet";
 import Text from "./Text";
-
-export type IconNameType = AppIconSvgType;
 
 const iconSets = [SvgIconSet];
 
 export interface IconProps {
-  name: IconNameType;
+  name: AppIconSvgType;
   size?: string;
   color?: string;
   style?: string;

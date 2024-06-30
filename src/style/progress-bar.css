@@ -1,0 +1,13 @@
+@layer components {
+  .progress-bar {
+    @apply h-1 bg-divider w-full;
+  }
+
+  .progress-bar:after {
+    @apply content-[''] block h-1 w-0 bg-primary;
+  }
+
+  .progress-bar.active:after {
+    @apply w-full transition-all duration-[3s] ease-linear;
+  }
+}

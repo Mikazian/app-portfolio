@@ -2,7 +2,7 @@
   .burger-bar,
   .burger-bar:before,
   .burger-bar:after {
-    @apply relative block w-6 h-[2px] rounded-full bg-light duration-500 ease-in-out;
+    @apply relative block w-6 h-[2px] rounded-full bg-onbackground duration-500 ease-in-out;
   }
 
   .burger-bar:before,

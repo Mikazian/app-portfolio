@@ -1,6 +1,6 @@
 export const AppImgPrefix = "img";
 
-export const AppImgBaseEnum = ["logo"] as const;
+export const AppImgBaseEnum = ["logo-white"] as const;
 
 export const AppImgEnum = AppImgBaseEnum.map(
   (image) => `${AppImgPrefix}-${image}` as const

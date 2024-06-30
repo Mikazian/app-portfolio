@@ -6,6 +6,16 @@ import type { IconProps } from "./Icon";
 const prefix = AppIconSvgPrefix;
 const baseSize = "25";
 
+/**
+ * Composant Icon pour afficher les icônes SVG
+ * @param name - Nom de l'icône
+ * @param color - Couleur de l'icône
+ * @param strokeColor - Couleur du contour de l'icône
+ * @param strokeWidth - Largeur du contour de l'icône
+ * @param style - Style CSS
+ * @param size - Taille de l'icône
+ * @returns {JSX.Element}
+ */
 const component = ({
   name,
   color,
@@ -13,7 +23,7 @@ const component = ({
   strokeWidth,
   style,
   size,
-}: IconProps) => {
+}: IconProps): JSX.Element => {
   const source = assets.icons[name];
 
   return (
