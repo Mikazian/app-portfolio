@@ -4,7 +4,11 @@ import { AppIconSvgType } from "../../../types/enums";
 import SectionLayout from "../../layout/SectionLayout";
 import UserItemCard from "./UserItemCard";
 
-const UserSpeciality = () => {
+/**
+ * Composant des spécialités de l'utilisateur
+ * @returns {JSX.Element}
+ */
+const UserSpeciality = (): JSX.Element => {
   const { userSpecialities } = useSpeciality();
 
   return (

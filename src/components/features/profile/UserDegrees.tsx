@@ -6,7 +6,11 @@ import Divider from "../../common/Divider";
 import Icon from "../../common/Icon";
 import Text from "../../common/Text";
 
-const UserDefress = () => {
+/**
+ * Composant des certifications de l'utilisateur
+ * @returns {JSX.Element}
+ */
+const UserDegress = (): JSX.Element => {
   const { userDegrees } = useDegree();
 
   return (
@@ -45,4 +49,4 @@ const UserDefress = () => {
   );
 };
 
-export default UserDefress;
+export default UserDegress;

@@ -16,7 +16,14 @@ interface Item {
   description?: string;
 }
 
-const UserItemCard = <T extends Item>({ item }: UserItemCardProps<T>) => {
+/**
+ * Composant d'élément de la carte utilisateur
+ * @param item - Élément
+ * @returns {JSX.Element}
+ */
+const UserItemCard = <T extends Item>({
+  item,
+}: UserItemCardProps<T>): JSX.Element => {
   return (
     <Card key={item.id} style="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 py-2">

@@ -7,10 +7,10 @@ interface SectionLayoutProps {
 
 const SectonLayout = ({ title, children }: SectionLayoutProps) => {
   return (
-    <section className="flex flex-col gap-10 mt-40">
+    <section className="flex flex-col mt-40">
       <Text
         as="h2"
-        style="flex items-center gap-4 font-title-bold text-4xl bedore:content-[''] before:block before:h-px before:w-12 before:bg-primary before:-translate-y-px"
+        style="flex items-center gap-4 font-title-bold text-4xl mb-10 bedore:content-[''] before:block before:h-px before:w-12 before:bg-primary before:-translate-y-px"
       >
         {title}
       </Text>
