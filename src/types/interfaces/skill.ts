@@ -1,19 +1,15 @@
-interface LabelType {
-  name: string;
-}
-
 export interface DevelopmentSkill {
   id: string;
   name: string;
   icon: string;
-  labels: LabelType[];
+  label: string;
 }
 
 export interface DesignSkill {
   id: string;
   name: string;
   icon: string;
-  labels: LabelType[];
+  label: string;
 }
 
 export interface SoftSkills {

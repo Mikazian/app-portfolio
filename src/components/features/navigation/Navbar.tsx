@@ -52,7 +52,7 @@ const Navbar = (): JSX.Element => {
       className={`navbar ${activeNavbar ? "active" : "inactive"} ${toggleNav ? "show-nav" : "hidde-nav"} `}
     >
       <Link to="/" className="logo">
-        <Image src="img-logo" alt="logo" style="h-full object-cover" />
+        <Image src="img-logo-white" alt="logo" style="h-full object-cover" />
       </Link>
       <div className="flex items-center gap-6">
         <ul className="navbar-links">

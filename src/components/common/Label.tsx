@@ -11,8 +11,8 @@ interface LabelProps {
  */
 const Label = ({ text }: LabelProps): JSX.Element => {
   return (
-    <div className="inline-flex items-center bg-light h-4 rounded-full px-2">
-      <Text style="text-underground text-xss font-bold translate-y-[1px]">
+    <div className="inline-flex items-center bg-secondary h-4 rounded-full px-2 truncate">
+      <Text style="text-background text-xss font-bold translate-y-[1px] truncate">
         {text}
       </Text>
     </div>

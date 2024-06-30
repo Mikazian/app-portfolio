@@ -1,9 +1,9 @@
 import { useCopy } from "../../../contexts";
 import { AppIconSvgType } from "../../../types/enums";
+import ButtonCard from "../../common/ButtonCard";
 
 import Icon from "../../common/Icon";
 import Text from "../../common/Text";
-import CopyButton from "../copy-clipboard/CopyButton";
 
 interface UserButtonCardProps {
   text: string;
@@ -11,9 +11,9 @@ interface UserButtonCardProps {
 }
 
 /**
- * Composant Bouton de profil utilisateur
+ * Composant Bouton de carte utilisateur
  * @param text - Texte du bouton
- * @param icon - Icone du bouton
+ * @param icon - Nom de l'icône
  * @returns {JSX.Element}
  */
 const UserButtonCard = ({ text, icon }: UserButtonCardProps): JSX.Element => {
@@ -27,7 +27,13 @@ const UserButtonCard = ({ text, icon }: UserButtonCardProps): JSX.Element => {
           {text}
         </Text>
       </div>
-      <CopyButton onClick={() => copyToClipboard(text)} disabled={isCopied} />
+      <ButtonCard
+        onClick={() => copyToClipboard(text)}
+        disabled={isCopied}
+        showModal
+      >
+        <Icon name="svg-copy" color="var(--onbackground)" style="btn-icon" />
+      </ButtonCard>
     </div>
   );
 };

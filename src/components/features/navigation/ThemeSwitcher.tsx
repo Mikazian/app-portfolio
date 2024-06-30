@@ -7,7 +7,13 @@ interface ThemeSwitcherProps {
   onClick: () => void;
 }
 
-const ThemeSwitcher = ({ icon, onClick }: ThemeSwitcherProps) => {
+/**
+ * Composant pour changer de thème
+ * @param icon - Nom de l'icône
+ * @param onClick - Action au clic
+ * @returns {JSX.Element}
+ */
+const ThemeSwitcher = ({ icon, onClick }: ThemeSwitcherProps): JSX.Element => {
   return (
     <button
       type="button"

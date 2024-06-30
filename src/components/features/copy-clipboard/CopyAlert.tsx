@@ -1,8 +1,8 @@
 import { useCopy } from "../../../contexts/CopyContext";
-import ProgressBar from "../../common/ProgressBar";
 
 import Text from "../../common/Text";
-import CopyButton from "./CopyButton";
+import ProgressBar from "../../common/ProgressBar";
+import Icon from "../../common/Icon";
 
 /**
  * Composant Alerte de copie
@@ -16,7 +16,7 @@ const CopyAlert = (): JSX.Element => {
       className={`flex flex-col fixed z-50 top-[15%] transition-all duration-700 ease-in-out ${showCopyAlert ? "right-0" : "right-[-100vw]"}`}
     >
       <div className="flex items-center gap-4 bg-foreground px-6 py-4 border-t border-l border-divider">
-        <CopyButton disabled />
+        <Icon name="svg-copy" style="border border-divider p-2 rounded-md" />
         <Text as="p" style="w-28">
           Copié dans le presse-papier
         </Text>

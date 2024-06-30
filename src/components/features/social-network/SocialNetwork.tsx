@@ -5,7 +5,11 @@ import Text from "../../common/Text";
 import Divider from "../../common/Divider";
 import Icon from "../../common/Icon";
 
-const SocialNetwork = () => {
+/**
+ * Composant des réseaux sociaux
+ * @returns {JSX.Element}
+ */
+const SocialNetwork = (): JSX.Element => {
   const [isVertical, setIsVertical] = useState<boolean>(
     window.innerWidth <= 1024 ? false : true
   );

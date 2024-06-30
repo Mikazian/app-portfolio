@@ -3,7 +3,7 @@
 @import "./navbar.css";
 @import "./burger.css";
 @import "./progress-bar.css";
-@import "./copy.css";
+@import "./button.css";
 
 @tailwind base;
 @tailwind components;
