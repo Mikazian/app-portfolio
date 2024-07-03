@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { SkillType as Skill, SkillEnum } from "../types/enums";
-import { SkillType } from "../types/interfaces/skill";
+import { SkillType } from "../types/interfaces/skill.type";
 
 interface ScreenType {
   width: number;

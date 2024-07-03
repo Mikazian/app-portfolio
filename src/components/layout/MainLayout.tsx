@@ -25,7 +25,7 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
       <header className="flex items-center justify-center relative z-20 h-screen px-4">
         <Text
           as="h1"
-          style="font-title-black text-6xl uppercase tracking-wider text-center"
+          className="font-title-black text-6xl uppercase tracking-wider text-center"
         >
           {title}
         </Text>

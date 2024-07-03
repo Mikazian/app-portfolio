@@ -25,17 +25,17 @@ const UserItemCard = <T extends Item>({
   item,
 }: UserItemCardProps<T>): JSX.Element => {
   return (
-    <Card key={item.id} style="flex flex-col gap-4">
+    <Card key={item.id} additionalClass="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 py-2">
         <Icon name={item.icon} size="30" color="var(--primary)" />
-        <Text as="p" style="font-text-bold translate-y-[2px] text-center">
+        <Text as="p" className="font-text-bold translate-y-[2px] text-center">
           {item.label}
         </Text>
       </div>
       {item.description ? (
         <>
           <Divider width="100%" />
-          <Text as="p" style="text-sm">
+          <Text as="p" className="text-sm">
             {item.description}
           </Text>
         </>

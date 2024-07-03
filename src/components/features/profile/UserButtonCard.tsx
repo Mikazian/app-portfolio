@@ -23,7 +23,10 @@ const UserButtonCard = ({ text, icon }: UserButtonCardProps): JSX.Element => {
     <div className="flex justify-between gap-6 px-4 py-6 border border-divider rounded-sm">
       <div className="flex items-center gap-4 truncate">
         <Icon name={icon} size="25" color="var(--onbackground)" />
-        <Text as="p" style="font-text-bold translate-y-pxs text-sm truncate">
+        <Text
+          as="p"
+          className="font-text-bold translate-y-pxs text-sm truncate"
+        >
           {text}
         </Text>
       </div>
@@ -32,7 +35,11 @@ const UserButtonCard = ({ text, icon }: UserButtonCardProps): JSX.Element => {
         disabled={isCopied}
         showModal
       >
-        <Icon name="svg-copy" color="var(--onbackground)" style="btn-icon" />
+        <Icon
+          name="svg-copy"
+          color="var(--onbackground)"
+          className="btn-icon"
+        />
       </ButtonCard>
     </div>
   );

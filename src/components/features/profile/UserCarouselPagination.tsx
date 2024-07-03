@@ -31,7 +31,7 @@ const UserCarouselPagination = ({
           icon="svg-arrow-right"
           onClick={prevPage}
           disabled={carouselIndex <= 0}
-          style={`${carouselIndex <= 0 ? "scale-0 invisible" : "scale-100 visible"}`}
+          additionalClass={`${carouselIndex <= 0 ? "scale-0 invisible" : "scale-100 visible"}`}
         />
       </div>
 
@@ -49,7 +49,7 @@ const UserCarouselPagination = ({
           icon="svg-arrow-left"
           onClick={nextPage}
           disabled={carouselIndex >= pages.length - 1}
-          style={`${carouselIndex >= pages.length - 1 ? "scale-0 invisible" : "scale-100 visible"}`}
+          additionalClass={`${carouselIndex >= pages.length - 1 ? "scale-0 invisible" : "scale-100 visible"}`}
         />
       </div>
     </div>

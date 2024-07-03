@@ -5,7 +5,7 @@ interface ButtonProps {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   disabled?: boolean;
-  style?: string;
+  additionalClass?: string;
 }
 /**
  * Composant Button
@@ -15,7 +15,7 @@ interface ButtonProps {
  * @param onMouseEnter - Action au survol du button
  * @param onMouseLeave - Action à la sortie du survol du button
  * @param disabled - Etat du button
- * @param style - Style Tailwind CSS
+ * @param additionalClass - Style Tailwind CSS
  * @returns {JSX.Element}
  */
 const Button = ({
@@ -25,7 +25,7 @@ const Button = ({
   onMouseEnter,
   onMouseLeave,
   disabled,
-  style,
+  additionalClass,
 }: ButtonProps): JSX.Element => {
   return (
     <button
@@ -34,7 +34,7 @@ const Button = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       disabled={disabled}
-      className={`text-primary uppercase text-xs font-bold px-4 pt-1.5 pb-1 border-2 border-primary font-title-bold tracking-widest ${style} hover:bg-primary hover:text-background transition-all duration-300 ease-in-out`}
+      className={`text-primary uppercase text-xs font-bold px-4 pt-1.5 pb-1 border-2 border-primary font-title-bold tracking-widest ${additionalClass} hover:bg-primary hover:text-background transition-all duration-300 ease-in-out`}
     >
       {children}
     </button>
