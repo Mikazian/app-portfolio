@@ -5,3 +5,5 @@ export * from "./useDegree";
 export * from "./useSpeciality";
 export * from "./useSkill";
 export * from "./useCarrouselSkills";
+export * from "./useExperience";
+export * from "./useFormatText";

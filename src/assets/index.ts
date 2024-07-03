@@ -1,5 +1,15 @@
 /** Images **/
 import LogoImg from "./images/logo-white.png";
+import PrimaImg from "./images/company/prima-32x32.webp";
+import WildImg from "./images/company/wild-32x32.webp";
+import ArsonvalImg from "./images/company/arsonval-32x32.webp";
+import LisaaImg from "./images/company/lisaa-32x32.webp";
+import MaStationImg from "./images/project/ma-station-32x32.webp";
+import InovinImg from "./images/project/inovin-32x32.webp";
+import JeannetteImg from "./images/project/jeannette-32x32.webp";
+import GrootImg from "./images/project/groot-32x32.webp";
+import TindevImg from "./images/project/tindev-32x32.webp";
+import GamepulseImg from "./images/project/gamepulse-32x32.webp";
 
 /** SVG **/
 import MailSvg from "./icons/global/mail.svg";
@@ -49,6 +59,16 @@ export const assets = {
     "img-logo-white": LogoImg,
     // TODO: Ajouter le logo en noir
     "img-logo-black": "",
+    "img-prima": PrimaImg,
+    "img-wild": WildImg,
+    "img-arsonval": ArsonvalImg,
+    "img-lisaa": LisaaImg,
+    "img-ma-station": MaStationImg,
+    "img-inovin": InovinImg,
+    "img-jeannette": JeannetteImg,
+    "img-groot": GrootImg,
+    "img-tindev": TindevImg,
+    "img-gamepulse": GamepulseImg,
   },
   icons: {
     //Global

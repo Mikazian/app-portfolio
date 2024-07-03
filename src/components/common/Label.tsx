@@ -1,21 +1,30 @@
-import Text from "./Text";
-
 interface LabelProps {
   text: string;
+  color?: string;
+  isOutline?: boolean;
+  additionalClass?: string;
 }
 
-/**
- * Composant Label
- * @param text - Texte du label
- * @returns {JSX.Element}
- */
-const Label = ({ text }: LabelProps): JSX.Element => {
+const Label = ({
+  text,
+  color,
+  isOutline = false,
+  additionalClass,
+}: LabelProps): JSX.Element => {
+  const outlineStyle = {
+    color: isOutline ? color : undefined,
+    borderColor: isOutline ? color : undefined,
+    borderWidth: isOutline ? "1px" : undefined,
+    borderStyle: isOutline ? "solid" : undefined,
+  };
+
   return (
-    <div className="inline-flex items-center bg-secondary h-4 rounded-full px-2 truncate">
-      <Text style="text-background text-xss font-bold translate-y-[1px] truncate">
-        {text}
-      </Text>
-    </div>
+    <span
+      className={`inline-flex items-center h-4 rounded-full px-2 text-xss font-bold ${!isOutline && "bg-secondary text-background"} ${additionalClass}`}
+      style={outlineStyle}
+    >
+      <span className="translate-y-px">{text}</span>
+    </span>
   );
 };
 

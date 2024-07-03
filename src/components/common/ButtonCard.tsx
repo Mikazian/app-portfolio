@@ -4,7 +4,7 @@ interface ButtonCardProps {
   disabled?: boolean;
   isActive?: boolean;
   showModal?: boolean;
-  style?: string;
+  additionalClass?: string;
   children: React.ReactNode;
 }
 
@@ -15,7 +15,7 @@ interface ButtonCardProps {
  * @param disabled - Désactiver le bouton
  * @param isActive - Activer le bouton
  * @param showModal - Afficher la modal
- * @param style - Style du bouton
+ * @param additionalClass - Style du bouton
  * @param children - Éléments enfants
  * @returns {JSX.Element}
  */
@@ -25,7 +25,7 @@ const ButtonCard = ({
   onClick,
   isActive,
   showModal = false,
-  style,
+  additionalClass,
   children,
 }: ButtonCardProps): JSX.Element => {
   return (
@@ -33,7 +33,7 @@ const ButtonCard = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`btn ${style} ${isActive ? "bg-primary border-primary" : "bg-foreground"} ${disabled ? "unactive" : "active"} ${showModal ? "active-modal" : "unactive-modal"}`}
+      className={`btn ${additionalClass} ${isActive ? "bg-primary border-primary" : "bg-foreground"} ${disabled ? "unactive" : "active"} ${showModal ? "active-modal" : "unactive-modal"}`}
     >
       {children}
     </button>

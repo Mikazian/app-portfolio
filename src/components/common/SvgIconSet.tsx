@@ -12,7 +12,7 @@ const baseSize = "25";
  * @param color - Couleur de l'icône
  * @param strokeColor - Couleur du contour de l'icône
  * @param strokeWidth - Largeur du contour de l'icône
- * @param style - Style CSS
+ * @param className - Style CSS
  * @param size - Taille de l'icône
  * @returns {JSX.Element}
  */
@@ -21,7 +21,7 @@ const component = ({
   color,
   strokeColor,
   strokeWidth,
-  style,
+  className,
   size,
 }: IconProps): JSX.Element => {
   const source = assets.icons[name];
@@ -39,7 +39,7 @@ const component = ({
         svg.setAttribute("width", size || baseSize);
         svg.setAttribute("height", size || baseSize);
       }}
-      className={style}
+      className={className}
     />
   );
 };

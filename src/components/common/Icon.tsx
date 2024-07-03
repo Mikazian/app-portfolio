@@ -8,7 +8,7 @@ export interface IconProps {
   name: AppIconSvgType;
   size?: string;
   color?: string;
-  style?: string;
+  className?: string;
   strokeColor?: string;
   strokeWidth?: string;
 }
@@ -17,7 +17,7 @@ export interface IconProps {
  * @param name - Nom de l'icône
  * @param size - Taille de l'icône
  * @param color - Couleur de l'icône
- * @param style - Style de l'icône
+ * @param className - Style de l'icône
  * @param strokeColor - Couleur du contour de l'icône
  * @param strokeWidth - Largeur du contour de l'icône
  * @returns {JSX.Element}
@@ -26,7 +26,7 @@ const Icon = ({
   name,
   size,
   color,
-  style,
+  className,
   strokeColor,
   strokeWidth,
 }: IconProps): JSX.Element | undefined => {
@@ -38,7 +38,7 @@ const Icon = ({
           name={name}
           size={size}
           color={color}
-          style={style}
+          className={className}
           strokeColor={strokeColor}
           strokeWidth={strokeWidth}
         />
