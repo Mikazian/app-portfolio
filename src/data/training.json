@@ -81,7 +81,7 @@
       },
       {
         "name": "Inovin",
-        "type": "Site web de dégustation de vin",
+        "type": "Site web création et dégustation de vin",
         "logo": "img-inovin",
         "url": ""
       }
@@ -106,7 +106,7 @@
     "projects": [
       {
         "name": "Game Pulse",
-        "type": "Site de jeux vidéo",
+        "type": "Site web de jeux vidéo",
         "logo": "img-gamepulse",
         "url": ""
       },
