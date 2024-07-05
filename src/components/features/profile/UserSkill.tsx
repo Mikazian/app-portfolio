@@ -32,16 +32,16 @@ const UserSkill = (): JSX.Element => {
             key={index}
             onClick={() => setActiveTab(skill)}
             isActive={activeTab === skill}
-            style="rounded-none py-4"
+            additionalClass="rounded-none py-4"
           >
-            <Text as="p" style="translate-y-px">
+            <Text as="p" className="translate-y-px">
               {skill === "development" ? "Développement" : "Graphisme"}
             </Text>
           </ButtonCard>
         ))}
       </div>
 
-      <Card style="translate-y-[-1px]">
+      <Card additionalClass="translate-y-[-1px]">
         <UserCarouselSkill pages={pages} carouselIndex={carouselIndex} />
       </Card>
 

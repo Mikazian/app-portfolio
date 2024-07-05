@@ -32,7 +32,7 @@ const UserCarouselSkill = ({
               <Icon
                 name={skill.icon as AppIconSvgType}
                 size="50"
-                style={`rounded-md overflow-hidden`}
+                className={`rounded-md overflow-hidden`}
               />
             </div>
             <div className="flex flex-col gap-2">

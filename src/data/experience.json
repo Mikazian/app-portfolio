@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "job": "Concepteur d'application",
+    "contract": "Stage",
+    "start_date": "2024-03",
+    "end_date": "2024-07",
+    "company": {
+      "name": "Primagolf",
+      "logo": "img-prima",
+      "location": {
+        "city": "Orléans",
+        "zip_code": "45000",
+        "country": "France"
+      }
+    },
+    "description": "Contribution à la V2 de l'application mobile iOS et Android, Ma Station, une application de lavage et distribution de carburant automatisée pour le client E.LECLERC en React Native, Redux et Nest JS.",
+    "projects": [
+      {
+        "name": "Ma Station",
+        "type": "Application mobile lavage et carburant",
+        "logo": "img-ma-station",
+        "url": "https://www.ma-station.fr/"
+      }
+    ]
+  }
+]

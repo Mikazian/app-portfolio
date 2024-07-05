@@ -1,0 +1,121 @@
+[
+  {
+    "id": "1",
+    "job": "Signalétique enseigne et décor",
+    "contract": "CAP",
+    "start_date": "2010-09",
+    "end_date": "2011-07",
+    "company": {
+      "name": "Lycée Professionnel d'Arsonval",
+      "logo": "img-arsonval",
+      "location": {
+        "city": "Joué-lès-Tours",
+        "zip_code": "37300",
+        "country": "France"
+      }
+    },
+    "description": "Formation professionnelle au Lycée des métiers d'arts d'Arsonval, combinant créativité, technicité et savoir-faire pour la conception, la fabrication et la pose de signalétique, d'enseignes et de décors."
+  },
+  {
+    "id": "2",
+    "job": "Communication graphique",
+    "contract": "BAC PRO",
+    "start_date": "2011-09",
+    "end_date": "2012-07",
+    "company": {
+      "name": "Lycée Professionnel d'Arsonval",
+      "logo": "img-arsonval",
+      "location": {
+        "city": "Joué-lès-Tours",
+        "zip_code": "37300",
+        "country": "France"
+      }
+    },
+    "description": "Formation professionnelle au Lycée des métiers d'arts d'Arsonval, axée sur la conception et la réalisation de supports de communication visuelle. Compétences en design graphique, typographie, mise en page et utilisation de la couleur. Maîtrise des outils numériques de PAO : Photoshop, Illustrator et InDesign."
+  },
+  {
+    "id": "3",
+    "job": "Animation 2D/3D et jeux vidéo",
+    "contract": "Prépa",
+    "start_date": "2012-09",
+    "end_date": "2012-07",
+    "company": {
+      "name": "École supérieur des métiers artistiques et créatifs LISAA",
+      "logo": "img-lisaa",
+      "location": {
+        "city": "Paris",
+        "zip_code": "75000",
+        "country": "France"
+      }
+    },
+    "description": "Formation en année préparatoire en École supérieure, spécialisée en animation 2D/3D et jeux vidéo. Acquisition des fondamentaux du dessin, de l'animation, de la modélisation 3D, ainsi que de la création de personnages et de décors. Maîtrise des logiciels de création graphique : Photoshop, Illustrator, After Effects et 3DS Max."
+  },
+  {
+    "id": "4",
+    "job": "Développeur web et web mobile",
+    "contract": "BAC+2",
+    "start_date": "2023-02",
+    "end_date": "2023-07",
+    "company": {
+      "name": "Wild Code School",
+      "logo": "img-wild",
+      "location": {
+        "city": "Orléans",
+        "zip_code": "45000",
+        "country": "France"
+      }
+    },
+    "description": "Formation intensive sur une durée de 5 mois au campus, centrée sur le développement de sites web et mobiles suivant le modèle MVC, avec une maîtrise des langages HTML, CSS, PHP et l'utilisation du framework Symfony. La formation inclut également la création de bases de données MySQL, ainsi que des compétences en gestion de projet, méthodes agiles et conception de maquettes.",
+    "projects": [
+      {
+        "name": "CV de Groot",
+        "type": "Site web CV fictif de Groot",
+        "logo": "img-groot",
+        "url": ""
+      },
+      {
+        "name": "Jeannette Verdier",
+        "type": "Site web Lycée Profesionnel Jeannette Verdier",
+        "logo": "img-jeannette",
+        "url": ""
+      },
+      {
+        "name": "Inovin",
+        "type": "Site web de dégustation de vin",
+        "logo": "img-inovin",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "job": "Concepteur d'application",
+    "contract": "BAC+4",
+    "start_date": "2024-09",
+    "end_date": "2024-03",
+    "company": {
+      "name": "Wild Code School",
+      "logo": "img-wild",
+      "location": {
+        "city": "Orléans",
+        "zip_code": "45000",
+        "country": "France"
+      }
+    },
+    "description": "Formation intensive sur une durée de 9 mois : 6 mois au campus et 3 mois en stage, dédiée à la conception d'applications web et mobiles. Au programme : maîtrise approfondie de JavaScript, React, React Native, développement d'une API avec Express JS, conception et gestion d'une base de données MySQL, ainsi que des compétences en gestion de projet, méthodes agiles, conception de maquettes et déploiement via Docker.",
+    "projects": [
+      {
+        "name": "Game Pulse",
+        "type": "Site de jeux vidéo",
+        "logo": "img-gamepulse",
+        "url": ""
+      },
+      {
+        "name": "Tindev",
+        "type": "Application de rencontre pour développeurs",
+        "logo": "img-tindev",
+        "url": ""
+      }
+    ]
+  }
+]
