@@ -27,11 +27,11 @@ const UserCarouselSkill = ({
     <div className="grid grid-rows-4 sm:grid-rows-3 sm:grid-cols-2 md:grid-cols-3 gap-4 min-h-[384px] max-h-[384px] sm:min-h-[284px] sm:max-h-[284px] overflow-hidden">
       {pages[carouselIndex]?.map((skill: Skill) => (
         <Card key={skill.id}>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <div>
               <Icon
                 name={skill.icon as AppIconSvgType}
-                size="50"
+                size="40"
                 className={`rounded-md overflow-hidden`}
               />
             </div>

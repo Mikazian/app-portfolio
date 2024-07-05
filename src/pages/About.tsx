@@ -5,6 +5,7 @@ import UserSkill from "../components/features/profile/UserSkill";
 import UserSpeciality from "../components/features/profile/UserSpeciality";
 import UserExperience from "../components/features/profile/UserExperience";
 import UserTraining from "../components/features/profile/UserTraining";
+import UserHobby from "../components/features/profile/UserHobby";
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
         <UserExperience />
         <UserTraining />
       </section>
+      <UserHobby />
     </MainLayout>
   );
 };
