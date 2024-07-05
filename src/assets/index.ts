@@ -50,7 +50,7 @@ import GithubSvg from "./icons/skills/development/github.svg";
 import AnimationSvg from "./icons/specialities/animation.svg";
 import ApiSvg from "./icons/specialities/api.svg";
 import CodeSvg from "./icons/specialities/code.svg";
-import DatabaseSvg from "./icons/specialities/database.svg";
+import DatabaseSvg from "./icons/specialities/database-sql.svg";
 import UiUxSvg from "./icons/specialities/ui-ux.svg";
 import ResponsiveSvg from "./icons/specialities/responsive.svg";
 
