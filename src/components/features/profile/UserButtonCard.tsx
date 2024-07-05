@@ -22,7 +22,7 @@ const UserButtonCard = ({ text, icon }: UserButtonCardProps): JSX.Element => {
   return (
     <div className="flex justify-between gap-6 px-4 py-6 border border-divider rounded-sm">
       <div className="flex items-center gap-4 truncate">
-        <Icon name={icon} size="25" color="var(--onbackground)" />
+        <Icon name={icon} size="25" color="var(--primary)" />
         <Text
           as="p"
           className="font-text-bold translate-y-pxs text-sm truncate"

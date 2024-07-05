@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "label": "Jeux vidéo",
+    "logo": "svg-gaming"
+  },
+  {
+    "id": "2",
+    "label": "Manga",
+    "logo": "svg-book"
+  },
+  {
+    "id": "3",
+    "label": "Code",
+    "logo": "svg-code"
+  },
+  {
+    "id": "4",
+    "label": "Musique",
+    "logo": "svg-music"
+  },
+  {
+    "id": "5",
+    "label": "Dessin numérique",
+    "logo": "svg-digital-art"
+  }
+]

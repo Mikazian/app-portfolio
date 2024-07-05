@@ -79,7 +79,7 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                 additionalClass="flex grow justify-between items-center text-start px-2 py-2 gap-2"
               >
                 <div className="flex gap-2 items-center">
-                  <div className="w-8 h-8 rounded-md overflow-hidden">
+                  <div className="w-8 h-8 shrink-0 rounded-md overflow-hidden">
                     <Image
                       src={project.logo}
                       alt={`Logo de ${project.name}`}

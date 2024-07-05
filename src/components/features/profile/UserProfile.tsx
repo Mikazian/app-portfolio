@@ -52,7 +52,7 @@ const UserProfile = (): JSX.Element => {
 
         <article>
           {profile.biography.split("\n").map((str, index) => (
-            <Text key={index} as="p">
+            <Text key={index} as="p" className="text-sm">
               {str}
             </Text>
           ))}

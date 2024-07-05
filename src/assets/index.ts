@@ -54,6 +54,11 @@ import DatabaseSvg from "./icons/specialities/database-sql.svg";
 import UiUxSvg from "./icons/specialities/ui-ux.svg";
 import ResponsiveSvg from "./icons/specialities/responsive.svg";
 
+import BookSvg from "./icons/hobby/book.svg";
+import DigitalArtSvg from "./icons/hobby/digital-art.svg";
+import GamingSvg from "./icons/hobby/gaming.svg";
+import MusicSvg from "./icons/hobby/music.svg";
+
 export const assets = {
   images: {
     "img-logo-white": LogoImg,
@@ -118,5 +123,11 @@ export const assets = {
     "svg-database": DatabaseSvg,
     "svg-ui-ux": UiUxSvg,
     "svg-responsive": ResponsiveSvg,
+
+    // Hobbies
+    "svg-book": BookSvg,
+    "svg-digital-art": DigitalArtSvg,
+    "svg-gaming": GamingSvg,
+    "svg-music": MusicSvg,
   },
 };
