@@ -1,5 +1,5 @@
-import Text from "../components/common/Text";
-import HomeLayout from "../components/layout/HomeLayout";
+import Text from '../components/common/Text';
+import HomeLayout from '../components/layout/HomeLayout';
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
             Mike <br />
             Xiong
           </span>
-          Développeur Full Stack & Designer
+          Développeur Full Stack & UX/UI Designer
         </Text>
       </div>
     </HomeLayout>

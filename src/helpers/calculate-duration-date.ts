@@ -1,7 +1,4 @@
-export const calculateDurationInMonth = (
-  start: string,
-  end: string
-): number => {
+export const calculateDurationInMonth = (start: string, end: string): number => {
   const startDate = new Date(start);
   const endDate = new Date(end);
 

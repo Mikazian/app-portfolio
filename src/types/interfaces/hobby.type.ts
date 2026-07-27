@@ -1,4 +1,4 @@
-import { AppIconSvgType } from "../enums";
+import { AppIconSvgType } from '../enums';
 
 export interface HobbyType {
   id: string;

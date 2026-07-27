@@ -1,4 +1,4 @@
-import { AppImgType } from "../enums";
+import { AppImgType } from '../enums';
 
 interface LocationType {
   city: string;

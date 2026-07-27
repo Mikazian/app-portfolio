@@ -1,36 +1,36 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
 /** Composants **/
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Project from "./pages/Project";
-import Gallery from "./pages/Gallery";
-import Contact from "./pages/Contact";
+import Home from './screens/Home';
+import Project from './screens/Project';
+import Gallery from './screens/Gallery';
+import Contact from './screens/Contact';
+import About from './screens/About';
 
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: '/',
       element: <Home />,
     },
     {
-      path: "/about-me",
+      path: '/about-me',
       element: <About />,
     },
     {
-      path: "/projects",
+      path: '/projects',
       element: <Project />,
     },
     {
-      path: "/gallery",
+      path: '/gallery',
       element: <Gallery />,
     },
     {
-      path: "/contact",
+      path: '/contact',
       element: <Contact />,
     },
   ],
-  { basename: import.meta.env.BASE_URL }
+  { basename: import.meta.env.BASE_URL },
 );
 
 export default router;
