@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react";
-import { useSocialNetworks } from "../../../hooks";
+import { useEffect, useState } from 'react';
+import { useSocialNetworks } from '../../../hooks';
 
-import Text from "../../common/Text";
-import Divider from "../../common/Divider";
-import Icon from "../../common/Icon";
+import Text from '../../common/Text';
+import Divider from '../../common/Divider';
+import Icon from '../../common/Icon';
 
 /**
  * Composant des réseaux sociaux
  * @returns {JSX.Element}
  */
-const SocialNetwork = (): JSX.Element => {
-  const [isVertical, setIsVertical] = useState<boolean>(
-    window.innerWidth <= 1024 ? false : true
-  );
+const SocialNetwork = (): React.JSX.Element => {
+  const [isVertical, setIsVertical] = useState<boolean>(window.innerWidth <= 1024 ? false : true);
 
   const { networks } = useSocialNetworks();
 
@@ -25,10 +23,10 @@ const SocialNetwork = (): JSX.Element => {
       }
     };
 
-    window.addEventListener("resize", handleChangeOrientation);
+    window.addEventListener('resize', handleChangeOrientation);
 
     return () => {
-      window.removeEventListener("resize", handleChangeOrientation);
+      window.removeEventListener('resize', handleChangeOrientation);
     };
   }, []);
 

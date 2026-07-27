@@ -7,7 +7,7 @@ interface BurgerMenuProps {
  * @param onClick - Action du menu burger
  * @returns {JSX.Element}
  */
-const BurgerMenu = ({ onClick }: BurgerMenuProps): JSX.Element => {
+const BurgerMenu = ({ onClick }: BurgerMenuProps): React.JSX.Element => {
   return (
     <button
       type="button"

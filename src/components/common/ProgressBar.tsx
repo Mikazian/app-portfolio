@@ -7,8 +7,8 @@ interface ProgressBarProps {
  * @param isActive - Etat de la barre de progression
  * @returns {JSX.Element}
  */
-const ProgressBar = ({ isActive }: ProgressBarProps): JSX.Element => {
-  return <div className={`progress-bar ${isActive ? "active" : ""}`} />;
+const ProgressBar = ({ isActive }: ProgressBarProps): React.JSX.Element => {
+  return <div className={`progress-bar ${isActive ? 'active' : ''}`} />;
 };
 
 export default ProgressBar;

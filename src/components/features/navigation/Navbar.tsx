@@ -1,18 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useCallback, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-import Button from "../../common/Button";
-import Image from "../../common/Image";
-import BurgerMenu from "./BurgerMenu";
-import { useTheme } from "../../../contexts";
-import ThemeSwitcher from "./ThemeSwitcher";
-import Divider from "../../common/Divider";
+import Button from '../../common/Button';
+import Image from '../../common/Image';
+import BurgerMenu from './BurgerMenu';
+import { useTheme } from '../../../contexts';
+import ThemeSwitcher from './ThemeSwitcher';
+import Divider from '../../common/Divider';
 
 /***
  * Composant Barre de Navigation
  * @returns {JSX.Element}
  */
-const Navbar = (): JSX.Element => {
+const Navbar = (): React.JSX.Element => {
   const navigate = useNavigate();
   const { theme, setTheme } = useTheme();
 
@@ -30,8 +30,8 @@ const Navbar = (): JSX.Element => {
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [toggleNav]);
 
   useEffect(() => {
@@ -43,36 +43,32 @@ const Navbar = (): JSX.Element => {
       }
     };
 
-    window.addEventListener("scroll", handleGhangeBackground);
-    return () => window.removeEventListener("scroll", handleGhangeBackground);
+    window.addEventListener('scroll', handleGhangeBackground);
+    return () => window.removeEventListener('scroll', handleGhangeBackground);
   }, []);
 
   return (
     <nav
-      className={`navbar ${activeNavbar ? "active" : "inactive"} ${toggleNav ? "show-nav" : "hidde-nav"} `}
+      className={`navbar ${activeNavbar ? 'active' : 'inactive'} ${toggleNav ? 'show-nav' : 'hidde-nav'} `}
     >
       <Link to="/" className="logo">
-        <Image
-          src="img-logo-white"
-          alt="logo"
-          className="h-full object-cover"
-        />
+        <Image src="img-logo-white" alt="logo" className="h-full object-cover" />
       </Link>
       <div className="flex items-center gap-6">
         <ul className="navbar-links">
           <li className="navbar-item slide-1">
             <Link to="/about-me">À propos de moi</Link>
           </li>
-          <li className="navbar-item slide-2">
+          {/* <li className="navbar-item slide-2">
             <Link to="/projects">Projets</Link>
-          </li>
-          <li className="navbar-item slide-3">
+          </li> */}
+          {/* <li className="navbar-item slide-3">
             <Link to="/gallery">Galerie</Link>
-          </li>
+          </li> */}
           <li className="navbar-item slide-4">
             <Button
               type="button"
-              onClick={() => navigate("/contact")}
+              onClick={() => navigate('/contact')}
               additionalClass="text-xl md:text-xs"
             >
               Me contacter
@@ -83,8 +79,8 @@ const Navbar = (): JSX.Element => {
         <div className="theme">
           <Divider height="10" isVertical />
           <ThemeSwitcher
-            icon={theme === "dark" ? "svg-moon" : "svg-sun"}
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            icon={theme === 'dark' ? 'svg-moon' : 'svg-sun'}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           />
         </div>
         <BurgerMenu onClick={handleToggleMenu} />

@@ -9,13 +9,9 @@ interface CardProps {
  * @param additionalClass - Style de la carte
  * @returns {JSX.Element}
  */
-const Card = ({ children, additionalClass }: CardProps): JSX.Element => {
+const Card = ({ children, additionalClass }: CardProps): React.JSX.Element => {
   return (
-    <div
-      className={`bg-foreground border border-divider p-4 ${additionalClass}`}
-    >
-      {children}
-    </div>
+    <div className={`bg-foreground border border-divider p-4 ${additionalClass}`}>{children}</div>
   );
 };
 

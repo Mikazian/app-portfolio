@@ -1,7 +1,7 @@
-import { ProfileType } from "../../../types/interfaces";
+import { ProfileType } from '../../../types/interfaces';
 
-import Text from "../../common/Text";
-import UserButtonCard from "./UserButtonCard";
+import Text from '../../common/Text';
+import UserButtonCard from './UserButtonCard';
 
 interface UserContentCardProps {
   profile: ProfileType;
@@ -12,7 +12,7 @@ interface UserContentCardProps {
  * @param profile - Informations du profil utilisateur
  * @returns {JSX.Element}
  */
-const UserContentCard = ({ profile }: UserContentCardProps): JSX.Element => {
+const UserContentCard = ({ profile }: UserContentCardProps): React.JSX.Element => {
   return (
     <>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -21,7 +21,7 @@ const UserContentCard = ({ profile }: UserContentCardProps): JSX.Element => {
       </section>
 
       <article>
-        {profile.biography.split("\n").map((str, index) => (
+        {profile.biography.split('\n').map((str, index) => (
           <Text key={index} as="p">
             {str}
           </Text>

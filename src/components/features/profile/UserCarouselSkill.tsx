@@ -1,10 +1,10 @@
-import { AppIconSvgType } from "../../../types/enums";
-import { DesignSkill, DevelopmentSkill } from "../../../types/interfaces";
+import { AppIconSvgType } from '../../../types/enums';
+import { DesignSkill, DevelopmentSkill } from '../../../types/interfaces';
 
-import Card from "../../common/Card";
-import Icon from "../../common/Icon";
-import Label from "../../common/Label";
-import Text from "../../common/Text";
+import Card from '../../common/Card';
+import Icon from '../../common/Icon';
+import Label from '../../common/Label';
+import Text from '../../common/Text';
 
 type Skill = DevelopmentSkill | DesignSkill;
 
@@ -19,10 +19,7 @@ interface UserCarouselSkillProps {
  * @param carouselIndex - Index du carrousel
  * @returns {JSX.Element}
  */
-const UserCarouselSkill = ({
-  pages,
-  carouselIndex,
-}: UserCarouselSkillProps): JSX.Element => {
+const UserCarouselSkill = ({ pages, carouselIndex }: UserCarouselSkillProps): React.JSX.Element => {
   return (
     <div className="grid grid-rows-4 sm:grid-rows-3 sm:grid-cols-2 md:grid-cols-3 gap-4 min-h-[384px] max-h-[384px] sm:min-h-[284px] sm:max-h-[284px] overflow-hidden">
       {pages[carouselIndex]?.map((skill: Skill) => (

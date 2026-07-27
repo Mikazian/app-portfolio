@@ -1,16 +1,16 @@
-import { useJob, useProfile } from "../../../hooks";
+import { useJob, useProfile } from '../../../hooks';
 
-import Card from "../../common/Card";
-import Text from "../../common/Text";
-import Divider from "../../common/Divider";
-import UserButtonCard from "./UserButtonCard";
-import Button from "../../common/Button";
+import Card from '../../common/Card';
+import Text from '../../common/Text';
+import Divider from '../../common/Divider';
+import UserButtonCard from './UserButtonCard';
+import Button from '../../common/Button';
 
 /**
  * Composant carte profil utilisateur
  * @returns JSX.Element
  */
-const UserProfile = (): JSX.Element => {
+const UserProfile = (): React.JSX.Element => {
   const { profile } = useProfile();
   const { userJobs } = useJob();
 
@@ -18,9 +18,7 @@ const UserProfile = (): JSX.Element => {
     <Card>
       <section className="flex flex-col grow gap-8">
         <header className="flex flex-col gap-6 sm:flex-row sm:items-center">
-          <div className="h-40 w-40 rounded-full bg-primary self-center">
-            {/* image */}
-          </div>
+          <div className="h-40 w-40 rounded-full bg-primary self-center">{/* image */}</div>
           <div>
             <Text
               as="p"
@@ -34,9 +32,7 @@ const UserProfile = (): JSX.Element => {
                 as="p"
                 className="font-title-bold text-4xl text-primary leading-tight text-center sm:text-left"
               >
-                {index === userJobs.length - 1 && (
-                  <span className="text-onbackground">& </span>
-                )}
+                {index === userJobs.length - 1 && <span className="text-onbackground">& </span>}
                 {job.label}
               </Text>
             ))}
@@ -51,7 +47,7 @@ const UserProfile = (): JSX.Element => {
         </div>
 
         <article>
-          {profile.biography.split("\n").map((str, index) => (
+          {profile.biography.split('\n').map((str, index) => (
             <Text key={index} as="p" className="text-sm">
               {str}
             </Text>
@@ -62,7 +58,7 @@ const UserProfile = (): JSX.Element => {
           <Button
             type="button"
             // TODO: Ajouter le téléchargement du PDF
-            onClick={() => console.log("pressed")}
+            onClick={() => console.log('pressed')}
             additionalClass="text-lg"
           >
             Télécharger CV

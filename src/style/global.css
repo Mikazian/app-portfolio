@@ -1,13 +1,31 @@
-@import "./fonts.css";
-@import "./transition.css";
-@import "./navbar.css";
-@import "./burger.css";
-@import "./progress-bar.css";
-@import "./button.css";
+@import 'tailwindcss';
+@import './fonts.css';
+@import './transition.css';
+@import './navbar.css';
+@import './burger.css';
+@import './progress-bar.css';
+@import './button.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-underground: var(--underground);
+  --color-onbackground: var(--onbackground);
+  --color-divider: var(--divider);
+  --color-dividerlight: var(--dividerlight);
+  --color-light: var(--light);
+
+  --font-title-black: 'NeuePlak-NarrowBlack';
+  --font-title-bold: 'NeuePlak-NarrowBold';
+  --font-text-bold: 'LaguSans-Bold';
+  --font-text-medium: 'LaguSans-Medium';
+
+  --text-xss: 0.65rem;
+
+  --transition-property-height: height;
+}
 
 @layer base {
   :root {

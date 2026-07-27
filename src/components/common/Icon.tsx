@@ -1,6 +1,6 @@
-import { AppIconSvgType } from "../../types/enums";
-import { SvgIconSet } from "./SvgIconSet";
-import Text from "./Text";
+import { AppIconSvgType } from '../../types/enums';
+import { SvgIconSet } from './SvgIconSet';
+import Text from './Text';
 
 const iconSets = [SvgIconSet];
 
@@ -29,7 +29,7 @@ const Icon = ({
   className,
   strokeColor,
   strokeWidth,
-}: IconProps): JSX.Element | undefined => {
+}: IconProps): React.JSX.Element | undefined => {
   for (const set of iconSets) {
     const regex = new RegExp(`^${set.prefix}-`);
     if (regex.test(name)) {

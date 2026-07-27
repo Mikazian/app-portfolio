@@ -1,14 +1,14 @@
-import { useSpeciality } from "../../../hooks";
-import { AppIconSvgType } from "../../../types/enums";
+import { useSpeciality } from '../../../hooks';
+import { AppIconSvgType } from '../../../types/enums';
 
-import SectionLayout from "../../layout/SectionLayout";
-import UserItemCard from "./UserItemCard";
+import SectionLayout from '../../layout/SectionLayout';
+import UserItemCard from './UserItemCard';
 
 /**
  * Composant des spécialités de l'utilisateur
  * @returns {JSX.Element}
  */
-const UserSpeciality = (): JSX.Element => {
+const UserSpeciality = (): React.JSX.Element => {
   const { userSpecialities } = useSpeciality();
 
   return (
