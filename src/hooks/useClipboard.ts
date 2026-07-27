@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 
 export const useClipboard = (timeoutDuration: number = 2000) => {
   const [error, setError] = useState<Error | undefined>();
@@ -18,14 +18,10 @@ export const useClipboard = (timeoutDuration: number = 2000) => {
           setShowCopyAlert(false);
         }, timeoutDuration);
       } catch (error) {
-        setError(
-          error instanceof Error
-            ? error
-            : new Error("Impossible de copier le texte")
-        );
+        setError(error instanceof Error ? error : new Error('Impossible de copier le texte'));
       }
     },
-    [timeoutDuration]
+    [timeoutDuration],
   );
 
   return { isCopied, showCopyAlert, copyToClipboard, error };

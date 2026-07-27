@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
-import { SkillType as Skill, SkillEnum } from "../types/enums";
-import { SkillType } from "../types/interfaces/skill.type";
+import { useEffect, useMemo, useState } from 'react';
+import { SkillType as Skill, SkillEnum } from '../types/enums';
+import { SkillType } from '../types/interfaces/skill.type';
 
 interface ScreenType {
   width: number;
@@ -21,15 +21,11 @@ export const useCarouselSkills = (userSkills: SkillType) => {
     skillsPerPage: calculateSkillsPerPage(window.innerWidth),
   });
 
-  const [activeTab, setActiveTab] = useState<Skill>(
-    Object.keys(userSkills)[0] as Skill
-  );
+  const [activeTab, setActiveTab] = useState<Skill>(Object.keys(userSkills)[0] as Skill);
   const [carouselIndex, setCarouselIndex] = useState<number>(0);
 
   const activeSkills = useMemo(() => {
-    return activeTab === Object.keys(userSkills)[0]
-      ? userSkills.development
-      : userSkills.design;
+    return activeTab === Object.keys(userSkills)[0] ? userSkills.development : userSkills.design;
   }, [activeTab, userSkills]);
 
   const pages = useMemo(() => {
@@ -52,9 +48,9 @@ export const useCarouselSkills = (userSkills: SkillType) => {
       setScreen({ width, skillsPerPage: newSkillsPerPage });
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Mise à jour de l'index du carousel si l'onglet actif change
@@ -67,9 +63,7 @@ export const useCarouselSkills = (userSkills: SkillType) => {
   };
 
   const prevPage = () => {
-    setCarouselIndex(
-      (prevIndex) => (prevIndex - 1 + pages.length) % pages.length
-    );
+    setCarouselIndex((prevIndex) => (prevIndex - 1 + pages.length) % pages.length);
   };
 
   return {

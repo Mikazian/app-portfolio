@@ -1,4 +1,4 @@
-import Text from "../common/Text";
+import Text from '../common/Text';
 
 interface SectionLayoutProps {
   title: string;

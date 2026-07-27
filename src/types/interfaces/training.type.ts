@@ -1,4 +1,4 @@
-import { CompanyType, ProjectType } from "./experience.type";
+import { CompanyType, ProjectType } from './experience.type';
 
 export interface TrainingType {
   id: string;

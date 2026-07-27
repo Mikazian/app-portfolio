@@ -1,20 +1,16 @@
-import trainingData from "../data/training.json";
-import { calculateDurationInMonth } from "../services/calculDuration";
-import { convertDate } from "../services/convertDate";
-import { AppImgType } from "../types/enums";
-import { TrainingType } from "../types/interfaces";
+import trainingData from '../data/training.json';
+import { calculateDurationInMonth } from '../helpers/calculate-duration-date';
+import { convertDate } from '../helpers/format-date';
+import { AppImgType } from '../types/enums';
+import { TrainingType } from '../types/interfaces';
 
 export const useTraining = () => {
   const sortedTraining = [...trainingData].sort(
-    (a, b) =>
-      new Date(b.start_date).getTime() - new Date(a.start_date).getTime()
+    (a, b) => new Date(b.start_date).getTime() - new Date(a.start_date).getTime(),
   );
 
   const userTrainings: TrainingType[] = sortedTraining.map((training) => {
-    const duration = calculateDurationInMonth(
-      training.start_date,
-      training.end_date
-    );
+    const duration = calculateDurationInMonth(training.start_date, training.end_date);
 
     return {
       ...training,

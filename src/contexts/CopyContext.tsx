@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useState,
-} from "react";
+import { createContext, useCallback, useContext, useMemo, useState } from 'react';
 
 interface CopyContextValue {
   isCopied: boolean;
@@ -17,9 +11,7 @@ interface CopyProviderProps {
   children: React.ReactNode;
 }
 
-export const CopyContext = createContext<CopyContextValue | undefined>(
-  undefined
-);
+export const CopyContext = createContext<CopyContextValue | undefined>(undefined);
 
 export const CopyProvider = ({ children }: CopyProviderProps) => {
   const [error, setError] = useState<Error | undefined>();
@@ -41,14 +33,10 @@ export const CopyProvider = ({ children }: CopyProviderProps) => {
           setShowCopyAlert(false);
         }, 3000);
       } catch (error) {
-        setError(
-          error instanceof Error
-            ? error
-            : new Error("Impossible de copier le texte")
-        );
+        setError(error instanceof Error ? error : new Error('Impossible de copier le texte'));
       }
     },
-    [isCopied]
+    [isCopied],
   );
 
   const value = useMemo(
@@ -58,7 +46,7 @@ export const CopyProvider = ({ children }: CopyProviderProps) => {
       copyToClipboard,
       error,
     }),
-    [isCopied, showCopyAlert, copyToClipboard, error]
+    [isCopied, showCopyAlert, copyToClipboard, error],
   );
 
   return <CopyContext.Provider value={value}>{children}</CopyContext.Provider>;

@@ -1,6 +1,6 @@
-import { useTraining } from "../../../hooks/useTraining";
-import SectionLayout from "../../layout/SectionLayout";
-import UserExtendedItemCard from "./UserExtendedItemCard";
+import { useTraining } from '../../../hooks/useTraining';
+import SectionLayout from '../../layout/SectionLayout';
+import UserExtendedItemCard from './UserExtendedItemCard';
 
 const UserTraining = () => {
   const { userTrainings } = useTraining();

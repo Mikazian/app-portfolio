@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-import Navbar from "../features/navigation/Navbar";
-import Transition from "./Transition";
-import Footer from "../common/Footer";
-import Text from "../common/Text";
-import CopyAlert from "../features/copy-clipboard/CopyAlert";
+import Navbar from '../features/navigation/Navbar';
+import Transition from './Transition';
+import Footer from '../common/Footer';
+import CopyAlert from '../features/copy-clipboard/CopyAlert';
+import Header from '../common/Header';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -22,19 +22,17 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
   return (
     <>
       <Navbar />
-      <header className="flex items-center justify-center relative z-20 h-screen px-4">
-        <Text
-          as="h1"
-          className="font-title-black text-6xl uppercase tracking-wider text-center"
-        >
-          {title}
-        </Text>
-      </header>
+
+      <Header title={title} />
+
       <main className="min-h-[calc(100vh-96px)] relative z-20 px-4 mx-auto w-full max-w-[855px] lg:min-h-screen lg:px-0 translate-x-[0.2px] mb-20">
         {children}
       </main>
+
       <CopyAlert />
+
       <Transition />
+
       <Footer />
     </>
   );

@@ -7,12 +7,21 @@
 }
 
 @layer components {
+  /*
+    Container de transition
+    Reste au-dessus pendant l'animation
+  */
   .lines {
     @apply fixed top-0 left-0 w-full h-screen pointer-events-none z-50;
+    isolation: isolate;
   }
 
+  /*
+    Après animation :
+    on laisse passer le contenu
+  */
   .lines.ready {
-    @apply z-10;
+    @apply z-0;
   }
 
   .lines .content {
@@ -23,10 +32,11 @@
     @apply relative align-top h-screen;
   }
 
-  .lines .line-col:nth-child(1) {
-    @apply inline-block w-1/2 md:w-2/6 lg:w-1/5;
-  }
 
+  /*
+    Colonnes
+  */
+  .lines .line-col:nth-child(1),
   .lines .line-col:nth-child(2) {
     @apply inline-block w-1/2 md:w-2/6 lg:w-1/5;
   }
@@ -35,107 +45,112 @@
     @apply hidden md:inline-block md:w-2/6 lg:w-1/5;
   }
 
-  .lines .line-col:nth-child(4) {
-    @apply hidden lg:inline-block lg:w-1/5;
-  }
-
+  .lines .line-col:nth-child(4),
   .lines .line-col:nth-child(5) {
     @apply hidden lg:inline-block lg:w-1/5;
   }
 
-  .lines .line-col:before {
-    -moz-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    -webkit-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    -o-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+
+  /*
+    ==========================
+    LIGNES VERTICALES
+    (ARrière-plan)
+    ==========================
+  */
+  .lines .line-col::before {
+    -moz-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1);
+    -webkit-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1);
+    -o-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1);
+
     @apply content-[''] absolute top-0 left-0 w-px h-0 bg-divider transition-height delay-0;
+
+    z-index: -1;
   }
 
-  /* Avant */
-  .lines.finish .line-col:before {
+
+  .lines.finish .line-col::before {
     @apply h-full;
   }
 
-  .lines .line-col:first-child:before {
+
+  .lines .line-col:first-child::before {
     @apply bg-transparent;
   }
 
-  .lines .line-col:nth-child(1):before {
-    -o-transition-delay: 0.6s;
-    -webkit-transition-delay: 0.6s;
+
+  .lines .line-col:nth-child(1)::before {
     @apply delay-[0.6s];
   }
 
-  .lines .line-col:nth-child(2):before {
-    -o-transition-delay: 0.7s;
-    -webkit-transition-delay: 0.7s;
+  .lines .line-col:nth-child(2)::before {
     @apply delay-[0.7s];
   }
 
-  .lines .line-col:nth-child(3):before {
-    -o-transition-delay: 0.4s;
-    -webkit-transition-delay: 0.4s;
+  .lines .line-col:nth-child(3)::before {
     @apply delay-[0.4s];
   }
 
-  .lines .line-col:nth-child(4):before {
-    -o-transition-delay: 0.5s;
-    -webkit-transition-delay: 0.5s;
+  .lines .line-col:nth-child(4)::before {
     @apply delay-[0.5s];
   }
 
-  .lines .line-col:nth-child(5):before {
-    -o-transition-delay: 0.8s;
-    -webkit-transition-delay: 0.8s;
+  .lines .line-col:nth-child(5)::before {
     @apply delay-[0.8s];
   }
 
-  /* Après */
-  .lines .line-col:after {
-    -moz-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    -webkit-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    -o-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
-    @apply content-[''] absolute left-0 top-0 w-full h-full bg-divider z-40 transition-height;
+
+
+  /*
+    ==========================
+    PANNEAUX TRANSITION
+    (Premier plan)
+    ==========================
+  */
+  .lines .line-col::after {
+    -moz-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1);
+    -webkit-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1);
+    -o-transition: height 0.65s cubic-bezier(0.165, 0.85, 0.45, 1);
+
+    @apply content-[''] absolute left-0 top-0 w-full h-full bg-divider transition-height;
+
+    z-index: 50;
   }
 
-  .lines .line-col:first-child:after {
+
+  .lines .line-col:first-child::after {
     @apply left-auto right-0 w-[1000%];
   }
 
-  .lines .line-col:last-child:after {
+  .lines .line-col:last-child::after {
     @apply w-[1000%];
   }
 
-  .lines.finish .line-col:after {
+
+  /*
+    Fermeture des panneaux
+  */
+  .lines.finish .line-col::after {
     @apply h-0;
   }
 
-  .lines .line-col:nth-child(1):after {
-    -o-transition-delay: 0.3s;
-    -webkit-transition-delay: 0.3s;
+
+  .lines .line-col:nth-child(1)::after {
     @apply top-0 bottom-auto delay-[0.3s];
   }
 
-  .lines .line-col:nth-child(2):after {
-    -o-transition-delay: 0.45s;
-    -webkit-transition-delay: 0.45s;
+  .lines .line-col:nth-child(2)::after {
     @apply bottom-0 top-auto delay-[0.45s];
   }
 
-  .lines .line-col:nth-child(3):after {
-    -o-transition-delay: 0s;
-    -webkit-transition-delay: 0s;
+  .lines .line-col:nth-child(3)::after {
     @apply top-0 bottom-auto delay-0;
   }
 
-  .lines .line-col:nth-child(4):after {
-    -o-transition-delay: 0.15s;
-    -webkit-transition-delay: 0.15s;
+  .lines .line-col:nth-child(4)::after {
     @apply bottom-0 top-auto delay-[0.15s];
   }
 
-  .lines .line-col:nth-child(5):after {
-    -o-transition-delay: 0.6s;
-    -webkit-transition-delay: 0.6s;
+  .lines .line-col:nth-child(5)::after {
     @apply top-0 bottom-auto delay-[0.6s];
   }
 }

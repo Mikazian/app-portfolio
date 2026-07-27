@@ -1,5 +1,5 @@
-import Text from "../components/common/Text";
-import MainLayout from "../components/layout/MainLayout";
+import Text from '../components/common/Text';
+import MainLayout from '../components/layout/MainLayout';
 
 const Gallery = () => {
   return (
