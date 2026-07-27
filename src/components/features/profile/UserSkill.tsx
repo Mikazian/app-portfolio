@@ -1,28 +1,21 @@
-import { useSkill } from "../../../hooks/useSkill";
-import { useCarouselSkills } from "../../../hooks/useCarrouselSkills";
+import { useSkill } from '../../../hooks/useSkill';
+import { useCarouselSkills } from '../../../hooks/useCarrouselSkills';
 
-import SectionLayout from "../../layout/SectionLayout";
-import ButtonCard from "../../common/ButtonCard";
-import Text from "../../common/Text";
-import UserCarouselSkill from "./UserCarouselSkill";
-import UserCarouselPagination from "./UserCarouselPagination";
-import Card from "../../common/Card";
+import SectionLayout from '../../layout/SectionLayout';
+import ButtonCard from '../../common/ButtonCard';
+import Text from '../../common/Text';
+import UserCarouselSkill from './UserCarouselSkill';
+import UserCarouselPagination from './UserCarouselPagination';
+import Card from '../../common/Card';
 
 /**
  * Composant des compétences de l'utilisateur
  * @returns {JSX.Element}
  */
-const UserSkill = (): JSX.Element => {
+const UserSkill = (): React.JSX.Element => {
   const { userSkills } = useSkill();
-  const {
-    skills,
-    activeTab,
-    setActiveTab,
-    pages,
-    carouselIndex,
-    prevPage,
-    nextPage,
-  } = useCarouselSkills(userSkills);
+  const { skills, activeTab, setActiveTab, pages, carouselIndex, prevPage, nextPage } =
+    useCarouselSkills(userSkills);
 
   return (
     <SectionLayout title="Compétences">
@@ -35,7 +28,7 @@ const UserSkill = (): JSX.Element => {
             additionalClass="rounded-none py-4"
           >
             <Text as="p" className="translate-y-px">
-              {skill === "development" ? "Développement" : "Graphisme"}
+              {skill === 'development' ? 'Développement' : 'Graphisme'}
             </Text>
           </ButtonCard>
         ))}

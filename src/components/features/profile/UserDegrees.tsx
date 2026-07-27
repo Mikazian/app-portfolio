@@ -1,16 +1,16 @@
-import { useDegree } from "../../../hooks";
+import { useDegree } from '../../../hooks';
 
-import SectionLayout from "../../layout/SectionLayout";
-import Card from "../../common/Card";
-import Divider from "../../common/Divider";
-import Icon from "../../common/Icon";
-import Text from "../../common/Text";
+import SectionLayout from '../../layout/SectionLayout';
+import Card from '../../common/Card';
+import Divider from '../../common/Divider';
+import Icon from '../../common/Icon';
+import Text from '../../common/Text';
 
 /**
  * Composant des certifications de l'utilisateur
  * @returns {JSX.Element}
  */
-const UserDegress = (): JSX.Element => {
+const UserDegress = (): React.JSX.Element => {
   const { userDegrees } = useDegree();
 
   return (
@@ -19,12 +19,7 @@ const UserDegress = (): JSX.Element => {
         {userDegrees.map((degree) => (
           <Card key={degree.id} additionalClass="flex flex-col gap-4">
             <div className="flex gap-4">
-              <Icon
-                name="svg-degree"
-                size="30"
-                color="var(--primary)"
-                className="mt-2"
-              />
+              <Icon name="svg-degree" size="30" color="var(--primary)" className="mt-2" />
               <div className="flex grow flex-col gap-4">
                 <div className="flex flex-col flex-wrap sm:h-[4.3rem] lg:h-auto">
                   <Text as="p" className="font-text-bold">

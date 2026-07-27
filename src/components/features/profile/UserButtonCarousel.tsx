@@ -1,6 +1,6 @@
-import { AppIconSvgType } from "../../../types/enums";
+import { AppIconSvgType } from '../../../types/enums';
 
-import Icon from "../../common/Icon";
+import Icon from '../../common/Icon';
 
 interface UserButtonCarouselProps {
   icon: AppIconSvgType;
@@ -22,7 +22,7 @@ const UserButtonCarousel = ({
   onClick,
   disabled,
   additionalClass,
-}: UserButtonCarouselProps): JSX.Element => {
+}: UserButtonCarouselProps): React.JSX.Element => {
   return (
     <button
       type="button"

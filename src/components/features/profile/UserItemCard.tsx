@@ -1,9 +1,9 @@
-import { AppIconSvgType } from "../../../types/enums";
+import { AppIconSvgType } from '../../../types/enums';
 
-import Card from "../../common/Card";
-import Divider from "../../common/Divider";
-import Icon from "../../common/Icon";
-import Text from "../../common/Text";
+import Card from '../../common/Card';
+import Divider from '../../common/Divider';
+import Icon from '../../common/Icon';
+import Text from '../../common/Text';
 
 interface UserItemCardProps<T> {
   item: T;
@@ -21,9 +21,7 @@ interface Item {
  * @param item - Élément
  * @returns {JSX.Element}
  */
-const UserItemCard = <T extends Item>({
-  item,
-}: UserItemCardProps<T>): JSX.Element => {
+const UserItemCard = <T extends Item>({ item }: UserItemCardProps<T>): React.JSX.Element => {
   return (
     <Card key={item.id} additionalClass="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 py-2">

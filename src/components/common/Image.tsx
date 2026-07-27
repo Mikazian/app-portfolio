@@ -1,5 +1,5 @@
-import { assets } from "../../assets";
-import { AppImgType } from "../../types/enums/app-img.enum";
+import { assets } from '../../assets';
+import { AppImgType } from '../../types/enums/app-img.enum';
 
 interface ImageProps {
   src: AppImgType;
@@ -14,7 +14,7 @@ interface ImageProps {
  * @param className - Style Tailwind CSS
  * @returns {JSX.Element}
  */
-const Image = ({ src, alt, className }: ImageProps): JSX.Element => {
+const Image = ({ src, alt, className }: ImageProps): React.JSX.Element => {
   const source = assets.images[src];
 
   return <img src={source} className={className} alt={alt} />;

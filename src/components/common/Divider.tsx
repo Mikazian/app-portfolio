@@ -11,12 +11,8 @@ interface DividerProps {
  * @param isVertical - Orientation du Divider
  * @returns {JSX.Element}
  */
-const Divider = ({
-  height,
-  width,
-  isVertical = false,
-}: DividerProps): JSX.Element => {
-  let style = "";
+const Divider = ({ height, width, isVertical = false }: DividerProps): React.JSX.Element => {
+  let style = '';
   if (isVertical) {
     style = `w-px h-${height} bg-divider relative z-20`;
   } else {

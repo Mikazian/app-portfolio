@@ -1,13 +1,13 @@
-import { ExperienceType, TrainingType } from "../../../types/interfaces";
-import { useFormatText } from "../../../hooks";
+import { ExperienceType, TrainingType } from '../../../types/interfaces';
+import { useFormatText } from '../../../hooks';
 
-import Text from "../../common/Text";
-import Icon from "../../common/Icon";
-import Image from "../../common/Image";
-import Card from "../../common/Card";
-import Label from "../../common/Label";
-import Divider from "../../common/Divider";
-import ButtonCard from "../../common/ButtonCard";
+import Text from '../../common/Text';
+import Icon from '../../common/Icon';
+import Image from '../../common/Image';
+import Card from '../../common/Card';
+import Label from '../../common/Label';
+import Divider from '../../common/Divider';
+import ButtonCard from '../../common/ButtonCard';
 
 interface UserExtendedItemCardProps<T> {
   item: T;
@@ -15,7 +15,7 @@ interface UserExtendedItemCardProps<T> {
 
 const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
   item,
-}: UserExtendedItemCardProps<T>): JSX.Element => {
+}: UserExtendedItemCardProps<T>): React.JSX.Element => {
   const { formatTextWithLabels } = useFormatText();
 
   return (
