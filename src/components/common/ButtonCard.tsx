@@ -33,7 +33,7 @@ const ButtonCard = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`btn ${additionalClass} ${isActive ? 'bg-primary border-primary' : 'bg-foreground'} ${disabled ? 'unactive' : 'active'} ${showModal ? 'active-modal' : 'unactive-modal'}`}
+      className={`btn ${additionalClass} ${isActive ? 'active' : ''} ${disabled ? 'unactive' : ''} ${showModal ? 'active-modal' : 'unactive-modal'}`}
     >
       {children}
     </button>
