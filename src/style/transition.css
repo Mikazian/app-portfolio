@@ -106,6 +106,10 @@
     (Arrière-plan)
     ==========================
   */
+  .background-lines {
+    @apply fixed top-0 left-0 w-full h-screen pointer-events-none z-0;
+  }
+
   .background-lines .content {
     @apply -ml-[712px] absolute left-1/2 top-0 w-[1424px];
   }

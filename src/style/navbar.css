@@ -16,7 +16,7 @@
   }
 
   .navbar-links {
-    @apply flex flex-col justify-center text-onbackground items-center fixed right-[-100vw] w-0 bottom-0 h-screen gap-10 bg-foreground backdrop-blur-sm invisible transition-transform duration-700 md:right-auto md:w-auto md:visible md:flex-row md:h-auto md:bottom-auto md:bg-transparent md:relative md:backdrop-blur-none z-20;
+    @apply flex flex-col justify-center text-text-primary items-center fixed right-[-100vw] w-0 bottom-0 h-screen gap-10 bg-foreground backdrop-blur-sm invisible transition-transform duration-700 md:right-auto md:w-auto md:visible md:flex-row md:h-auto md:bottom-auto md:bg-transparent md:relative md:backdrop-blur-none z-20;
   }
 
   .show-nav .navbar-links {
