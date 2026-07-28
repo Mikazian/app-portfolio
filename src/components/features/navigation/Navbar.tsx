@@ -7,6 +7,7 @@ import BurgerMenu from './BurgerMenu';
 import { useTheme } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
 import Divider from '../../common/Divider';
+import { AppIconSvg, AppImg } from '../../../enums';
 
 /***
  * Composant Barre de Navigation
@@ -52,7 +53,7 @@ const Navbar = (): React.JSX.Element => {
       className={`navbar ${activeNavbar ? 'active' : 'inactive'} ${toggleNav ? 'show-nav' : 'hidde-nav'} `}
     >
       <Link to="/" className="logo">
-        <Image src="img-logo-white" alt="logo" className="h-full object-cover" />
+        <Image src={AppImg.LOGO_WHITE} alt="logo" className="h-full object-cover" />
       </Link>
       <div className="flex items-center gap-6">
         <ul className="navbar-links">
@@ -79,7 +80,7 @@ const Navbar = (): React.JSX.Element => {
         <div className="theme">
           <Divider height="10" isVertical />
           <ThemeSwitcher
-            icon={theme === 'dark' ? 'svg-moon' : 'svg-sun'}
+            icon={theme === 'dark' ? AppIconSvg.MOON : AppIconSvg.SUN}
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           />
         </div>

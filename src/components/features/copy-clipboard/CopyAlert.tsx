@@ -1,4 +1,5 @@
 import { useCopy } from '../../../contexts/CopyContext';
+import { AppIconSvg } from '../../../enums';
 
 import Text from '../../common/Text';
 import ProgressBar from '../../common/ProgressBar';
@@ -16,7 +17,7 @@ const CopyAlert = (): React.JSX.Element => {
       className={`flex flex-col fixed z-50 top-[15%] transition-all duration-700 ease-in-out ${showCopyAlert ? 'right-0' : 'right-[-100vw]'}`}
     >
       <div className="flex items-center gap-4 bg-foreground px-6 py-4 border-t border-l border-divider">
-        <Icon name="svg-copy" className="border border-divider p-2 rounded-md" />
+        <Icon name={AppIconSvg.COPY} className="border border-divider p-2 rounded-md" />
         <Text as="p">Copié dans le presse-papier</Text>
       </div>
       <ProgressBar isActive={showCopyAlert} />
