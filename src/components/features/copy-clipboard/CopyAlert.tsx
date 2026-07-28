@@ -2,7 +2,7 @@ import { useCopy } from '../../../contexts/CopyContext';
 
 import Text from '../../common/Text';
 import ProgressBar from '../../common/ProgressBar';
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 
 /**
  * Composant Alerte de copie
@@ -17,9 +17,7 @@ const CopyAlert = (): React.JSX.Element => {
     >
       <div className="flex items-center gap-4 bg-foreground px-6 py-4 border-t border-l border-divider">
         <Icon name="svg-copy" className="border border-divider p-2 rounded-md" />
-        <Text as="p" className="w-28">
-          Copié dans le presse-papier
-        </Text>
+        <Text as="p">Copié dans le presse-papier</Text>
       </div>
       <ProgressBar isActive={showCopyAlert} />
     </section>
