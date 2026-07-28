@@ -1,12 +1,12 @@
-import { useDegree } from '../../../hooks';
+import { useDegree } from '../../../../hooks';
 
-import SectionLayout from '../../layout/SectionLayout';
-import Card from '../../common/Card';
-import Divider from '../../common/Divider';
-import Icon from '../../common/icon/Icon';
-import Text from '../../common/Text';
-import Button from '../../common/Button';
-import { DegreeI18n } from '../../../types/enums';
+import SectionLayout from '../../../layout/SectionLayout';
+import Card from '../../../common/Card';
+import Divider from '../../../common/Divider';
+import Icon from '../../../common/icon/Icon';
+import Text from '../../../common/Text';
+import Button from '../../../common/Button';
+import { DegreeI18n, AppIconSvg } from '../../../../enums';
 
 /**
  * Composant des certifications de l'utilisateur
@@ -21,7 +21,7 @@ const UserDegress = (): React.JSX.Element => {
         {userDegrees.map((degree) => (
           <Card key={degree.id} additionalClass="flex flex-col gap-4">
             <div className="flex gap-4">
-              <Icon name="svg-degree" size="30" color="var(--primary)" className="mt-2" />
+              <Icon name={AppIconSvg.DEGREE} size="30" color="var(--primary)" className="mt-2" />
               <div className="flex grow flex-col gap-4">
                 <div className="flex flex-col flex-wrap sm:h-[4.3rem] lg:h-auto">
                   <Text as="p" className="font-text-bold">

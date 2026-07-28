@@ -1,9 +1,9 @@
-import { useExperience } from '../../../hooks';
+import { useExperience } from '../../../../hooks';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import SectionLayout from '../../layout/SectionLayout';
-import Image from '../../common/Image';
+import SectionLayout from '../../../layout/SectionLayout';
+import Image from '../../../common/Image';
 import UserExtendedItemCard from './UserExtendedItemCard';
 
 const UserExperience = () => {

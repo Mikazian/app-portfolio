@@ -1,10 +1,11 @@
-import { useJob, useProfile } from '../../../hooks';
+import { useJob, useProfile } from '../../../../hooks';
+import { AppIconSvg } from '../../../../enums';
 
-import Card from '../../common/Card';
-import Text from '../../common/Text';
-import Divider from '../../common/Divider';
+import Card from '../../../common/Card';
+import Text from '../../../common/Text';
+import Divider from '../../../common/Divider';
 import UserButtonCard from './UserButtonCard';
-import Article from '../../common/Article';
+import Article from '../../../common/Article';
 
 /**
  * Composant carte profil utilisateur
@@ -42,8 +43,8 @@ const UserProfile = (): React.JSX.Element => {
         <Divider width="100%" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <UserButtonCard text={profile.phone} icon="svg-mobile" />
-          <UserButtonCard text={profile.email} icon="svg-mail" />
+          <UserButtonCard text={profile.phone} icon={AppIconSvg.MOBILE} />
+          <UserButtonCard text={profile.email} icon={AppIconSvg.MAIL} />
         </div>
 
         <Article text={profile.biography} />

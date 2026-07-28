@@ -1,6 +1,6 @@
-import { AppIconSvgType } from '../../../types/enums';
+import { AppIconSvgType } from '../../../../enums';
 
-import Icon from '../../common/icon/Icon';
+import Icon from '../../../common/icon/Icon';
 
 interface UserButtonCarouselProps {
   icon: AppIconSvgType;

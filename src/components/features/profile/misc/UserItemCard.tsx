@@ -1,9 +1,9 @@
-import { AppIconSvgType } from '../../../types/enums';
+import { AppIconSvgType } from '../../../../enums';
 
-import Card from '../../common/Card';
-import Divider from '../../common/Divider';
-import Icon from '../../common/icon/Icon';
-import Text from '../../common/Text';
+import Card from '../../../common/Card';
+import Divider from '../../../common/Divider';
+import Icon from '../../../common/icon/Icon';
+import Text from '../../../common/Text';
 
 interface UserItemCardProps<T> {
   item: T;

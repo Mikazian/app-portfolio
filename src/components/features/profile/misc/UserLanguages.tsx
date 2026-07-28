@@ -1,6 +1,6 @@
-import { useLanguage } from '../../../hooks';
-import { AppIconSvgType } from '../../../types/enums';
-import SectionLayout from '../../layout/SectionLayout';
+import { useLanguage } from '../../../../hooks';
+import { AppIconSvgType } from '../../../../enums';
+import SectionLayout from '../../../layout/SectionLayout';
 import UserItemCard from './UserItemCard';
 
 const UserLanguages = () => {

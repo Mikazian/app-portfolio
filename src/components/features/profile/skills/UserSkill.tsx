@@ -1,12 +1,12 @@
-import { useSkill } from '../../../hooks/useSkill';
-import { useCarouselSkills } from '../../../hooks/useCarrouselSkills';
+import { useSkill } from '../../../../hooks/useSkill';
+import { useCarouselSkills } from '../../../../hooks/useCarrouselSkills';
 
-import SectionLayout from '../../layout/SectionLayout';
-import ButtonCard from '../../common/ButtonCard';
-import Text from '../../common/Text';
+import SectionLayout from '../../../layout/SectionLayout';
+import ButtonCard from '../../../common/ButtonCard';
+import Text from '../../../common/Text';
 import UserCarouselSkill from './UserCarouselSkill';
 import UserCarouselPagination from './UserCarouselPagination';
-import Card from '../../common/Card';
+import Card from '../../../common/Card';
 
 /**
  * Composant des compétences de l'utilisateur

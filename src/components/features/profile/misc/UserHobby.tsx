@@ -1,7 +1,7 @@
-import { useHobby } from '../../../hooks';
-import { AppIconSvgType } from '../../../types/enums';
+import { useHobby } from '../../../../hooks';
+import { AppIconSvgType } from '../../../../enums';
 
-import SectionLayout from '../../layout/SectionLayout';
+import SectionLayout from '../../../layout/SectionLayout';
 import UserItemCard from './UserItemCard';
 
 const UserHobby = () => {

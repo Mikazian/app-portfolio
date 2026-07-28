@@ -1,14 +1,15 @@
-import { ExperienceType, TrainingType } from '../../../types/interfaces';
-import { formatDuration } from '../../../helpers/format-duration';
+import { ExperienceType, TrainingType } from '../../../../types';
+import { formatDuration } from '../../../../helpers/format-duration';
 
-import Text from '../../common/Text';
-import Icon from '../../common/icon/Icon';
-import Image from '../../common/Image';
-import Card from '../../common/Card';
-import Label from '../../common/Label';
-import Divider from '../../common/Divider';
-import ButtonCard from '../../common/ButtonCard';
-import Article from '../../common/Article';
+import Text from '../../../common/Text';
+import Icon from '../../../common/icon/Icon';
+import Image from '../../../common/Image';
+import Card from '../../../common/Card';
+import Label from '../../../common/Label';
+import Divider from '../../../common/Divider';
+import ButtonCard from '../../../common/ButtonCard';
+import Article from '../../../common/Article';
+import { AppIconSvg } from '../../../../enums';
 
 interface UserExtendedItemCardProps<T> {
   item: T;
@@ -82,7 +83,7 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                   </div>
                 </div>
 
-                <Icon name="svg-arrow-left" size="20" />
+                <Icon name={AppIconSvg.ARROW_LEFT} size="20" />
               </ButtonCard>
             ))}
           </footer>

@@ -1,10 +1,10 @@
-import { AppIconSvgType } from '../../../types/enums';
-import { DesignSkill, DevelopmentSkill } from '../../../types/interfaces';
+import { AppIconSvgType } from '../../../../enums';
+import { DesignSkill, DevelopmentSkill } from '../../../../types';
 
-import Card from '../../common/Card';
-import Icon from '../../common/icon/Icon';
-import Label from '../../common/Label';
-import Text from '../../common/Text';
+import Card from '../../../common/Card';
+import Icon from '../../../common/icon/Icon';
+import Label from '../../../common/Label';
+import Text from '../../../common/Text';
 
 type Skill = DevelopmentSkill | DesignSkill;
 
