@@ -1,7 +1,7 @@
 import { AppIconSvgType } from '../enums';
 
 export interface SpecialityType {
-  id: string;
+  id: number;
   label: AppIconSvgType;
   icon: string;
   description: string;

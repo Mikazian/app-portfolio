@@ -1,12 +1,12 @@
 export interface DevelopmentSkill {
-  id: string;
+  id: number;
   name: string;
   icon: string;
   label: string;
 }
 
 export interface DesignSkill {
-  id: string;
+  id: number;
   name: string;
   icon: string;
   label: string;

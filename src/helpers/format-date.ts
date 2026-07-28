@@ -1,5 +1,5 @@
-export const convertDate = (date: string) => {
-  const dateObject = new Date(date);
+export const convertDate = (date: string | null) => {
+  const dateObject = date ? new Date(date) : new Date();
 
   const months = [
     'Janvier',

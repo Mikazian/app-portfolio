@@ -20,13 +20,13 @@ export interface ProjectType {
 }
 
 export interface ExperienceType {
-  id: string;
+  id: number;
   job: string;
   contract: string;
   start_date: string;
   duration: string;
-  end_date: string;
+  end_date: string | null;
   company: CompanyType;
   description: string;
-  projects: ProjectType[];
+  projects?: ProjectType[];
 }

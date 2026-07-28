@@ -1,7 +1,7 @@
 import { CompanyType, ProjectType } from './experience.type';
 
 export interface TrainingType {
-  id: string;
+  id: number;
   job: string;
   contract: string;
   start_date: string;

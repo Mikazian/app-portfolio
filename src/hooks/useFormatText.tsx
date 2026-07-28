@@ -14,6 +14,7 @@ export const useFormatText = () => {
 
     return segments.map((segment, index) => {
       const label = sortedLabelsByLength.find((label) => label.label === segment);
+
       return label ? (
         <Label
           key={index}

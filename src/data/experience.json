@@ -1,24 +1,49 @@
 [
   {
-    "id": "1",
-    "job": "Concepteur d'application",
-    "contract": "Stage",
-    "start_date": "2024-03",
-    "end_date": "2024-07",
+    "id": 2,
+    "job": "Développeur Full Stack",
+    "contract": "CDI",
+    "start_date": "2024-05",
+    "end_date": null,
     "company": {
-      "name": "Primagolf",
-      "logo": "img-prima",
+      "name": "Piazy",
+      "logo": "img-piazy",
       "location": {
         "city": "Orléans",
         "zip_code": "45000",
         "country": "France"
       }
     },
-    "description": "Contribution à la V2 de l'application mobile iOS et Android, Ma Station, une application de lavage et distribution de carburant automatisée pour le client E.LECLERC en React Native, Redux et Nest JS.",
+    "description": "Au sein d'une petite équipe, je participe au développement et à l'évolution de plusieurs applications web et mobiles ainsi que du back-office associé.\n\nMon rôle consiste à concevoir et développer de nouvelles fonctionnalités, améliorer les applications existantes et accompagner leur évolution au quotidien. J'interviens aussi bien sur la partie interface que sur les fonctionnalités côté serveur et la gestion des données.\n\nJe réalise également les maquettes et la conception des interfaces afin de proposer des applications simples, intuitives et adaptées aux besoins des utilisateurs.\n\nEn complément du développement, je m'occupe des déploiements, des mises en production, de la publication des applications sur les stores ainsi que de la maintenance de l'environnement technique. Je travaille également sur des sujets liés à l'IoT et au suivi d'équipements connectés.\n\nCette expérience m'a permis de développer une grande polyvalence et d'avoir une vision complète d'un projet, de la conception à la mise en production.",
     "projects": [
       {
-        "name": "Ma Station",
-        "type": "Application mobile lavage et carburant",
+        "name": "Prima energie",
+        "type": "Application de gestion de station-service",
+        "logo": "img-ma-station",
+        "url": "https://www.ma-station.fr/"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "job": "Développeur Full Stack",
+    "contract": "Stage",
+    "start_date": "2024-03",
+    "end_date": "2024-04",
+    "company": {
+      "name": "Piazy",
+      "logo": "img-piazy",
+      "location": {
+        "city": "Orléans",
+        "zip_code": "45000",
+        "country": "France"
+      }
+    },
+    "description": "Lors de mon stage en tant que Développeur Full Stack Web & Mobile, j'ai participé au développement et à l'évolution des applications au sein d'une équipe.\n\nJ'ai contribué à la conception de nouvelles fonctionnalités, en réalisant des maquettes et des prototypes UI/UX afin de définir les parcours utilisateurs et les interfaces avant leur développement.\n\nEn collaboration avec les différents membres de l'équipe, j'ai participé aux différentes étapes de réalisation des projets, de la réflexion autour des besoins jusqu'à l'intégration technique des fonctionnalités.\n\nCette expérience m'a permis de renforcer mes compétences en conception d'interfaces, en développement web et mobile, tout en découvrant le fonctionnement d'un projet mené en équipe.",
+    "projects": [
+      {
+        "name": "Prima energie",
+        "type": "Application de gestion de station-service",
         "logo": "img-ma-station",
         "url": "https://www.ma-station.fr/"
       }

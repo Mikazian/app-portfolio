@@ -1,7 +1,8 @@
 import { AppIconSvgType } from '../enums';
 
-export interface HobbyType {
+export type LanguageType = {
   id: number;
   label: string;
   icon: AppIconSvgType;
-}
+  caption: string;
+};

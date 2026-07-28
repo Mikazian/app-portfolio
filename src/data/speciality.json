@@ -1,38 +1,38 @@
 [
   {
-    "id": "1",
-    "label": "Conception UI/UX",
-    "icon": "svg-ui-ux",
-    "description": "Conception ergonomique et esthétique des interfaces utilisateur."
-  },
-  {
-    "id": "2",
-    "label": "Développement de composants",
+    "id": 1,
+    "label": "Développement Web",
     "icon": "svg-code",
-    "description": "Création de composants modulaires et réutilisables."
+    "description": "Conception et développement d'applications web modernes, performantes et évolutives."
   },
   {
-    "id": "3",
-    "label": "Responsive design",
+    "id": 2,
+    "label": "Développement Mobile",
+    "icon": "svg-mobile",
+    "description": "Développement d'applications mobiles multiplateformes pour Android et iOS avec React Native."
+  },
+  {
+    "id": 3,
+    "label": "Développement Frontend",
     "icon": "svg-responsive",
-    "description": "Création de sites et applications optimisés pour tous les appareils."
+    "description": "Développement d'interfaces interactives, responsives et de composants réutilisables."
   },
   {
-    "id": "4",
-    "label": "Animation",
-    "icon": "svg-animation",
-    "description": "Intégration d'animations et de transitions fluides pour une meilleure expérience utilisateur."
-  },
-  {
-    "id": "5",
-    "label": "Développement d'API REST",
+    "id": 4,
+    "label": "Développement Backend & API",
     "icon": "svg-api",
-    "description": "Conception et implémentation d'API RESTful robustes et maintenables."
+    "description": "Conception d'API REST, développement de la logique métier et des services backend."
   },
   {
-    "id": "6",
+    "id": 5,
     "label": "Gestion de base de données",
     "icon": "svg-database",
-    "description": "Conception et gestion de bases de données relationnelles et non relationnelles."
+    "description": "Conception, modélisation et gestion de bases de données relationnelles."
+  },
+  {
+    "id": 6,
+    "label": "Conception UI/UX",
+    "icon": "svg-ui-ux",
+    "description": "Conception d'interfaces ergonomiques, intuitives et centrées sur l'expérience utilisateur."
   }
 ]

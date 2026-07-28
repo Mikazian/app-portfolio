@@ -4,7 +4,7 @@ import { AppIconSvgType } from '../types/enums';
 type IconNameType = AppIconSvgType;
 
 interface SocialNetworksType {
-  id: string;
+  id: number;
   name: string;
   url: string;
   icon: IconNameType;
