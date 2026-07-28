@@ -16,12 +16,12 @@ const UserContentCard = ({ profile }: UserContentCardProps): React.JSX.Element =
   return (
     <>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <UserButtonCard text={profile.phone} icon="svg-phone" />
+        <UserButtonCard text={profile.phone} icon="svg-mobile" />
         <UserButtonCard text={profile.email} icon="svg-mail" />
       </section>
 
-      <article>
-        {profile.biography.split('\n').map((str, index) => (
+      <article className="flex flex-col gap-4">
+        {profile.biography.split('\n').filter(Boolean).map((str, index) => (
           <Text key={index} as="p">
             {str}
           </Text>

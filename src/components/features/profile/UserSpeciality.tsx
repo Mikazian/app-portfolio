@@ -17,7 +17,10 @@ const UserSpeciality = (): React.JSX.Element => {
         {userSpecialities.map((speciality) => (
           <UserItemCard
             key={speciality.id}
-            item={{ ...speciality, icon: speciality.icon as AppIconSvgType }}
+            item={{
+              ...speciality,
+              icon: { name: speciality.icon as AppIconSvgType, color: 'var(--primary)' },
+            }}
           />
         ))}
       </div>

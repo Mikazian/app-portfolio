@@ -4,7 +4,7 @@ import Card from '../../common/Card';
 import Text from '../../common/Text';
 import Divider from '../../common/Divider';
 import UserButtonCard from './UserButtonCard';
-import Button from '../../common/Button';
+import Article from '../../common/Article';
 
 /**
  * Composant carte profil utilisateur
@@ -32,7 +32,7 @@ const UserProfile = (): React.JSX.Element => {
                 as="p"
                 className="font-title-bold text-4xl text-primary leading-tight text-center sm:text-left"
               >
-                {index === userJobs.length - 1 && <span className="text-onbackground">& </span>}
+                {index === userJobs.length - 1 && <span className="text-text-secondary">& </span>}
                 {job.label}
               </Text>
             ))}
@@ -42,28 +42,11 @@ const UserProfile = (): React.JSX.Element => {
         <Divider width="100%" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <UserButtonCard text={profile.phone} icon="svg-phone" />
+          <UserButtonCard text={profile.phone} icon="svg-mobile" />
           <UserButtonCard text={profile.email} icon="svg-mail" />
         </div>
 
-        <article>
-          {profile.biography.split('\n').map((str, index) => (
-            <Text key={index} as="p" className="text-sm">
-              {str}
-            </Text>
-          ))}
-        </article>
-
-        <footer className="text-right">
-          <Button
-            type="button"
-            // TODO: Ajouter le téléchargement du PDF
-            onClick={() => console.log('pressed')}
-            additionalClass="text-lg"
-          >
-            Télécharger CV
-          </Button>
-        </footer>
+        <Article text={profile.biography} />
       </section>
     </Card>
   );

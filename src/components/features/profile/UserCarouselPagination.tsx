@@ -39,7 +39,7 @@ const UserCarouselPagination = ({
         {pages?.map((_, pageIndex) => (
           <span
             key={pageIndex}
-            className={`block h-2 rounded-full transition-all duration-500 ease-in-out ${carouselIndex === pageIndex ? 'bg-primary w-12' : 'bg-onbackground w-2'}`}
+            className={`block h-2 rounded-full transition-all duration-500 ease-in-out ${carouselIndex === pageIndex ? 'bg-primary w-12' : 'bg-text-secondary w-2'}`}
           />
         ))}
       </div>

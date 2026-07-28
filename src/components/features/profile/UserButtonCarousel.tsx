@@ -1,6 +1,6 @@
 import { AppIconSvgType } from '../../../types/enums';
 
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 
 interface UserButtonCarouselProps {
   icon: AppIconSvgType;
@@ -30,7 +30,7 @@ const UserButtonCarousel = ({
       disabled={disabled}
       className={`bg-background border border-divider p-2 rounded-full transition-all duration-300 ease-in-out ${additionalClass}`}
     >
-      <Icon name={icon} size="25" color="var(--onbackground)" />
+      <Icon name={icon} size="25" color="var(--text-primary)" />
     </button>
   );
 };

@@ -2,17 +2,23 @@ import { AppIconSvgType } from '../../../types/enums';
 
 import Card from '../../common/Card';
 import Divider from '../../common/Divider';
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 import Text from '../../common/Text';
 
 interface UserItemCardProps<T> {
   item: T;
 }
 
+interface Icon {
+  name: AppIconSvgType;
+  color?: string;
+}
+
 interface Item {
-  id: string;
+  id: number | string;
   label: string;
-  icon: AppIconSvgType;
+  icon: Icon;
+  caption?: string;
   description?: string;
 }
 
@@ -25,15 +31,21 @@ const UserItemCard = <T extends Item>({ item }: UserItemCardProps<T>): React.JSX
   return (
     <Card key={item.id} additionalClass="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 py-2">
-        <Icon name={item.icon} size="30" color="var(--primary)" />
+        <Icon name={item.icon.name} size="30" color={item.icon.color} />
         <Text as="p" className="font-text-bold translate-y-[2px] text-center">
           {item.label}
         </Text>
+
+        <Text as="p" className="text-sm text-center text-text-secondary">
+          {item.caption}
+        </Text>
       </div>
+
       {item.description ? (
         <>
           <Divider width="100%" />
-          <Text as="p" className="text-sm">
+
+          <Text as="p" className="text-sm text-text-secondary">
             {item.description}
           </Text>
         </>

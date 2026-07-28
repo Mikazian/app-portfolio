@@ -2,7 +2,7 @@ import { AppIconSvgType } from '../../../types/enums';
 import { DesignSkill, DevelopmentSkill } from '../../../types/interfaces';
 
 import Card from '../../common/Card';
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 import Label from '../../common/Label';
 import Text from '../../common/Text';
 

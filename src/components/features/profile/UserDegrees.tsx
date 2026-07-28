@@ -3,8 +3,10 @@ import { useDegree } from '../../../hooks';
 import SectionLayout from '../../layout/SectionLayout';
 import Card from '../../common/Card';
 import Divider from '../../common/Divider';
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 import Text from '../../common/Text';
+import Button from '../../common/Button';
+import { DegreeI18n } from '../../../types/enums';
 
 /**
  * Composant des certifications de l'utilisateur
@@ -25,7 +27,8 @@ const UserDegress = (): React.JSX.Element => {
                   <Text as="p" className="font-text-bold">
                     {degree.label}
                   </Text>
-                  <Text as="p" className="text-sm truncate">
+
+                  <Text as="p" className="text-sm truncate text-text-secondary">
                     {degree.degree}
                   </Text>
                 </div>
@@ -34,9 +37,13 @@ const UserDegress = (): React.JSX.Element => {
 
             <Divider width="100%" />
 
-            <Text as="p" className="text-sm">
-              {`Année d'obtention : ${degree.year}`}
+            <Text as="p" className="text-sm text-text-secondary">
+              {`Année : ${degree.year}`}
             </Text>
+
+            <Button type="button" onClick={() => null}>
+              {`Voir le ${DegreeI18n[degree.type]}`}
+            </Button>
           </Card>
         ))}
       </div>

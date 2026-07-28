@@ -2,7 +2,7 @@ import { useCopy } from '../../../contexts';
 import { AppIconSvgType } from '../../../types/enums';
 import ButtonCard from '../../common/ButtonCard';
 
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 import Text from '../../common/Text';
 
 interface UserButtonCardProps {
@@ -28,7 +28,7 @@ const UserButtonCard = ({ text, icon }: UserButtonCardProps): React.JSX.Element 
         </Text>
       </div>
       <ButtonCard onClick={() => copyToClipboard(text)} disabled={isCopied} showModal>
-        <Icon name="svg-copy" color="var(--onbackground)" className="btn-icon" />
+        <Icon name="svg-copy" color="var(--text-primary)" className="btn-icon" />
       </ButtonCard>
     </div>
   );

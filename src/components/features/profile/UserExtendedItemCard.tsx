@@ -1,13 +1,14 @@
 import { ExperienceType, TrainingType } from '../../../types/interfaces';
-import { useFormatText } from '../../../hooks';
+import { formatDuration } from '../../../helpers/format-duration';
 
 import Text from '../../common/Text';
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 import Image from '../../common/Image';
 import Card from '../../common/Card';
 import Label from '../../common/Label';
 import Divider from '../../common/Divider';
 import ButtonCard from '../../common/ButtonCard';
+import Article from '../../common/Article';
 
 interface UserExtendedItemCardProps<T> {
   item: T;
@@ -16,44 +17,32 @@ interface UserExtendedItemCardProps<T> {
 const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
   item,
 }: UserExtendedItemCardProps<T>): React.JSX.Element => {
-  const { formatTextWithLabels } = useFormatText();
-
   return (
     <Card key={item.id} additionalClass="flex flex-col gap-4">
       <header className="flex flex-col gap-4">
-        <div className="flex gap-4 items-center">
-          <div className="w-8 h-8 shrink-0 rounded-md overflow-hidden">
-            <Image
-              src={item.company.logo}
-              alt={`Logo de ${item.company.name}`}
-              className="object-cover w-full h-full"
-            />
+        <div className="flex grow h-full justify-between gap-4">
+          <div className="flex-wrap self-center">
+            <Text as="p" className="text-md! font-text-bold text-primary">
+              {item.job}
+            </Text>
           </div>
-
-          <div className="flex grow h-full justify-between gap-4">
-            <div className="flex-wrap self-center">
-              <Text as="p" className="font-text-bold text-md text-primary">
-                {item.job}
-              </Text>
-            </div>
-            <div className="flex shrink-0 self-start">
-              <Label text={item.contract} />
-            </div>
+          <div className="flex shrink-0 self-start">
+            <Label text={item.contract} />
           </div>
         </div>
 
         <div className="flex flex-col gap-1">
-          <Text as="p" className="text-xs">
+          <Text as="p" className="text-sm!">
             {`${item.company.name}, ${item.company.location.city} (${item.company.location.zip_code.slice(0, 2)}) - ${item.company.location.country}`}
           </Text>
 
           <div className="flex flex-wrap justify-between">
-            <Text as="p" className="text-xs">
-              {`${item.start_date} - ${item.end_date}`}
+            <Text as="p" className="text-xs! text-text-secondary">
+              {`${item.start_date} - ${item.end_date ?? "Aujourd'hui"}`}
             </Text>
 
-            <Text as="p" className="text-xs">
-              {`Durée : ${item.duration} mois`}
+            <Text as="p" className="text-xs! text-text-secondary">
+              {`Durée : ${formatDuration(Number(item.duration))}`}
             </Text>
           </div>
         </div>
@@ -61,11 +50,7 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
 
       <Divider />
 
-      <article>
-        <Text as="p" className="text-sm items-center">
-          {formatTextWithLabels(item.description)}
-        </Text>
-      </article>
+      <Article nbOfLine={4} className="items-center" text={item.description} />
 
       {item.projects && (
         <>
@@ -88,10 +73,10 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                   </div>
 
                   <div className="flex flex-col justify-between">
-                    <Text as="p" className="text-sm">
+                    <Text as="p" className="text-sm!">
                       {project.name}
                     </Text>
-                    <Text as="p" className="text-xs">
+                    <Text as="p" className="text-xs! text-text-secondary">
                       {project.type}
                     </Text>
                   </div>
