@@ -1,6 +1,6 @@
 import { CompanyType, ProjectType } from './experience.type';
 
-export interface TrainingType {
+export type TrainingType = {
   id: number;
   job: string;
   contract: string;
@@ -10,4 +10,4 @@ export interface TrainingType {
   company: CompanyType;
   description: string;
   projects?: ProjectType[];
-}
+};

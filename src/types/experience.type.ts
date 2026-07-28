@@ -1,25 +1,25 @@
 import { AppImgType } from '../enums';
 
-interface LocationType {
+type LocationType = {
   city: string;
   zip_code: string;
   country: string;
-}
+};
 
-export interface CompanyType {
+export type CompanyType = {
   name: string;
   logo: AppImgType;
   location: LocationType;
-}
+};
 
-export interface ProjectType {
+export type ProjectType = {
   name: string;
   type: string;
   logo: AppImgType;
   url: string;
-}
+};
 
-export interface ExperienceType {
+export type ExperienceType = {
   id: number;
   job: string;
   contract: string;
@@ -29,4 +29,4 @@ export interface ExperienceType {
   company: CompanyType;
   description: string;
   projects?: ProjectType[];
-}
+};

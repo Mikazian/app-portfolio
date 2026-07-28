@@ -93,7 +93,7 @@ GitHub Actions (`.github/workflows/deploy.yml`):
 
 - Default exports for components and hooks
 - Barrel exports via `index.ts` in `hooks/`, `contexts/`, `types/`
-- Interfaces in `src/types/interfaces/*.type.ts` (note: `.type.ts` extension, not `.ts`)
-- Enums as `as const` arrays + derived types in `src/types/enums/`
+- Types in `src/types/*.type.ts` (note: `.type.ts` extension, not `.ts`)
+- Enums in `src/enums/*.enum.ts`
 - Component props defined inline or in interfaces at top of file
 - French comments (`/** Composant **/`, error messages in French)

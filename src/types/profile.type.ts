@@ -1,4 +1,4 @@
-export interface ProfileType {
+export type ProfileType = {
   firstName: string;
   lastName: string;
   birthDate: string;
@@ -7,4 +7,4 @@ export interface ProfileType {
   nationality: string;
   biography: string;
   picture: string;
-}
+};

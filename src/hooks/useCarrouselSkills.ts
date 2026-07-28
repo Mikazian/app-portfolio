@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
-import { SkillType as Skill, SkillEnum } from '../types/enums';
-import { SkillType } from '../types/interfaces/skill.type';
+import { SkillType as Skill, skillValues } from '../enums';
+import { SkillType } from '../types/skill.type';
 
 interface ScreenType {
   width: number;
   skillsPerPage: number;
 }
 
-const skills = SkillEnum;
+const skills = skillValues;
 
 const calculateSkillsPerPage = (width: number): number => {
   if (width < 640) return 4;

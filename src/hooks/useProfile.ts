@@ -1,5 +1,5 @@
 import personalInfos from '../data/personal-infos.json';
-import { ProfileType } from '../types/interfaces/profile.type';
+import { ProfileType } from '../types/profile.type';
 
 export const useProfile = () => {
   const profile: ProfileType = personalInfos[0];

@@ -1,4 +1,4 @@
-export interface JobType {
+export type JobType = {
   id: number;
   label: string;
-}
+};

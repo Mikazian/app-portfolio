@@ -1,5 +1,5 @@
 import Label from '../components/common/Label';
-import { labels as unsortedLabels } from '../types/enums/label.enum';
+import { labels as unsortedLabels } from '../enums/label.enum';
 
 export const useFormatText = () => {
   const formatTextWithLabels = (text: string) => {

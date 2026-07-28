@@ -1,5 +1,5 @@
 import jobs from '../data/job.json';
-import { JobType } from '../types/interfaces/job.type';
+import { JobType } from '../types/job.type';
 
 export const useJob = () => {
   const userJobs = jobs as JobType[];

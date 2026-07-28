@@ -1,4 +1,4 @@
-import { AppIconSvgType } from '../../../types/enums';
+import { AppIconSvgType } from '../../../enums';
 import { SvgIconSet } from './SvgIconSet';
 import Text from '../Text';
 

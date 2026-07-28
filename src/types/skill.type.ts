@@ -1,18 +1,18 @@
-export interface DevelopmentSkill {
+export type DevelopmentSkill = {
   id: number;
   name: string;
   icon: string;
   label: string;
-}
+};
 
-export interface DesignSkill {
+export type DesignSkill = {
   id: number;
   name: string;
   icon: string;
   label: string;
-}
+};
 
-export interface SkillType {
+export type SkillType = {
   development: DevelopmentSkill[];
   design: DesignSkill[];
-}
+};

@@ -2,8 +2,8 @@ import experiences from '../data/experience.json';
 import trainingData from '../data/training.json';
 import { calculateDurationInMonth } from '../helpers/calculate-duration-date';
 import { convertDate } from '../helpers/format-date';
-import { AppImgType } from '../types/enums';
-import { ExperienceType } from '../types/interfaces';
+import { AppImgType } from '../enums';
+import { ExperienceType } from '../types';
 
 export const useExperience = () => {
   const allItems = [...experiences, ...trainingData].sort(
