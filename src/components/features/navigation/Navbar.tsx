@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Image from '../../common/Image';
 import { useTheme } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
 import Divider from '../../common/Divider';
-import { AppIconSvg, AppImg } from '../../../enums';
+import { AppIconSvg } from '../../../enums';
 import { aboutSections } from './about-sections';
 import { getNavbarOffset } from '../../../helpers/scroll';
+import Logo from '../../common/Logo';
 
 const OBSERVER_OPTIONS: IntersectionObserverInit = {
   rootMargin: '-80px 0px -50% 0px',
@@ -86,7 +86,7 @@ const Navbar = (): React.JSX.Element => {
   return (
     <nav ref={navRef} className={`navbar ${activeNavbar ? 'active' : 'inactive'}`}>
       <button type="button" onClick={scrollToTop} className="logo cursor-pointer bg-transparent">
-        <Image src={AppImg.LOGO_WHITE} alt="logo" className="h-full object-cover pr-8" />
+        <Logo />
       </button>
 
       <div className="flex items-center justify-end gap-6 flex-1 min-w-0 h-full">
