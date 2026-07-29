@@ -9,11 +9,11 @@ import CopyAlert from '../features/copy-clipboard/CopyAlert';
 import Header from '../common/Header';
 
 interface MainLayoutProps {
+  title?: string;
   children: React.ReactNode;
-  title: string;
 }
 
-const MainLayout = ({ children, title }: MainLayoutProps) => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -24,14 +24,14 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
     <>
       <Navbar />
 
-      <Header title={title} />
+      <CopyAlert />
+      <ContactAlert />
+
+      <Header />
 
       <main className="min-h-[calc(100vh-96px)] relative z-20 px-4 mx-auto w-full max-w-[855px] lg:min-h-screen lg:px-0 translate-x-[0.2px] mb-20">
         {children}
       </main>
-
-      <CopyAlert />
-      <ContactAlert />
 
       <Transition />
 

@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useMemo, useState } from 'react';
 
 type AlertType = 'success' | 'error';
 
@@ -20,7 +20,7 @@ export const ContactProvider = ({ children }: ContactProviderProps) => {
   const [alertMessage, setAlertMessage] = useState<string>('');
   const [alertType, setAlertType] = useState<AlertType>('success');
 
-  const triggerContactAlert = useCallback((type: AlertType, message: string) => {
+  const triggerContactAlert = (type: AlertType, message: string) => {
     setAlertType(type);
     setAlertMessage(message);
     setShowContactAlert(true);
@@ -28,7 +28,7 @@ export const ContactProvider = ({ children }: ContactProviderProps) => {
     setTimeout(() => {
       setShowContactAlert(false);
     }, 3000);
-  }, []);
+  };
 
   const value = useMemo(
     () => ({

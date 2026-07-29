@@ -1,5 +1,6 @@
 import { useSkill } from '../../../../hooks/useSkill';
 import { useCarouselSkills } from '../../../../hooks/useCarrouselSkills';
+import { aboutSections } from '../../navigation/about-sections';
 
 import SectionLayout from '../../../layout/SectionLayout';
 import ButtonCard from '../../../common/ButtonCard';
@@ -17,8 +18,10 @@ const UserSkill = (): React.JSX.Element => {
   const { skills, activeTab, setActiveTab, pages, carouselIndex, prevPage, nextPage } =
     useCarouselSkills(userSkills);
 
+  const section = aboutSections.find((s) => s.id === 'competences')!;
+
   return (
-    <SectionLayout title="Compétences">
+    <SectionLayout id={section.id} title={section.label}>
       <div className="grid grid-cols-2 w-full gap-px">
         {skills.map((skill, index) => (
           <ButtonCard

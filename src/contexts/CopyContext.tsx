@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useMemo, useState } from 'react';
 
 interface CopyContextValue {
   isCopied: boolean;
@@ -18,26 +18,23 @@ export const CopyProvider = ({ children }: CopyProviderProps) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [showCopyAlert, setShowCopyAlert] = useState<boolean>(false);
 
-  const copyToClipboard = useCallback(
-    async (value: string) => {
-      if (isCopied) return;
+  const copyToClipboard = async (value: string) => {
+    if (isCopied) return;
 
-      try {
-        await navigator.clipboard.writeText(value);
-        setIsCopied(true);
-        setError(undefined);
-        setShowCopyAlert(true);
+    try {
+      await navigator.clipboard.writeText(value);
+      setIsCopied(true);
+      setError(undefined);
+      setShowCopyAlert(true);
 
-        setTimeout(() => {
-          setIsCopied(false);
-          setShowCopyAlert(false);
-        }, 3000);
-      } catch (error) {
-        setError(error instanceof Error ? error : new Error('Impossible de copier le texte'));
-      }
-    },
-    [isCopied],
-  );
+      setTimeout(() => {
+        setIsCopied(false);
+        setShowCopyAlert(false);
+      }, 3000);
+    } catch (error) {
+      setError(error instanceof Error ? error : new Error('Impossible de copier le texte'));
+    }
+  };
 
   const value = useMemo(
     () => ({

@@ -1,5 +1,6 @@
 import { useJob, useProfile } from '../../../../hooks';
 import { AppIconSvg } from '../../../../enums';
+import { aboutSections } from '../../navigation/about-sections';
 
 import Card from '../../../common/Card';
 import Text from '../../../common/Text';
@@ -15,8 +16,10 @@ const UserProfile = (): React.JSX.Element => {
   const { profile } = useProfile();
   const { userJobs } = useJob();
 
+  const section = aboutSections.find((s) => s.id === 'profil')!;
+
   return (
-    <Card>
+    <Card id={section.id}>
       <section className="flex flex-col grow gap-8">
         <header className="flex flex-col gap-6 sm:flex-row sm:items-center">
           <div className="h-40 w-40 rounded-full bg-primary self-center">{/* image */}</div>

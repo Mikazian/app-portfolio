@@ -1,5 +1,6 @@
 import { useSpeciality } from '../../../../hooks';
 import { AppIconSvgType } from '../../../../enums';
+import { aboutSections } from '../../navigation/about-sections';
 
 import SectionLayout from '../../../layout/SectionLayout';
 import UserItemCard from './UserItemCard';
@@ -11,8 +12,10 @@ import UserItemCard from './UserItemCard';
 const UserSpeciality = (): React.JSX.Element => {
   const { userSpecialities } = useSpeciality();
 
+  const section = aboutSections.find((s) => s.id === 'specialites')!;
+
   return (
-    <SectionLayout title="Spécialités">
+    <SectionLayout id={section.id} title={section.label}>
       <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
         {userSpecialities.map((speciality) => (
           <UserItemCard

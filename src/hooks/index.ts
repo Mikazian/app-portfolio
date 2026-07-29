@@ -1,7 +1,6 @@
 export * from './useCarrouselSkills';
 export * from './useDegree';
 export * from './useExperience';
-export * from './useFormatText';
 export * from './useHobby';
 export * from './useJob';
 export * from './useLanguage';

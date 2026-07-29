@@ -3,6 +3,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useContact } from '../../../../contexts/ContactContext';
+import { aboutSections } from '../../navigation/about-sections';
 import Button from '../../../common/Button';
 import Card from '../../../common/Card';
 import TextAreaField from '../../../common/TextAreaField';
@@ -47,8 +48,10 @@ const UserContact = () => {
     }
   };
 
+  const section = aboutSections.find((s) => s.id === 'contact')!;
+
   return (
-    <SectionLayout title="Contact">
+    <SectionLayout id={section.id} title={section.label}>
       <Card>
         <form className="flex flex-col gap-8" onSubmit={handleSubmit(onSubmit)} noValidate>
           <TextField

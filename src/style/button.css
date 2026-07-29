@@ -11,14 +11,6 @@
     @apply bg-primary;
   }
 
-  .btn.active.active-modal:after {
-    @apply content-['Copier'] absolute left-1/2 -bottom-9 translate-x-[-50%] text-light text-xs bg-secondary px-2 pt-2 pb-1.5 rounded-md opacity-0 transition-all duration-200 ease-in-out;
-  }
-
-  .btn.active.active-modal:hover:after {
-    @apply opacity-100;
-  }
-
   .btn-icon {
     @apply scale-75 transition-all duration-300 ease-in-out;
   }

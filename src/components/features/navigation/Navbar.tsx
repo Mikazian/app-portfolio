@@ -1,13 +1,17 @@
-import { useCallback, useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import Button from '../../common/Button';
 import Image from '../../common/Image';
-import BurgerMenu from './BurgerMenu';
 import { useTheme } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
 import Divider from '../../common/Divider';
 import { AppIconSvg, AppImg } from '../../../enums';
+import { aboutSections } from './about-sections';
+import { getNavbarOffset } from '../../../helpers/scroll';
+
+const OBSERVER_OPTIONS: IntersectionObserverInit = {
+  rootMargin: '-80px 0px -50% 0px',
+};
 
 /***
  * Composant Barre de Navigation
@@ -17,74 +21,100 @@ const Navbar = (): React.JSX.Element => {
   const navigate = useNavigate();
   const { theme, setTheme } = useTheme();
 
+  const navRef = useRef<HTMLElement>(null);
   const [activeNavbar, setActiveNavbar] = useState(false);
-  const [toggleNav, setToggleNav] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
-  const handleToggleMenu = useCallback(() => {
-    setToggleNav((prev) => !prev);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      }
+    }, OBSERVER_OPTIONS);
+
+    aboutSections.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768 && toggleNav) {
-        setToggleNav(false);
+    let ticking = false;
+
+    const handleChangeBackground = () => {
+      setActiveNavbar(window.scrollY >= 40);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleChangeBackground);
+        ticking = true;
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [toggleNav]);
-
-  useEffect(() => {
-    const handleGhangeBackground = () => {
-      if (window.scrollY >= 40) {
-        setActiveNavbar(true);
-      } else {
-        setActiveNavbar(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleGhangeBackground);
-    return () => window.removeEventListener('scroll', handleGhangeBackground);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+
+    if (el) {
+      const offset = navRef.current
+        ? navRef.current.getBoundingClientRect().height + 16
+        : getNavbarOffset();
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
 
   return (
-    <nav
-      className={`navbar ${activeNavbar ? 'active' : 'inactive'} ${toggleNav ? 'show-nav' : 'hidde-nav'} `}
-    >
-      <Link to="/" className="logo">
-        <Image src={AppImg.LOGO_WHITE} alt="logo" className="h-full object-cover" />
-      </Link>
-      <div className="flex items-center gap-6">
+    <nav ref={navRef} className={`navbar ${activeNavbar ? 'active' : 'inactive'}`}>
+      <button type="button" onClick={scrollToTop} className="logo cursor-pointer bg-transparent">
+        <Image src={AppImg.LOGO_WHITE} alt="logo" className="h-full object-cover pr-8" />
+      </button>
+
+      <div className="flex items-center justify-end gap-6 flex-1 min-w-0 h-full">
         <ul className="navbar-links">
-          <li className="navbar-item slide-1">
-            <Link to="/about-me">À propos de moi</Link>
-          </li>
-          {/* <li className="navbar-item slide-2">
-            <Link to="/projects">Projets</Link>
-          </li> */}
-          {/* <li className="navbar-item slide-3">
-            <Link to="/gallery">Galerie</Link>
-          </li> */}
-          <li className="navbar-item slide-4">
-            <Button
-              type="button"
-              onClick={() => navigate('/contact')}
-              additionalClass="text-xl md:text-xs"
-            >
-              Me contacter
-            </Button>
-          </li>
+          {aboutSections.map((section) => (
+            <li key={section.id} className="navbar-item">
+              <button
+                type="button"
+                onClick={() => scrollToSection(section.id)}
+                className={`uppercase text-sm bg-transparent cursor-pointer transition-colors duration-200 ${
+                  activeSection === section.id
+                    ? 'text-primary'
+                    : 'text-text-primary hover:text-primary'
+                }`}
+              >
+                {section.label}
+              </button>
+            </li>
+          ))}
         </ul>
 
-        <div className="theme">
+        <div className="theme shrink-0">
           <Divider height="10" isVertical />
           <ThemeSwitcher
             icon={theme === 'dark' ? AppIconSvg.MOON : AppIconSvg.SUN}
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={toggleTheme}
           />
         </div>
-        <BurgerMenu onClick={handleToggleMenu} />
       </div>
     </nav>
   );
