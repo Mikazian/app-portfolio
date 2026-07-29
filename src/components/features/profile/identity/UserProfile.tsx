@@ -44,7 +44,7 @@ const UserProfile = (): React.JSX.Element => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <UserButtonCard text={profile.phone} icon={AppIconSvg.MOBILE} />
-          <UserButtonCard text={profile.email} icon={AppIconSvg.MAIL} />
+          <UserButtonCard text={profile.email} icon={AppIconSvg.MAIL_ROUNDED} />
         </div>
 
         <Article text={profile.biography} />

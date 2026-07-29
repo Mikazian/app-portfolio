@@ -10,6 +10,7 @@ export const AppIconSvg = {
   INSTAGRAM: 'svg-instagram',
   LINKEDIN: 'svg-linkedin',
   MAIL: 'svg-mail',
+  MAIL_ROUNDED: 'svg-mail-rounded',
   MOON: 'svg-moon',
   PHONE: 'svg-phone',
   SUN: 'svg-sun',
