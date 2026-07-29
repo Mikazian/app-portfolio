@@ -1,9 +1,6 @@
 import { useCopy } from '../../../contexts/CopyContext';
 import { AppIconSvg } from '../../../enums';
-
-import Text from '../../common/Text';
-import ProgressBar from '../../common/ProgressBar';
-import Icon from '../../common/icon/Icon';
+import Alert from '../../common/Alert';
 
 /**
  * Composant Alerte de copie
@@ -13,15 +10,11 @@ const CopyAlert = (): React.JSX.Element => {
   const { showCopyAlert } = useCopy();
 
   return (
-    <section
-      className={`flex flex-col fixed z-50 top-[15%] transition-all duration-700 ease-in-out ${showCopyAlert ? 'right-0' : 'right-[-100vw]'}`}
-    >
-      <div className="flex items-center gap-4 bg-foreground px-6 py-4 border-t border-l border-divider">
-        <Icon name={AppIconSvg.COPY} className="border border-divider p-2 rounded-md" />
-        <Text as="p">Copié dans le presse-papier</Text>
-      </div>
-      <ProgressBar isActive={showCopyAlert} />
-    </section>
+    <Alert
+      show={showCopyAlert}
+      icon={AppIconSvg.COPY}
+      message="Copié dans le presse-papier"
+    />
   );
 };
 
