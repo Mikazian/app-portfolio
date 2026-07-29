@@ -1,5 +1,5 @@
 interface ButtonCardProps {
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   onClick: () => void;
   disabled?: boolean;
   isActive?: boolean;
@@ -20,20 +20,20 @@ interface ButtonCardProps {
  * @returns {JSX.Element}
  */
 const ButtonCard = ({
-  type = "button",
+  type = 'button',
   disabled,
   onClick,
   isActive,
   showModal = false,
   additionalClass,
   children,
-}: ButtonCardProps): JSX.Element => {
+}: ButtonCardProps): React.JSX.Element => {
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`btn ${additionalClass} ${isActive ? "bg-primary border-primary" : "bg-foreground"} ${disabled ? "unactive" : "active"} ${showModal ? "active-modal" : "unactive-modal"}`}
+      className={`btn ${additionalClass} ${isActive ? 'active' : ''} ${disabled ? 'unactive' : ''} ${showModal ? 'active-modal' : 'unactive-modal'}`}
     >
       {children}
     </button>

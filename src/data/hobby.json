@@ -1,27 +1,22 @@
 [
   {
-    "id": "1",
+    "id": 1,
+    "label": "Développement",
+    "logo": "svg-code"
+  },
+  {
+    "id": 2,
+    "label": "Création numérique",
+    "logo": "svg-digital-art"
+  },
+  {
+    "id": 3,
     "label": "Jeux vidéo",
     "logo": "svg-gaming"
   },
   {
-    "id": "2",
-    "label": "Manga",
+    "id": 4,
+    "label": "Culture japonaise",
     "logo": "svg-book"
-  },
-  {
-    "id": "3",
-    "label": "Code",
-    "logo": "svg-code"
-  },
-  {
-    "id": "4",
-    "label": "Musique",
-    "logo": "svg-music"
-  },
-  {
-    "id": "5",
-    "label": "Dessin numérique",
-    "logo": "svg-digital-art"
   }
 ]

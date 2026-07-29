@@ -1,6 +1,6 @@
 interface ButtonProps {
   children: React.ReactNode;
-  type: "button" | "submit" | "reset";
+  type: 'button' | 'submit' | 'reset';
   onClick: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
@@ -26,7 +26,7 @@ const Button = ({
   onMouseLeave,
   disabled,
   additionalClass,
-}: ButtonProps): JSX.Element => {
+}: ButtonProps): React.JSX.Element => {
   return (
     <button
       type={type}

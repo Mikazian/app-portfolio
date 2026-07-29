@@ -1,4 +1,4 @@
-import { TextType } from "../../types/enums";
+import { TextType } from '../../types';
 
 interface TextProps {
   as?: TextType;
@@ -12,11 +12,7 @@ interface TextProps {
  * @param className - Style Tailwind CSS
  * @returns {JSX.Element}
  */
-const Text = ({
-  as: Component = "p",
-  children,
-  className,
-}: TextProps): JSX.Element => {
+const Text = ({ as: Component = 'p', children, className }: TextProps): React.JSX.Element => {
   return <Component className={className}>{children}</Component>;
 };
 

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "label": "Français",
+    "icon": "svg-circle-flags-fr",
+    "caption": "Langue maternelle"
+  },
+  {
+    "id": 2,
+    "label": "Anglais",
+    "icon": "svg-circle-flags-en",
+    "caption": "Intermédiaire"
+  }
+]

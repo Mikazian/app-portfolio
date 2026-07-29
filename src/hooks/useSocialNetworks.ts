@@ -1,10 +1,10 @@
-import socialNetworks from "../data/social-network.json";
-import { AppIconSvgType } from "../types/enums";
+import socialNetworks from '../data/social-network.json';
+import { AppIconSvgType } from '../enums';
 
 type IconNameType = AppIconSvgType;
 
 interface SocialNetworksType {
-  id: string;
+  id: number;
   name: string;
   url: string;
   icon: IconNameType;

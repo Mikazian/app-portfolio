@@ -1,0 +1,20 @@
+.vertical-timeline {
+  width: 100% !important;
+  padding: 0;
+}
+
+.vertical-timeline::before {
+  width: 2px !important;
+}
+
+.vertical-timeline-marker-start {
+  position: absolute;
+  bottom: 0;
+  left: 19px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.vertical-timeline-element-content p {
+  margin: 0;
+}

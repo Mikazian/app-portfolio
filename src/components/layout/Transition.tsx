@@ -1,8 +1,5 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from 'react';
 
-/**
- * Component Transition qui se déclenche lors du chargement de la page
- */
 const Transition = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -23,15 +20,23 @@ const Transition = () => {
   }, []);
 
   return (
-    <div
-      className={`lines ${isLoaded ? "finish" : ""} ${isReady ? "ready" : ""}`}
-    >
-      <div className="content">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <div key={index} className="line-col" />
-        ))}
+    <>
+      <div className="background-lines">
+        <div className="content">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div key={index} className="line-col" />
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className={`lines ${isLoaded ? 'finish' : ''} ${isReady ? 'ready' : ''}`}>
+        <div className="content">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div key={index} className="line-col" />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
