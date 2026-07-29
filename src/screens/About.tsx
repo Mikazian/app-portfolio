@@ -1,24 +1,51 @@
-import UserDegrees from '../components/features/profile/UserDegrees';
-import UserProfile from '../components/features/profile/UserProfile';
-import UserSpeciality from '../components/features/profile/UserSpeciality';
-import UserSkill from '../components/features/profile/UserSkill';
-import UserExperience from '../components/features/profile/UserExperience';
-import UserTraining from '../components/features/profile/UserTraining';
-import UserHobby from '../components/features/profile/UserHobby';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import {
+  UserDegrees,
+  UserProfile,
+  UserSpeciality,
+  UserSkill,
+  UserExperience,
+  UserHobby,
+  UserLanguages,
+} from '../components/features/profile';
+import UserContact from '../components/features/profile/misc/UserContact';
 import MainLayout from '../components/layout/MainLayout';
+import { scrollToElement } from '../helpers/scroll';
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (!hash) return;
+
+    const el = document.getElementById(hash);
+    if (!el) return;
+
+    let rafId: number;
+    const firstFrame = requestAnimationFrame(() => {
+      rafId = requestAnimationFrame(() => {
+        scrollToElement(el);
+      });
+    });
+
+    return () => {
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(rafId);
+    };
+  }, [location.hash]);
+
   return (
-    <MainLayout title="À propos de moi">
+    <MainLayout>
       <UserProfile />
       <UserDegrees />
       <UserSpeciality />
       <UserSkill />
-      <section className="grid sm:grid-cols-2 gap-x-10">
-        <UserExperience />
-        <UserTraining />
-      </section>
+      <UserExperience />
+      <UserLanguages />
       <UserHobby />
+      <UserContact />
     </MainLayout>
   );
 };

@@ -1,10 +1,10 @@
 [
   {
-    "id": "1",
-    "job": "Signalétique enseigne et décor",
-    "contract": "CAP",
+    "id": 1,
+    "job": "CAP Signalétique enseignes et décor",
+    "contract": "Formation",
     "start_date": "2010-09",
-    "end_date": "2011-07",
+    "end_date": "2011-08",
     "company": {
       "name": "Lycée Professionnel d'Arsonval",
       "logo": "img-arsonval",
@@ -14,14 +14,14 @@
         "country": "France"
       }
     },
-    "description": "Formation professionnelle au Lycée des métiers d'arts d'Arsonval, combinant créativité, technicité et savoir-faire pour la conception, la fabrication et la pose de signalétique, d'enseignes et de décors."
+    "description": "Formation de 2 ans en Signalétique, Enseigne et Décors, axée sur la création et la réalisation de supports visuels.\n\nJ'ai appris à concevoir et réaliser différents projets de signalétique, notamment la création d'enseignes, la pose de vinyles et la réalisation de décors peints.\n\nCette formation m'a permis de développer ma précision, ma créativité et ma maîtrise des techniques de création graphique, notamment à travers l'utilisation d'outils comme Photoshop et Illustrator."
   },
   {
-    "id": "2",
-    "job": "Communication graphique",
-    "contract": "BAC PRO",
+    "id": 2,
+    "job": "BAC PRO Communication graphique",
+    "contract": "Formation",
     "start_date": "2011-09",
-    "end_date": "2012-07",
+    "end_date": "2012-08",
     "company": {
       "name": "Lycée Professionnel d'Arsonval",
       "logo": "img-arsonval",
@@ -31,14 +31,14 @@
         "country": "France"
       }
     },
-    "description": "Formation professionnelle au Lycée des métiers d'arts d'Arsonval, axée sur la conception et la réalisation de supports de communication visuelle. Compétences en design graphique, typographie, mise en page et utilisation de la couleur. Maîtrise des outils numériques de PAO : Photoshop, Illustrator et InDesign."
+    "description": "Formation de 2 ans en Communication Graphique, axée sur la création de supports visuels et la conception graphique.\n\nJ'ai réalisé différents projets de communication tels que des brochures, cartes de visite, logos, illustrations et supports print en utilisant des outils de création graphique comme Photoshop, Illustrator et InDesign.\n\nCette formation m'a permis de développer ma créativité, ma sensibilité graphique et ma maîtrise des principes de conception visuelle.\n\nJ'ai également effectué plusieurs stages en entreprise, qui m'ont permis de découvrir le fonctionnement d'un environnement professionnel et de mettre en pratique mes compétences."
   },
   {
-    "id": "3",
-    "job": "Animation 2D/3D et jeux vidéo",
-    "contract": "Prépa",
+    "id": 3,
+    "job": "Année préparatoire Animation 2D/3D et jeux vidéo",
+    "contract": "Formation",
     "start_date": "2012-09",
-    "end_date": "2012-07",
+    "end_date": "2012-08",
     "company": {
       "name": "École supérieur des métiers artistiques et créatifs LISAA",
       "logo": "img-lisaa",
@@ -48,12 +48,12 @@
         "country": "France"
       }
     },
-    "description": "Formation en année préparatoire en École supérieure, spécialisée en animation 2D/3D et jeux vidéo. Acquisition des fondamentaux du dessin, de l'animation, de la modélisation 3D, ainsi que de la création de personnages et de décors. Maîtrise des logiciels de création graphique : Photoshop, Illustrator, After Effects et 3DS Max."
+    "description": "Année préparatoire en Animation 2D/3D et Jeux Vidéo au sein de LISAA (L'Institut Supérieur des Arts Appliqués), axée sur l'apprentissage des fondamentaux de la création numérique.\n\nCette formation m'a permis de développer mes compétences artistiques et techniques à travers différents projets de création, en travaillant notamment sur le dessin, la composition, la narration visuelle et l'initiation aux techniques d'animation 2D/3D.\n\nElle m'a également permis de renforcer ma culture graphique, ma créativité et ma compréhension des étapes de conception d'un projet visuel, de l'idée initiale jusqu'à sa réalisation."
   },
   {
-    "id": "4",
-    "job": "Développeur web et web mobile",
-    "contract": "BAC+2",
+    "id": 4,
+    "job": "Développeur web et web mobile (DWWM) BAC+2",
+    "contract": "Formation",
     "start_date": "2023-02",
     "end_date": "2023-07",
     "company": {
@@ -65,7 +65,7 @@
         "country": "France"
       }
     },
-    "description": "Formation intensive sur une durée de 5 mois au campus, centrée sur le développement de sites web et mobiles suivant le modèle MVC, avec une maîtrise des langages HTML, CSS, PHP et l'utilisation du framework Symfony. La formation inclut également la création de bases de données MySQL, ainsi que des compétences en gestion de projet, méthodes agiles et conception de maquettes.",
+    "description": "J'ai suivi une formation intensive qui m'a permis d'acquérir de solides bases en développement web et en conception d'applications.\n\nJ'ai travaillé sur plusieurs projets en utilisant des technologies telles que HTML, CSS, PHP, Symfony et MySQL, tout en découvrant les bonnes pratiques de développement et la gestion des bases de données.\n\nCette formation m'a permis de développer ma logique de programmation, de renforcer mon autonomie technique et de comprendre les différentes étapes de création d'une application web, de la conception jusqu'à sa réalisation.",
     "projects": [
       {
         "name": "CV de Groot",
@@ -88,11 +88,11 @@
     ]
   },
   {
-    "id": "5",
-    "job": "Concepteur d'application",
-    "contract": "BAC+4",
-    "start_date": "2024-09",
-    "end_date": "2024-03",
+    "id": 5,
+    "job": "Concepteur d'application (CAD) BAC+4",
+    "contract": "Formation",
+    "start_date": "2023-09",
+    "end_date": "2023-03",
     "company": {
       "name": "Wild Code School",
       "logo": "img-wild",
@@ -102,7 +102,7 @@
         "country": "France"
       }
     },
-    "description": "Formation intensive sur une durée de 9 mois : 6 mois au campus et 3 mois en stage, dédiée à la conception d'applications web et mobiles. Au programme : maîtrise approfondie de JavaScript, React, React Native, développement d'une API avec Express JS, conception et gestion d'une base de données MySQL, ainsi que des compétences en gestion de projet, méthodes agiles, conception de maquettes et déploiement via Docker.",
+    "description": "Cette formation intensive m'a permis d'acquérir de solides compétences en développement full stack à travers une phase d'apprentissage technique suivie d'une expérience en entreprise.\n\nJ'ai travaillé sur plusieurs projets de conception et de réalisation d'applications en utilisant des technologies modernes telles que JavaScript, TypeScript, React, Node.js, Express, Docker et MySQL.\n\nCette expérience m'a permis de développer une approche complète du cycle de vie d'une application, de la conception des fonctionnalités jusqu'à leur mise en production, tout en appliquant les bonnes pratiques de développement et de collaboration en équipe.",
     "projects": [
       {
         "name": "Game Pulse",

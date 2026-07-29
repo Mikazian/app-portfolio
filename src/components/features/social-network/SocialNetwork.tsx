@@ -3,7 +3,7 @@ import { useSocialNetworks } from '../../../hooks';
 
 import Text from '../../common/Text';
 import Divider from '../../common/Divider';
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 
 /**
  * Composant des réseaux sociaux
@@ -43,7 +43,7 @@ const SocialNetwork = (): React.JSX.Element => {
             className="scale-100 hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <Icon name={network.icon} color="var(--onbackground)" />
+              <Icon name={network.icon} color="var(--text-primary)" />
             </a>
           </li>
         ))}

@@ -1,4 +1,4 @@
-import { TextType } from '../../types/enums';
+import { TextType } from '../../types';
 
 interface TextProps {
   as?: TextType;

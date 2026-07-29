@@ -1,5 +1,5 @@
 import { assets } from '../../assets';
-import { AppImgType } from '../../types/enums/app-img.enum';
+import { AppImgType } from '../../enums/app-img.enum';
 
 interface ImageProps {
   src: AppImgType;

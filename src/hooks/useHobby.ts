@@ -1,6 +1,6 @@
 import hobbies from '../data/hobby.json';
-import { AppIconSvgType } from '../types/enums';
-import { HobbyType } from '../types/interfaces/hobby.type';
+import { AppIconSvgType } from '../enums';
+import { HobbyType } from '../types/hobby.type';
 
 export const useHobby = () => {
   const userHobbies: HobbyType[] = hobbies.map((hobby) => ({

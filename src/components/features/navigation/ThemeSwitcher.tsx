@@ -1,6 +1,6 @@
-import { AppIconSvgType } from '../../../types/enums';
+import { AppIconSvgType } from '../../../enums';
 
-import Icon from '../../common/Icon';
+import Icon from '../../common/icon/Icon';
 
 interface ThemeSwitcherProps {
   icon: AppIconSvgType;
@@ -15,8 +15,12 @@ interface ThemeSwitcherProps {
  */
 const ThemeSwitcher = ({ icon, onClick }: ThemeSwitcherProps): React.JSX.Element => {
   return (
-    <button type="button" className="rounded-full p-1.5 relative z-20" onClick={onClick}>
-      <Icon name={icon} size="20" color="var(--onbackground)" />
+    <button
+      type="button"
+      className="rounded-full p-1.5 relative z-20 cursor-pointer"
+      onClick={onClick}
+    >
+      <Icon name={icon} size="20" color="var(--text-primary)" />
     </button>
   );
 };
