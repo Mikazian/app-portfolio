@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from '../features/navigation/Navbar';
 import Transition from './Transition';
 import Footer from '../common/Footer';
+import ContactAlert from '../features/contact/ContactAlert';
 import CopyAlert from '../features/copy-clipboard/CopyAlert';
 import Header from '../common/Header';
 
@@ -30,6 +31,7 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
       </main>
 
       <CopyAlert />
+      <ContactAlert />
 
       <Transition />
 
