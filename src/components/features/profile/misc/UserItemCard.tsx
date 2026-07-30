@@ -43,7 +43,7 @@ const UserItemCard = <T extends Item>({ item }: UserItemCardProps<T>): React.JSX
 
       {item.description ? (
         <>
-          <Divider width="100%" />
+          <Divider />
 
           <Text as="p" className="text-sm text-text-secondary">
             {item.description}

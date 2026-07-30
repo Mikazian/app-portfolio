@@ -77,12 +77,7 @@ const UserContact = () => {
           />
 
           <div className="mt-4 w-full">
-            <Button
-              type="submit"
-              disabled={isSending}
-              onClick={() => {}}
-              additionalClass="h-12 w-full"
-            >
+            <Button type="submit" disabled={isSending} additionalClass="h-12 w-full">
               {isSending ? 'Envoi...' : 'Envoyer'}
             </Button>
           </div>

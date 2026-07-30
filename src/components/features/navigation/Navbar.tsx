@@ -108,8 +108,9 @@ const Navbar = (): React.JSX.Element => {
           ))}
         </ul>
 
-        <div className="theme shrink-0">
-          <Divider height="10" isVertical />
+        <div className="theme shrink-0 h-12">
+          <Divider isVertical />
+
           <ThemeSwitcher
             icon={theme === 'dark' ? AppIconSvg.MOON : AppIconSvg.SUN}
             onClick={toggleTheme}

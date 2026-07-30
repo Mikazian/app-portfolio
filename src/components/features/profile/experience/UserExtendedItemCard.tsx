@@ -1,15 +1,16 @@
+import { AppIconSvg } from '../../../../enums';
 import { ExperienceType, TrainingType } from '../../../../types';
 import { formatDuration } from '../../../../helpers/format-duration';
-
-import Text from '../../../common/Text';
+import Article from '../../../common/Article';
+import ButtonCard from '../../../common/ButtonCard';
+import Card from '../../../common/Card';
+import Divider from '../../../common/Divider';
 import Icon from '../../../common/icon/Icon';
 import Image from '../../../common/Image';
-import Card from '../../../common/Card';
 import Label from '../../../common/Label';
-import Divider from '../../../common/Divider';
-import ButtonCard from '../../../common/ButtonCard';
-import Article from '../../../common/Article';
-import { AppIconSvg } from '../../../../enums';
+import Text from '../../../common/Text';
+import UserTask from './UserTask';
+import StackList from './StackList';
 
 interface UserExtendedItemCardProps<T> {
   item: T;
@@ -51,17 +52,27 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
 
       <Divider />
 
-      <Article nbOfLine={4} className="items-center" text={item.description} />
+      <Article nbOfLine={4} className="items-center" text={item.description}>
+        {item.tasks ? (
+          <div className="flex flex-col gap-4 mt-4">
+            <Divider />
+
+            <UserTask tasks={item.tasks} />
+          </div>
+        ) : null}
+      </Article>
 
       {item.projects && (
         <>
           <Divider />
 
-          <footer className="flex flex-col gap-2">
+          <footer className="flex flex-col gap-4">
             {item.projects.map((project, index) => (
               <ButtonCard
                 key={index}
-                onClick={() => {}}
+                onClick={() =>
+                  project.url && window.open(project.url, '_blank', 'noopener,noreferrer')
+                }
                 additionalClass="flex grow justify-between items-center text-start px-2 py-2 gap-2"
               >
                 <div className="flex gap-2 items-center">
@@ -86,6 +97,8 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                 <Icon name={AppIconSvg.ARROW_LEFT} size="20" />
               </ButtonCard>
             ))}
+
+            <StackList stacks={item.stacks} />
           </footer>
         </>
       )}

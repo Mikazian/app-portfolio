@@ -3,7 +3,10 @@ import trainingData from '../data/training.json';
 import { calculateDurationInMonth } from '../helpers/calculate-duration-date';
 import { convertDate } from '../helpers/format-date';
 import { AppImgType } from '../enums';
+import { Stack } from '../enums/stack.enum';
 import { ExperienceType } from '../types';
+
+const toAppImg = (logo: string): AppImgType => logo as AppImgType;
 
 export const useExperience = () => {
   const allItems = [...experiences, ...trainingData].sort(
@@ -20,11 +23,12 @@ export const useExperience = () => {
       duration: duration.toString(),
       company: {
         ...item.company,
-        logo: item.company.logo as AppImgType,
+        logo: toAppImg(item.company.logo),
       },
+      stacks: 'stacks' in item ? (item.stacks as Stack[] | undefined) : undefined,
       projects: item.projects?.map((project) => ({
         ...project,
-        logo: project.logo as AppImgType,
+        logo: toAppImg(project.logo),
       })),
     };
   });

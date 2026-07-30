@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import TruncateMarkup from 'react-truncate-markup';
 
 interface ArticleProps {
@@ -7,7 +7,12 @@ interface ArticleProps {
   className?: string;
 }
 
-const Article = ({ text, nbOfLine, className }: ArticleProps): React.JSX.Element => {
+const Article = ({
+  text,
+  nbOfLine,
+  className,
+  children,
+}: PropsWithChildren<ArticleProps>): React.JSX.Element => {
   const [expanded, setExpanded] = useState(false);
   const [remountKey, setRemountKey] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,8 +37,15 @@ const Article = ({ text, nbOfLine, className }: ArticleProps): React.JSX.Element
 
   if (expanded) {
     return (
-      <article ref={containerRef} className={baseClassName}>
+      <article
+        ref={containerRef}
+        className={`${baseClassName}
+      `}
+      >
         {text}
+
+        {children}
+
         <button
           type="button"
           onClick={() => setExpanded(false)}

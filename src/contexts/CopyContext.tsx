@@ -43,7 +43,7 @@ export const CopyProvider = ({ children }: CopyProviderProps) => {
       copyToClipboard,
       error,
     }),
-    [isCopied, showCopyAlert, copyToClipboard, error],
+    [isCopied, showCopyAlert, error],
   );
 
   return <CopyContext.Provider value={value}>{children}</CopyContext.Provider>;

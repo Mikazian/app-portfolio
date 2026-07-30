@@ -6,7 +6,7 @@ interface SectionLayoutProps {
   children: React.ReactNode;
 }
 
-const SectonLayout = ({ id, title, children }: SectionLayoutProps) => {
+const SectionLayout = ({ id, title, children }: SectionLayoutProps) => {
   return (
     <section id={id} className="flex flex-col mt-40">
       <Text
@@ -20,4 +20,4 @@ const SectonLayout = ({ id, title, children }: SectionLayoutProps) => {
   );
 };
 
-export default SectonLayout;
+export default SectionLayout;
