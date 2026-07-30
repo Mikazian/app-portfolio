@@ -68,23 +68,29 @@
     "description": "J'ai suivi une formation intensive qui m'a permis d'acquérir de solides bases en développement web et en conception d'applications.\n\nJ'ai travaillé sur plusieurs projets en utilisant des technologies telles que HTML, CSS, PHP, Symfony et MySQL, tout en découvrant les bonnes pratiques de développement et la gestion des bases de données.\n\nCette formation m'a permis de développer ma logique de programmation, de renforcer mon autonomie technique et de comprendre les différentes étapes de création d'une application web, de la conception jusqu'à sa réalisation.",
     "projects": [
       {
-        "name": "CV de Groot",
-        "type": "Site web CV fictif de Groot",
-        "logo": "img-groot",
-        "url": ""
-      },
-      {
         "name": "Jeannette Verdier",
         "type": "Site web Lycée Profesionnel Jeannette Verdier",
         "logo": "img-jeannette",
-        "url": ""
+        "url": "https://github.com/Mikazian/jeannette-verdier"
       },
       {
         "name": "Inovin",
         "type": "Site web création et dégustation de vin",
         "logo": "img-inovin",
-        "url": ""
+        "url": "https://github.com/Mikazian/Projet3-Inovin"
       }
+    ],
+    "stacks": [
+      "php",
+      "symfony",
+      "doctrineOrm",
+      "twig",
+      "webpack",
+      "bootstrap",
+      "docker",
+      "mySql",
+      "phpstan",
+      "stimulus"
     ]
   },
   {
@@ -108,14 +114,15 @@
         "name": "Game Pulse",
         "type": "Site web de jeux vidéo",
         "logo": "img-gamepulse",
-        "url": ""
+        "url": "https://github.com/Mikazian/GamePulse"
       },
       {
         "name": "Tindev",
         "type": "Application de rencontre pour développeurs",
         "logo": "img-tindev",
-        "url": ""
+        "url": "https://github.com/Mikazian/tindev-app"
       }
-    ]
+    ],
+    "stacks": ["typescript", "expressJs", "react", "vite", "bun", "mySql", "docker", "tailwindCss"]
   }
 ]

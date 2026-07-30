@@ -1,3 +1,4 @@
+import { Stack } from '../enums/stack.enum';
 import { CompanyType, ProjectType } from './experience.type';
 
 export type TrainingType = {
@@ -10,4 +11,6 @@ export type TrainingType = {
   company: CompanyType;
   description: string;
   projects?: ProjectType[];
+  tasks?: { title: string; description: string }[];
+  stacks?: Stack[];
 };

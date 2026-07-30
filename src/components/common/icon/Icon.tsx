@@ -2,8 +2,6 @@ import { AppIconSvgType } from '../../../enums';
 import { SvgIconSet } from './SvgIconSet';
 import Text from '../Text';
 
-const iconSets = [SvgIconSet];
-
 export interface IconProps {
   name: AppIconSvgType;
   size?: string;
@@ -30,21 +28,19 @@ const Icon = ({
   strokeColor,
   strokeWidth,
 }: IconProps): React.JSX.Element | undefined => {
-  for (const set of iconSets) {
-    const regex = new RegExp(`^${set.prefix}-`);
+  const regex = new RegExp(`^${SvgIconSet.prefix}-`);
 
-    if (regex.test(name)) {
-      return (
-        <set.component
-          name={name}
-          size={size}
-          color={color}
-          className={className}
-          strokeColor={strokeColor}
-          strokeWidth={strokeWidth}
-        />
-      );
-    }
+  if (regex.test(name)) {
+    return (
+      <SvgIconSet.component
+        name={name}
+        size={size}
+        color={color}
+        className={className}
+        strokeColor={strokeColor}
+        strokeWidth={strokeWidth}
+      />
+    );
   }
 
   return <Text>Icône non supportée</Text>;
