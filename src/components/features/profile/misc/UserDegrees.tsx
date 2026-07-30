@@ -12,7 +12,7 @@ import { AppIconSvg } from '../../../../enums';
  * Composant des certifications de l'utilisateur
  * @returns {JSX.Element}
  */
-const UserDegress = (): React.JSX.Element => {
+const UserDegrees = (): React.JSX.Element => {
   const { userDegrees } = useDegree();
 
   const section = aboutSections.find((s) => s.id === 'certifications')!;
@@ -37,7 +37,7 @@ const UserDegress = (): React.JSX.Element => {
               </div>
             </div>
 
-            <Divider width="100%" />
+            <Divider />
 
             <Text as="p" className="text-sm text-text-secondary">
               {`Année : ${degree.year}`}
@@ -49,4 +49,4 @@ const UserDegress = (): React.JSX.Element => {
   );
 };
 
-export default UserDegress;
+export default UserDegrees;

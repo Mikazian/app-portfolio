@@ -35,7 +35,8 @@ const SocialNetwork = (): React.JSX.Element => {
       <Text className="translate-y-0.5 lg:absolute lg:origin-left lg:rotate-90 lg:top-0 lg:left-0 uppercase text-sm lg:mb-6 lg:translate-x-3 lg:-translate-y-24 text-nowrap">
         Me suivre
       </Text>
-      <Divider height="12" width="12" isVertical={isVertical} />
+      <Divider isVertical={isVertical} />
+
       <ul className="flex flex-row lg:flex-col gap-5">
         {networks.map((network) => (
           <li

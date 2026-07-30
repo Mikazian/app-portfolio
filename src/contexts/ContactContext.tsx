@@ -37,7 +37,7 @@ export const ContactProvider = ({ children }: ContactProviderProps) => {
       alertType,
       triggerContactAlert,
     }),
-    [showContactAlert, alertMessage, alertType, triggerContactAlert],
+    [showContactAlert, alertMessage, alertType],
   );
 
   return <ContactContext.Provider value={value}>{children}</ContactContext.Provider>;

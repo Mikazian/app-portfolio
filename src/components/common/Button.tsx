@@ -1,7 +1,7 @@
 interface ButtonProps {
   children: React.ReactNode;
   type: 'button' | 'submit' | 'reset';
-  onClick: () => void;
+  onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   disabled?: boolean;

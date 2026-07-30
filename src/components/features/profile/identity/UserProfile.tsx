@@ -43,7 +43,7 @@ const UserProfile = (): React.JSX.Element => {
           </div>
         </header>
 
-        <Divider width="100%" />
+        <Divider />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <UserButtonCard text={profile.phone} icon={AppIconSvg.MOBILE} />
