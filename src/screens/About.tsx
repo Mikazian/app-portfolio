@@ -11,7 +11,7 @@ import {
 } from '../components/features/profile';
 import UserContact from '../components/features/profile/misc/UserContact';
 import MainLayout from '../components/layout/MainLayout';
-import { scrollToElement } from '../helpers/scroll';
+import { scrollToElement } from '@app-portfolio/helpers';
 
 const About = () => {
   const location = useLocation();

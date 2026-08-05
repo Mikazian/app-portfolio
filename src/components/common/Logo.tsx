@@ -1,5 +1,5 @@
 import { useTheme } from '../../contexts';
-import { AppImg } from '../../enums';
+import { AppImg } from '@app-portfolio/enums';
 import Image from './Image';
 
 const Logo = () => {

@@ -9,7 +9,7 @@ import Card from '../../../common/Card';
 import TextAreaField from '../../../common/TextAreaField';
 import TextField from '../../../common/TextField';
 import SectionLayout from '../../../layout/SectionLayout';
-import { contactSchema, type ContactForm } from '../../../../validator/contact.schema';
+import { contactSchema, type ContactForm } from '@app-portfolio/validator';
 
 const UserContact = () => {
   const [isSending, setIsSending] = useState(false);

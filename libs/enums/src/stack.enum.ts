@@ -114,5 +114,3 @@ export const StackColor: Record<Stack, string> = {
   [Stack.WEBPACK]: '#8DD6F9',
   [Stack.FIGMA]: '#f24e1e',
 };
-
-export type StackType = Stack;

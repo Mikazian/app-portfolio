@@ -1,4 +1,4 @@
-import { AppIconSvg } from '../../../enums';
+import { AppIconSvg } from '@app-portfolio/enums';
 import { useContact } from '../../../contexts/ContactContext';
 import Alert from '../../common/Alert';
 

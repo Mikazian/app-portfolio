@@ -1,4 +1,4 @@
-import { Stack, StackColor, StackI18n } from '../../../../enums/stack.enum';
+import { Stack, StackColor, StackI18n } from '@app-portfolio/enums';
 import Label from '../../../common/Label';
 
 interface StackListProps {

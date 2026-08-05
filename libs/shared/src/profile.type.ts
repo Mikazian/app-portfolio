@@ -6,5 +6,6 @@ export type ProfileType = {
   phone: string;
   nationality: string;
   biography: string;
+  shortBiography: string;
   picture: string;
 };

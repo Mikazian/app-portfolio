@@ -17,11 +17,20 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Paths */
+    "paths": {
+      "@app-portfolio/enums": ["./libs/enums/src/index.ts"],
+      "@app-portfolio/helpers": ["./libs/helpers/src/index.ts"],
+      "@app-portfolio/shared": ["./libs/shared/src/index.ts"],
+      "@app-portfolio/validator": ["./libs/validator/src/index.ts"],
+      "@app-portfolio/react-pdf": ["./libs/react-pdf/src/index.ts"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "libs"]
 }

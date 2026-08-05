@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { SkillType as Skill, skillValues } from '../enums';
-import { SkillType } from '../types/skill.type';
+import { SkillType as Skill, skillValues } from '@app-portfolio/enums';
+import { SkillType } from '@app-portfolio/shared';
 
 interface ScreenType {
   width: number;

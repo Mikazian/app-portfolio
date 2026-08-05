@@ -1,5 +1,5 @@
 import socialNetworks from '../data/social-network.json';
-import { AppIconSvgType } from '../enums';
+import { AppIconSvgType } from '@app-portfolio/enums';
 
 type IconNameType = AppIconSvgType;
 

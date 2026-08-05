@@ -1,6 +1,6 @@
 [
   {
-    "id": 2,
+    "id": 7,
     "job": "Développeur Full Stack",
     "contract": "CDI",
     "start_date": "2024-05",
@@ -15,6 +15,7 @@
       }
     },
     "description": "Au sein d'une petite équipe, je participe au développement et à l'évolution de plusieurs applications web et mobiles ainsi que du back-office associé.\n\nMon rôle consiste à concevoir et développer de nouvelles fonctionnalités, améliorer les applications existantes et accompagner leur évolution au quotidien. J'interviens aussi bien sur la partie interface que sur les fonctionnalités côté serveur et la gestion des données.\n\nJe réalise également les maquettes et la conception des interfaces afin de proposer des applications simples, intuitives et adaptées aux besoins des utilisateurs.\n\nEn complément du développement, je m'occupe des déploiements, des mises en production, de la publication des applications sur les stores ainsi que de la maintenance de l'environnement technique. Je travaille également sur des sujets liés à l'IoT et au suivi d'équipements connectés.\n\nCette expérience m'a permis de développer une grande polyvalence et d'avoir une vision complète d'un projet, de la conception à la mise en production.",
+    "shortDescription": "Conception et développement d'applications mobiles Android/IOS, web et back-office, de la conception UI/UX à la mise en production. Création d'applications White Label, réalisation de fonctionnalités métier, systèmes d'abonnements, notifications push et solutions connectées.",
     "projects": [],
     "tasks": [
       {
@@ -44,11 +45,12 @@
       "typeOrm",
       "docker",
       "kubernetes",
-      "firebase"
+      "firebase",
+      "figma"
     ]
   },
   {
-    "id": 1,
+    "id": 6,
     "job": "Développeur Full Stack",
     "contract": "Stage",
     "start_date": "2024-03",
@@ -63,7 +65,7 @@
       }
     },
     "description": "Lors de mon stage en tant que Développeur Full Stack, j’ai participé au développement et à l’évolution des applications mobiles au sein d’une équipe.\n\nJ’ai contribué à la conception de nouvelles fonctionnalités en réalisant des maquettes et prototypes UI/UX afin de définir les parcours utilisateurs et les interfaces avant leur développement.\n\nEn collaboration avec les différents membres de l’équipe, j’ai participé aux différentes étapes de réalisation des projets, de l’analyse des besoins à l’intégration technique des fonctionnalités.\n\nCette expérience m’a permis de renforcer mes compétences en conception d’interfaces, développement mobile et développement backend, tout en découvrant le fonctionnement d’un projet mené en équipe.",
-    "projects": [],
+    "shortDescription": "Conception et développement de nouvelles fonctionnalités, de modules métier, création d'interfaces mobiles, intégration d'API REST et correction d'anomalies, en collaboration avec l'équipe de développement.",
     "tasks": [
       {
         "title": "Module de gestion des véhicules",
@@ -84,7 +86,8 @@
       "typeOrm",
       "docker",
       "kubernetes",
-      "firebase"
+      "firebase",
+      "figma"
     ]
   }
 ]

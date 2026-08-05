@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import { useTheme } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
 import Divider from '../../common/Divider';
-import { AppIconSvg } from '../../../enums';
+import { AppIconSvg } from '@app-portfolio/enums';
 import { aboutSections } from './about-sections';
-import { getNavbarOffset } from '../../../helpers/scroll';
+import { getNavbarOffset } from '@app-portfolio/helpers';
 import Logo from '../../common/Logo';
 
 const OBSERVER_OPTIONS: IntersectionObserverInit = {
@@ -106,6 +106,19 @@ const Navbar = (): React.JSX.Element => {
               </button>
             </li>
           ))}
+
+          <li className="navbar-item">
+            <NavLink
+              to="/resume"
+              className={({ isActive }) =>
+                `uppercase text-sm bg-transparent cursor-pointer transition-colors duration-200 ${
+                  isActive ? 'text-primary' : 'text-text-primary hover:text-primary'
+                }`
+              }
+            >
+              CV
+            </NavLink>
+          </li>
         </ul>
 
         <div className="theme shrink-0 h-12">

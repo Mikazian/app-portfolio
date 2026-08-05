@@ -1,5 +1,5 @@
-import { AppImgType } from '../enums';
-import { Stack } from '../enums/stack.enum';
+import { AppImgType } from '@app-portfolio/enums';
+import { Stack } from '@app-portfolio/enums';
 
 type LocationType = {
   city: string;
@@ -29,6 +29,7 @@ export type ExperienceType = {
   end_date: string | null;
   company: CompanyType;
   description: string;
+  shortDescription?: string;
   projects?: ProjectType[];
   tasks?: { title: string; description: string }[];
   stacks?: Stack[];

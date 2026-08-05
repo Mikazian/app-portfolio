@@ -14,7 +14,8 @@
         "country": "France"
       }
     },
-    "description": "Formation de 2 ans en Signalétique, Enseigne et Décors, axée sur la création et la réalisation de supports visuels.\n\nJ'ai appris à concevoir et réaliser différents projets de signalétique, notamment la création d'enseignes, la pose de vinyles et la réalisation de décors peints.\n\nCette formation m'a permis de développer ma précision, ma créativité et ma maîtrise des techniques de création graphique, notamment à travers l'utilisation d'outils comme Photoshop et Illustrator."
+    "description": "Formation de 2 ans en Signalétique, Enseigne et Décors, axée sur la création et la réalisation de supports visuels.\n\nJ'ai appris à concevoir et réaliser différents projets de signalétique, notamment la création d'enseignes, la pose de vinyles et la réalisation de décors peints.\n\nCette formation m'a permis de développer ma précision, ma créativité et ma maîtrise des techniques de création graphique, notamment à travers l'utilisation d'outils comme Photoshop et Illustrator.",
+    "stacks": ["photoshop", "illustrator"]
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
         "country": "France"
       }
     },
-    "description": "Formation de 2 ans en Communication Graphique, axée sur la création de supports visuels et la conception graphique.\n\nJ'ai réalisé différents projets de communication tels que des brochures, cartes de visite, logos, illustrations et supports print en utilisant des outils de création graphique comme Photoshop, Illustrator et InDesign.\n\nCette formation m'a permis de développer ma créativité, ma sensibilité graphique et ma maîtrise des principes de conception visuelle.\n\nJ'ai également effectué plusieurs stages en entreprise, qui m'ont permis de découvrir le fonctionnement d'un environnement professionnel et de mettre en pratique mes compétences."
+    "description": "Formation de 2 ans en Communication Graphique, axée sur la création de supports visuels et la conception graphique.\n\nJ'ai réalisé différents projets de communication tels que des brochures, cartes de visite, logos, illustrations et supports print en utilisant des outils de création graphique comme Photoshop, Illustrator et InDesign.\n\nCette formation m'a permis de développer ma créativité, ma sensibilité graphique et ma maîtrise des principes de conception visuelle.\n\nJ'ai également effectué plusieurs stages en entreprise, qui m'ont permis de découvrir le fonctionnement d'un environnement professionnel et de mettre en pratique mes compétences.",
+    "stacks": ["photoshop", "illustrator", "inDesign"]
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
         "country": "France"
       }
     },
-    "description": "Année préparatoire en Animation 2D/3D et Jeux Vidéo au sein de LISAA (L'Institut Supérieur des Arts Appliqués), axée sur l'apprentissage des fondamentaux de la création numérique.\n\nCette formation m'a permis de développer mes compétences artistiques et techniques à travers différents projets de création, en travaillant notamment sur le dessin, la composition, la narration visuelle et l'initiation aux techniques d'animation 2D/3D.\n\nElle m'a également permis de renforcer ma culture graphique, ma créativité et ma compréhension des étapes de conception d'un projet visuel, de l'idée initiale jusqu'à sa réalisation."
+    "description": "Année préparatoire en Animation 2D/3D et Jeux Vidéo au sein de LISAA (L'Institut Supérieur des Arts Appliqués), axée sur l'apprentissage des fondamentaux de la création numérique.\n\nCette formation m'a permis de développer mes compétences artistiques et techniques à travers différents projets de création, en travaillant notamment sur le dessin, la composition, la narration visuelle et l'initiation aux techniques d'animation 2D/3D.\n\nElle m'a également permis de renforcer ma culture graphique, ma créativité et ma compréhension des étapes de conception d'un projet visuel, de l'idée initiale jusqu'à sa réalisation.",
+    "stacks": ["photoshop", "premiere", "afterEffect", "3dsMax"]
   },
   {
     "id": 4,
@@ -90,7 +93,8 @@
       "docker",
       "mySql",
       "phpstan",
-      "stimulus"
+      "stimulus",
+      "figma"
     ]
   },
   {
@@ -123,6 +127,16 @@
         "url": "https://github.com/Mikazian/tindev-app"
       }
     ],
-    "stacks": ["typescript", "expressJs", "react", "vite", "bun", "mySql", "docker", "tailwindCss"]
+    "stacks": [
+      "typescript",
+      "expressJs",
+      "react",
+      "vite",
+      "bun",
+      "mySql",
+      "docker",
+      "tailwindCss",
+      "figma"
+    ]
   }
 ]

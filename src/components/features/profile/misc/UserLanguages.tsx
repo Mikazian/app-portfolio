@@ -1,5 +1,5 @@
 import { useLanguage } from '../../../../hooks';
-import { AppIconSvgType } from '../../../../enums';
+import { AppIconSvgType } from '@app-portfolio/enums';
 import { aboutSections } from '../../navigation/about-sections';
 import SectionLayout from '../../../layout/SectionLayout';
 import UserItemCard from './UserItemCard';

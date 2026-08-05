@@ -1,4 +1,4 @@
-import { Stack } from '../enums/stack.enum';
+import { Stack } from '@app-portfolio/enums';
 import { CompanyType, ProjectType } from './experience.type';
 
 export type TrainingType = {

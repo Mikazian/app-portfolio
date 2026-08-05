@@ -1,4 +1,4 @@
-import { TextType } from '../../types';
+import { TextType } from '@app-portfolio/shared';
 
 interface TextProps {
   as?: TextType;

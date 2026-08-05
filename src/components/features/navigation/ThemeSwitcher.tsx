@@ -1,4 +1,4 @@
-import { AppIconSvgType } from '../../../enums';
+import { AppIconSvgType } from '@app-portfolio/enums';
 
 import Icon from '../../common/icon/Icon';
 
