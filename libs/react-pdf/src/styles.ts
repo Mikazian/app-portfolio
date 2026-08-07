@@ -1,5 +1,4 @@
 import { Font } from '@react-pdf/renderer';
-import type { Theme } from '../../../src/contexts';
 import LaguMedium from '../../../src/assets/fonts/Lagu-Sans-Medium.ttf';
 import LaguBold from '../../../src/assets/fonts/Lagu-Sans-Bold.ttf';
 import NeuePlakBold from '../../../src/assets/fonts/NeuePlak-NarrowBold.ttf';
@@ -35,7 +34,7 @@ export type ResumeColors = {
   dark: string;
 };
 
-const darkTheme: ResumeColors = {
+export const resumeColors: ResumeColors = {
   primary: '#ec6559',
   secondary: '#7786af',
   textPrimary: '#ffffff',
@@ -46,18 +45,3 @@ const darkTheme: ResumeColors = {
   dividerlight: '#434667',
   dark: '#1a1a2e',
 };
-
-const lightTheme: ResumeColors = {
-  primary: '#ec6559',
-  secondary: '#7786af',
-  textPrimary: '#1a1a1a',
-  textSecondary: '#2d2d2d',
-  background: '#c9dada',
-  foreground: '#d0e0e0',
-  divider: '#becad1',
-  dividerlight: 'rgb(197, 211, 220)',
-  dark: '#e8eef0',
-};
-
-export const getTheme = (theme: Theme): ResumeColors =>
-  theme === 'light' ? lightTheme : darkTheme;

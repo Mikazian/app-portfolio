@@ -1,7 +1,7 @@
 import { View } from '@react-pdf/renderer';
 import type { Style } from '@react-pdf/types';
 import type { ReactNode } from 'react';
-import { useResumeTheme } from '../../contexts';
+import { resumeColors } from '../../styles';
 
 type CardProps = {
   children?: ReactNode;
@@ -9,7 +9,7 @@ type CardProps = {
 };
 
 const Card = ({ children, style }: CardProps) => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
   const styles: Style[] = [
     {
       backgroundColor: colors.foreground,

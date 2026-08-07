@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useTheme } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
@@ -106,19 +106,6 @@ const Navbar = (): React.JSX.Element => {
               </button>
             </li>
           ))}
-
-          <li className="navbar-item">
-            <NavLink
-              to="/resume"
-              className={({ isActive }) =>
-                `uppercase text-sm bg-transparent cursor-pointer transition-colors duration-200 ${
-                  isActive ? 'text-primary' : 'text-text-primary hover:text-primary'
-                }`
-              }
-            >
-              CV
-            </NavLink>
-          </li>
         </ul>
 
         <div className="theme shrink-0 h-12">

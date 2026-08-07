@@ -1,6 +1,6 @@
 import { Image, View } from '@react-pdf/renderer';
 import type { AppImgType } from '@app-portfolio/enums';
-import { useResumeTheme } from '../contexts';
+import { resumeColors } from '../styles';
 import { companyLogos } from '../data/company-logos';
 
 type ResumeExperienceDotProps = {
@@ -8,7 +8,7 @@ type ResumeExperienceDotProps = {
 };
 
 const ResumeExperienceDot = ({ logo }: ResumeExperienceDotProps) => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
   const logoSource = companyLogos[logo];
   const size = 24;
   const logoSize = 18;

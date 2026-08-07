@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { SkillType as Skill, skillValues } from '@app-portfolio/enums';
-import { SkillType } from '@app-portfolio/shared';
+import { SkillCategoryList } from '@app-portfolio/shared';
 
 interface ScreenType {
   width: number;
@@ -15,7 +15,7 @@ const calculateSkillsPerPage = (width: number): number => {
   return 9;
 };
 
-export const useCarouselSkills = (userSkills: SkillType) => {
+export const useCarouselSkills = (userSkills: SkillCategoryList) => {
   const [screen, setScreen] = useState<ScreenType>({
     width: window.innerWidth,
     skillsPerPage: calculateSkillsPerPage(window.innerWidth),

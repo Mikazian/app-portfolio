@@ -1,10 +1,9 @@
 import { View } from '@react-pdf/renderer';
 import { DegreeType } from '@app-portfolio/shared';
-import { useResumeTheme } from '../contexts';
+import { resumeColors } from '../styles';
 import Card from './common/Card';
-import Divider from './common/Divider';
 import Grid from './common/Grid';
-import Icon from './common/Icon';
+import Image from './common/Image';
 import ResumeSection from './ResumeSection';
 import Text from './common/Text';
 
@@ -13,14 +12,14 @@ type ResumeDegreeProps = {
 };
 
 const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
 
   if (!degrees) {
     return null;
   }
 
   return (
-    <ResumeSection title="Certifications">
+    <ResumeSection title="Formation">
       <Grid container spacing={16} style={{ alignItems: 'stretch' }}>
         {degrees.map((degree) => (
           <Grid key={degree.id} size={6} style={{ display: 'flex', flexDirection: 'column' }}>
@@ -31,29 +30,29 @@ const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
                 flexGrow: 1,
                 justifyContent: 'space-between',
                 gap: 8,
+                padding: 12,
               }}
             >
               <View>
                 <View
                   style={{
                     flexDirection: 'row',
-                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                    alignItems: 'flex-start',
                     gap: 8,
                   }}
                 >
-                  <Icon name="svg-degree" size={16} />
-                  <View style={{ flex: 1, minWidth: 0, minHeight: 24, justifyContent: 'center' }}>
-                    <Text
-                      variant="h5"
-                      color={colors.primary}
-                      fontWeight={700}
-                      style={{ lineHeight: 1 }}
-                    >
+                  <Image name="svg-degree" size={12} />
+
+                  <View style={{ flex: 1, minWidth: 0, justifyContent: 'center' }}>
+                    <Text variant="h5" color={colors.primary} fontWeight={700}>
                       {degree.label}
                     </Text>
                   </View>
                 </View>
+              </View>
 
+              <View>
                 <Text
                   variant="p"
                   color={colors.textPrimary}
@@ -62,10 +61,6 @@ const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
                 >
                   {degree.degree}
                 </Text>
-              </View>
-
-              <View>
-                <Divider style={{ marginBottom: 8 }} />
 
                 <Text
                   variant="span"

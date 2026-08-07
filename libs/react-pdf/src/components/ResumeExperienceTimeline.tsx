@@ -1,6 +1,6 @@
 import { View } from '@react-pdf/renderer';
 import type { ExperienceType } from '@app-portfolio/shared';
-import { useResumeTheme } from '../contexts';
+import { resumeColors } from '../styles';
 import ResumeExperienceList from './ResumeExperienceList';
 
 type ResumeExperienceTimelineProps = {
@@ -8,7 +8,7 @@ type ResumeExperienceTimelineProps = {
 };
 
 const ResumeExperienceTimeline = ({ experiences }: ResumeExperienceTimelineProps) => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
   const lineCenter = 12;
   const markerSize = 8;
 

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import type { Style } from '@react-pdf/types';
-import { useResumeTheme } from '../../contexts';
+import { resumeColors } from '../../styles';
 import Text from './Text';
 
 type LabelProps = {
@@ -12,7 +12,7 @@ type LabelProps = {
 };
 
 const Label = ({ children, color, backgroundColor, isOutline = false, style }: LabelProps) => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
   const labelColor = color ?? (isOutline ? colors.primary : colors.background);
 
   return (

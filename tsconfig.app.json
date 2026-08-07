@@ -19,6 +19,7 @@
 
     /* Paths */
     "paths": {
+      "@app-portfolio/data": ["./libs/data/src/index.ts"],
       "@app-portfolio/enums": ["./libs/enums/src/index.ts"],
       "@app-portfolio/helpers": ["./libs/helpers/src/index.ts"],
       "@app-portfolio/shared": ["./libs/shared/src/index.ts"],

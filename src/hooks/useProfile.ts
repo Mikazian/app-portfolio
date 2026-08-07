@@ -1,4 +1,4 @@
-import personalInfos from '../data/personal-infos.json';
+import { personalInfos } from '@app-portfolio/data';
 import { ProfileType } from '@app-portfolio/shared';
 
 export const useProfile = () => {

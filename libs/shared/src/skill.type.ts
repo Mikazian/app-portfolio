@@ -12,7 +12,23 @@ export type DesignSkill = {
   label: string;
 };
 
-export type SkillType = {
+export type SkillCategoryList = {
   development: DevelopmentSkill[];
   design: DesignSkill[];
+};
+
+export type SkillShortList = {
+  frontend: string[];
+  backend: string[];
+  devOps: string[];
+  cloud: string[];
+  tools: string[];
+  uiUx: string[];
+};
+
+export type SkillType = {
+  list: SkillCategoryList[];
+  shortList: {
+    skills: SkillShortList;
+  };
 };

@@ -1,4 +1,4 @@
-import specialities from '../data/speciality.json';
+import { specialities } from '@app-portfolio/data';
 import { AppIconSvgType } from '@app-portfolio/enums';
 import { SpecialityType } from '@app-portfolio/shared';
 

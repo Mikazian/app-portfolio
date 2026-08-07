@@ -1,6 +1,6 @@
 export const aboutSections = [
   { id: 'profil', label: 'Profil' },
-  { id: 'certifications', label: 'Certifications' },
+  { id: 'certifications', label: 'Formation' },
   { id: 'specialites', label: 'Spécialités' },
   { id: 'competences', label: 'Compétences' },
   { id: 'experiences', label: 'Expériences' },

@@ -1,11 +1,11 @@
 import { Text as RPDFText, View } from '@react-pdf/renderer';
-import { useResumeTheme } from '../contexts';
+import { resumeColors } from '../styles';
 import { resumeData } from '../data/resume';
 import Avatar from './common/Avatar';
 import Text from './common/Text';
 
 const ResumeHeader = () => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
   const { profile, jobs } = resumeData;
 
   return (
@@ -16,13 +16,13 @@ const ResumeHeader = () => {
         alignItems: 'center',
         backgroundColor: colors.dark,
         paddingVertical: 20,
-        paddingHorizontal: 20,
-        gap: 20,
+        paddingHorizontal: 32,
+        gap: 32,
         borderBottomWidth: 1,
         borderColor: colors.secondary,
       }}
     >
-      <Avatar size={120} style={{ backgroundColor: 'white' }} />
+      <Avatar size={140} style={{ backgroundColor: 'white' }} />
 
       <View style={{ flex: 1, flexDirection: 'column', gap: 12 }}>
         <View>
@@ -45,6 +45,10 @@ const ResumeHeader = () => {
             ))}
           </View>
         </View>
+
+        <Text variant="h4" color={colors.primary} fontWeight={700} style={{ lineHeight: 1.4 }}>
+          {profile.headline}
+        </Text>
 
         <Text variant="p" color={colors.textSecondary} fontWeight={900}>
           {profile.shortBiography}

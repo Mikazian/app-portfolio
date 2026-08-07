@@ -1,7 +1,7 @@
 import { View } from '@react-pdf/renderer';
 import type { ExperienceType } from '@app-portfolio/shared';
 import { convertDate } from '@app-portfolio/helpers';
-import { useResumeTheme } from '../contexts';
+import { resumeColors } from '../styles';
 import Card from './common/Card';
 import Label from './common/Label';
 import Text from './common/Text';
@@ -11,8 +11,9 @@ type ResumeExperienceCardProps = {
 };
 
 const ResumeExperienceCard = ({ experience }: ResumeExperienceCardProps) => {
-  const colors = useResumeTheme();
+  const colors = resumeColors;
   const { job, contract, company, start_date, end_date, shortDescription } = experience;
+  const highlights = shortDescription ? shortDescription.split('\n') : [];
 
   return (
     <Card>
@@ -45,15 +46,31 @@ const ResumeExperienceCard = ({ experience }: ResumeExperienceCardProps) => {
         {company.location.country}
       </Text>
 
-      <Text variant="span" color={colors.textSecondary} fontWeight={400}>
-        {convertDate(start_date)} - {end_date ? convertDate(end_date) : "Aujourd'hui"}
-      </Text>
+      <View style={{ display: 'flex', flexDirection: 'row' }}>
+        <Text variant="span" color={colors.textSecondary} fontWeight={400}>
+          {convertDate(start_date)} - {end_date ? convertDate(end_date) : "Aujourd'hui"}
+        </Text>
+      </View>
 
       <View style={{ borderBottomWidth: 1, borderColor: colors.divider, marginVertical: 8 }} />
 
-      <Text variant="p" color={colors.textSecondary} fontWeight={400} style={{ marginTop: 4 }}>
-        {shortDescription}
-      </Text>
+      <View style={{ flexDirection: 'column', gap: 6, marginTop: 4 }}>
+        {highlights.map((highlight, index) => (
+          <View key={index} style={{ flexDirection: 'row', gap: 6 }}>
+            <Text variant="p" color={colors.primary} fontWeight={700} style={{ lineHeight: 1.4 }}>
+              •
+            </Text>
+            <Text
+              variant="p"
+              color={colors.textSecondary}
+              fontWeight={400}
+              style={{ lineHeight: 1.4, flex: 1 }}
+            >
+              {highlight}
+            </Text>
+          </View>
+        ))}
+      </View>
     </Card>
   );
 };

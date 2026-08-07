@@ -1,12 +1,14 @@
-import personalInfos from '../../../../src/data/personal-infos.json';
-import jobs from '../../../../src/data/job.json';
-import experiences from '../../../../src/data/experience.json';
-import trainingData from '../../../../src/data/training.json';
-import degrees from '../../../../src/data/degree.json';
-import skillsData from '../../../../src/data/skill.json';
-import languages from '../../../../src/data/language.json';
-import hobbies from '../../../../src/data/hobby.json';
-import socialNetworks from '../../../../src/data/social-network.json';
+import {
+  personalInfos,
+  jobs,
+  experiences,
+  trainingData,
+  degrees,
+  skills as skillsData,
+  languages,
+  hobbies,
+  socialNetworks,
+} from '@app-portfolio/data';
 import type {
   ProfileType,
   JobType,

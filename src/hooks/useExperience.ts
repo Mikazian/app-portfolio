@@ -1,9 +1,6 @@
-import experiences from '../data/experience.json';
-import trainingData from '../data/training.json';
-import { calculateDurationInMonth } from '@app-portfolio/helpers';
-import { convertDate } from '@app-portfolio/helpers';
-import { AppImgType } from '@app-portfolio/enums';
-import { Stack } from '@app-portfolio/enums';
+import { experiences, trainingData } from '@app-portfolio/data';
+import { calculateDurationInMonth, convertDate } from '@app-portfolio/helpers';
+import { AppImgType, Stack } from '@app-portfolio/enums';
 import { ExperienceType } from '@app-portfolio/shared';
 
 const toAppImg = (logo: string): AppImgType => logo as AppImgType;

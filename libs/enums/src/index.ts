@@ -1,4 +1,7 @@
 export * from './app-icon.enum';
 export * from './app-img.enum';
+export * from './resume-mode.enum';
 export * from './skill.enum';
+export * from './stack-category.enum';
+export * from './stack-icon';
 export * from './stack.enum';

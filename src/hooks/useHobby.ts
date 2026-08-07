@@ -1,4 +1,4 @@
-import hobbies from '../data/hobby.json';
+import { hobbies } from '@app-portfolio/data';
 import { AppIconSvgType } from '@app-portfolio/enums';
 import { HobbyType } from '@app-portfolio/shared';
 

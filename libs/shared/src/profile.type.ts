@@ -7,5 +7,11 @@ export type ProfileType = {
   nationality: string;
   biography: string;
   shortBiography: string;
+  headline: string;
   picture: string;
+  address: {
+    address: string;
+    city: string;
+    postalCode: string;
+  };
 };
