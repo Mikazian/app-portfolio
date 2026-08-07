@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "label": "Développement",
+    "logo": "svg-code"
+  },
+  {
+    "id": 2,
+    "label": "Création numérique",
+    "logo": "svg-digital-art"
+  },
+  {
+    "id": 3,
+    "label": "Jeux vidéo",
+    "logo": "svg-gaming"
+  },
+  {
+    "id": 4,
+    "label": "Mangas et animation japonaise",
+    "logo": "svg-book"
+  }
+]

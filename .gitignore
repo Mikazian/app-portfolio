@@ -14,6 +14,13 @@ dist-ssr
 .env
 .omo/
 
+# Test / dev artifacts
+.playwright-mcp/
+resume-*.png
+render-entry.tsx
+render-*.mjs
+rolldown.test.config.mjs
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

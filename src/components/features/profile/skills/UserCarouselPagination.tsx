@@ -1,5 +1,5 @@
-import { DesignSkill, DevelopmentSkill } from '../../../../types';
-import { AppIconSvg } from '../../../../enums';
+import { DesignSkill, DevelopmentSkill } from '@app-portfolio/shared';
+import { AppIconSvg } from '@app-portfolio/enums';
 import UserButtonCarousel from './UserButtonCarousel';
 
 type Skill = DevelopmentSkill | DesignSkill;

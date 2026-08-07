@@ -1,0 +1,37 @@
+import { AppIconSvg } from './app-icon.enum';
+import type { AppIconSvgType } from './app-icon.enum';
+import { Stack } from './stack.enum';
+
+export const StackIcon: Partial<Record<Stack, AppIconSvgType>> = {
+  [Stack.TYPESCRIPT]: AppIconSvg.TYPESCRIPT,
+  [Stack.TYPEORM]: AppIconSvg.TYPEORM,
+  [Stack.NEST_JS]: AppIconSvg.NESTJS,
+  [Stack.NODE_JS]: AppIconSvg.NODEJS,
+  [Stack.REACT]: AppIconSvg.REACT,
+  [Stack.REACT_NATIVE]: AppIconSvg.REACT,
+  [Stack.MYSQL]: AppIconSvg.MYSQL,
+  [Stack.REDIS]: AppIconSvg.REDIS,
+  [Stack.ZOD]: AppIconSvg.ZOD,
+  [Stack.DOCKER]: AppIconSvg.DOCKER,
+  [Stack.FIREBASE]: AppIconSvg.FIREBASE,
+  [Stack.REDUX]: AppIconSvg.REDUX,
+  [Stack.JAVASCRIPT]: AppIconSvg.JAVASCRIPT,
+  [Stack.EXPRESS_JS]: AppIconSvg.EXPRESSJS,
+  [Stack.HTML]: AppIconSvg.HTML,
+  [Stack.CSS]: AppIconSvg.CSS,
+  [Stack.TAILWIND_CSS]: AppIconSvg.TAILWIND_CSS,
+  [Stack.MUI]: AppIconSvg.MUI,
+  [Stack.PHOTOSHOP]: AppIconSvg.PHOTOSHOP,
+  [Stack.ILLUSTRATOR]: AppIconSvg.ILLUSTRATOR,
+  [Stack.INDESIGN]: AppIconSvg.INDESIGN,
+  [Stack.AFTER_EFFECTS]: AppIconSvg.AFTER_EFFECTS,
+  [Stack.PREMIERE_PRO]: AppIconSvg.PREMIERE_PRO,
+  [Stack.FIGMA]: AppIconSvg.FIGMA,
+  [Stack.GITHUB]: AppIconSvg.GITHUB,
+  [Stack.GIT]: AppIconSvg.GIT,
+  [Stack.GOOGLE_CLOUD]: AppIconSvg.GOOGLE_CLOUD,
+  [Stack.POSTMAN]: AppIconSvg.POSTMAN,
+  [Stack.VS_CODE]: AppIconSvg.VS_CODE,
+  [Stack.X_CODE]: AppIconSvg.X_CODE,
+  [Stack.ANDROID_STUDIO]: AppIconSvg.ANDROID_STUDIO,
+};

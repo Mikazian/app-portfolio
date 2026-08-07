@@ -1,6 +1,6 @@
 import { ReactSVG } from 'react-svg';
 import { assets } from '../../../assets';
-import { AppIconSvgPrefix } from '../../../enums/app-icon.enum';
+import { AppIconSvgPrefix } from '@app-portfolio/enums';
 import type { IconProps } from './Icon';
 
 const prefix = AppIconSvgPrefix;

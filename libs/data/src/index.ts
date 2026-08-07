@@ -1,0 +1,10 @@
+export { default as personalInfos } from './personal-infos.json';
+export { default as jobs } from './job.json';
+export { default as experiences } from './experience.json';
+export { default as trainingData } from './training.json';
+export { default as degrees } from './degree.json';
+export { default as skills } from './skill.json';
+export { default as languages } from './language.json';
+export { default as hobbies } from './hobby.json';
+export { default as socialNetworks } from './social-network.json';
+export { default as specialities } from './speciality.json';

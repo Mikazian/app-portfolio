@@ -1,8 +1,8 @@
-import degress from '../data/degree.json';
-import { DegreeType } from '../types/degree.type';
+import { degrees } from '@app-portfolio/data';
+import { DegreeType } from '@app-portfolio/shared';
 
 export const useDegree = () => {
-  const userDegrees = degress as DegreeType[];
+  const userDegrees = degrees as DegreeType[];
 
   return { userDegrees };
 };
