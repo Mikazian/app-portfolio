@@ -15,11 +15,7 @@ interface ThemeSwitcherProps {
  */
 const ThemeSwitcher = ({ icon, onClick }: ThemeSwitcherProps): React.JSX.Element => {
   return (
-    <button
-      type="button"
-      className="rounded-full p-1.5 relative z-20 cursor-pointer"
-      onClick={onClick}
-    >
+    <button type="button" className="rounded-full relative z-20 cursor-pointer" onClick={onClick}>
       <Icon name={icon} size="20" color="var(--text-primary)" />
     </button>
   );

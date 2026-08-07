@@ -1,5 +1,6 @@
 import ArrowLeftSvg from '../../../../assets/icons/global/arrow-left.svg';
 import ArrowRightSvg from '../../../../assets/icons/global/arrow-right.svg';
+import ChevronDownSvg from '../../../../assets/icons/global/chevron-down.svg';
 import ChevronUpSvg from '../../../../assets/icons/global/chevron-up.svg';
 import CopySvg from '../../../../assets/icons/global/copy.svg';
 import DegreeSvg from '../../../../assets/icons/global/degree.svg';
@@ -14,6 +15,7 @@ import SunSvg from '../../../../assets/icons/global/sun.svg';
 export const globalIcons = {
   'svg-arrow-left': ArrowLeftSvg,
   'svg-arrow-right': ArrowRightSvg,
+  'svg-chevron-down': ChevronDownSvg,
   'svg-chevron-up': ChevronUpSvg,
   'svg-copy': CopySvg,
   'svg-degree': DegreeSvg,

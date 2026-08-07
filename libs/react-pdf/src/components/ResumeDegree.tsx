@@ -19,7 +19,7 @@ const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
   }
 
   return (
-    <ResumeSection title="Formation">
+    <ResumeSection title="Formations">
       <Grid container spacing={16} style={{ alignItems: 'stretch' }}>
         {degrees.map((degree) => (
           <Grid key={degree.id} size={6} style={{ display: 'flex', flexDirection: 'column' }}>

@@ -4,6 +4,7 @@ export const AppIconSvg = {
   // Global
   ARROW_LEFT: 'svg-arrow-left',
   ARROW_RIGHT: 'svg-arrow-right',
+  CHEVRON_DOWN: 'svg-chevron-down',
   CHEVRON_UP: 'svg-chevron-up',
   COPY: 'svg-copy',
   DEGREE: 'svg-degree',

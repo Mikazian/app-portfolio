@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useTheme } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
+import ResumeDownloadModal from './ResumeDownloadModal';
 import Divider from '../../common/Divider';
 import { AppIconSvg } from '@app-portfolio/enums';
 import { aboutSections } from './about-sections';
@@ -108,8 +109,10 @@ const Navbar = (): React.JSX.Element => {
           ))}
         </ul>
 
-        <div className="theme shrink-0 h-12">
+        <div className="theme shrink-0 h-12 gap-8">
           <Divider isVertical />
+
+          <ResumeDownloadModal />
 
           <ThemeSwitcher
             icon={theme === 'dark' ? AppIconSvg.MOON : AppIconSvg.SUN}
