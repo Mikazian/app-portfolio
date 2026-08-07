@@ -1,5 +1,5 @@
 import { useJob, useProfile } from '../../../../hooks';
-import { AppIconSvg } from '../../../../enums';
+import { AppIconSvg } from '@app-portfolio/enums';
 import { aboutSections } from '../../navigation/about-sections';
 
 import Card from '../../../common/Card';

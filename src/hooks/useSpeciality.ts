@@ -1,6 +1,6 @@
-import specialities from '../data/speciality.json';
-import { AppIconSvgType } from '../enums';
-import { SpecialityType } from '../types/speciality.type';
+import { specialities } from '@app-portfolio/data';
+import { AppIconSvgType } from '@app-portfolio/enums';
+import { SpecialityType } from '@app-portfolio/shared';
 
 export const useSpeciality = () => {
   const userSpecialities: SpecialityType[] = specialities.map((speciality) => ({

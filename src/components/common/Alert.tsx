@@ -1,4 +1,4 @@
-import { type AppIconSvgType } from '../../enums';
+import { type AppIconSvgType } from '@app-portfolio/enums';
 import Text from './Text';
 import ProgressBar from './ProgressBar';
 import Icon from './icon/Icon';

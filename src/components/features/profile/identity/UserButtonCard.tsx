@@ -1,5 +1,5 @@
 import { useCopy } from '../../../../contexts';
-import { AppIconSvg, AppIconSvgType } from '../../../../enums';
+import { AppIconSvg, AppIconSvgType } from '@app-portfolio/enums';
 import ButtonCard from '../../../common/ButtonCard';
 
 import Icon from '../../../common/icon/Icon';

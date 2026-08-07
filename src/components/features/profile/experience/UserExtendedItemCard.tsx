@@ -1,6 +1,6 @@
-import { AppIconSvg } from '../../../../enums';
-import { ExperienceType, TrainingType } from '../../../../types';
-import { formatDuration } from '../../../../helpers/format-duration';
+import { AppIconSvg } from '@app-portfolio/enums';
+import { ExperienceType, TrainingType } from '@app-portfolio/shared';
+import { formatDuration } from '@app-portfolio/helpers';
 import Article from '../../../common/Article';
 import ButtonCard from '../../../common/ButtonCard';
 import Card from '../../../common/Card';
@@ -24,7 +24,7 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
       <header className="flex flex-col gap-4">
         <div className="flex grow h-full justify-between gap-4">
           <div className="flex-wrap self-center">
-            <Text as="p" className="text-md! font-text-bold text-primary">
+            <Text as="p" className="text-lg! font-title-bold text-primary">
               {item.job}
             </Text>
           </div>
@@ -62,12 +62,12 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
         ) : null}
       </Article>
 
-      {item.projects && (
+      {item.projects || item.stacks ? (
         <>
           <Divider />
 
           <footer className="flex flex-col gap-4">
-            {item.projects.map((project, index) => (
+            {item.projects?.map((project, index) => (
               <ButtonCard
                 key={index}
                 onClick={() =>
@@ -101,7 +101,7 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
             <StackList stacks={item.stacks} />
           </footer>
         </>
-      )}
+      ) : null}
     </Card>
   );
 };

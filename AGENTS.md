@@ -31,11 +31,22 @@ TypeScript must compile before Vite bundles. The `build` script handles this: `t
 
 **Critical**: Vite config sets `base: '/app-portfolio/'` for GitHub Pages. All routes must work under this base path.
 
-Routes: `/`, `/about-me`, `/projects`, `/gallery`, `/contact`
+Routes: `/`, `/resume`
 
 ### Data Layer
 
-All portfolio data lives in `src/data/*.json` files (static JSON). Custom hooks in `src/hooks/use{Entity}.ts` load and type-cast this data. No API calls.
+All portfolio data lives in `libs/data/src/*.json` (static JSON), re-exported through `libs/data/src/index.ts` and imported via the `@app-portfolio/data` alias. Custom hooks in `src/hooks/use{Entity}.ts` load and type-cast this data. No API calls.
+
+### Shared Libraries (`libs/`)
+
+Monorepo-style packages resolved via `@app-portfolio/*` path aliases (declared in `tsconfig.app.json` `paths`, resolved at build by Vite's native `resolve.tsconfigPaths`):
+
+- `libs/data` - Portfolio data (`*.json`), re-exported via a barrel `index.ts`
+- `libs/enums` - Enums & constants (`AppIconSvg`, `Stack`, `StackColor`, ...)
+- `libs/helpers` - Pure utilities (`formatDuration`, `convertDate`, `scrollToElement`, ...)
+- `libs/shared` - Shared types (`*.type.ts`)
+- `libs/validator` - Zod schemas (`contactSchema`)
+- `libs/react-pdf` - PDF résumé rendering (`ResumeViewer` + document components, built on `@react-pdf/renderer`); imports app data via `@app-portfolio/data`
 
 ### Component Structure
 
@@ -92,8 +103,8 @@ GitHub Actions (`.github/workflows/deploy.yml`):
 ## Conventions
 
 - Default exports for components and hooks
-- Barrel exports via `index.ts` in `hooks/`, `contexts/`, `types/`
-- Types in `src/types/*.type.ts` (note: `.type.ts` extension, not `.ts`)
-- Enums in `src/enums/*.enum.ts`
+- Barrel exports via `index.ts` in `hooks/`, `contexts/` and in each `libs/*/src/` package
+- Shared types in `libs/shared/src/*.type.ts` (note: `.type.ts` extension, not `.ts`)
+- Enums in `libs/enums/src/*.enum.ts`
 - Component props defined inline or in interfaces at top of file
 - French comments (`/** Composant **/`, error messages in French)

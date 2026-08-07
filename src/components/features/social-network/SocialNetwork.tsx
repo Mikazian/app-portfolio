@@ -5,6 +5,8 @@ import Text from '../../common/Text';
 import Divider from '../../common/Divider';
 import Icon from '../../common/icon/Icon';
 
+const VISIBLE_NETWORKS = ['GitHub', 'LinkedIn'];
+
 /**
  * Composant des réseaux sociaux
  * @returns {JSX.Element}
@@ -13,6 +15,7 @@ const SocialNetwork = (): React.JSX.Element => {
   const [isVertical, setIsVertical] = useState<boolean>(window.innerWidth <= 1024 ? false : true);
 
   const { networks } = useSocialNetworks();
+  const visibleNetworks = networks.filter((network) => VISIBLE_NETWORKS.includes(network.name));
 
   useEffect(() => {
     const handleChangeOrientation = () => {
@@ -38,7 +41,7 @@ const SocialNetwork = (): React.JSX.Element => {
       <Divider isVertical={isVertical} />
 
       <ul className="flex flex-row lg:flex-col gap-5">
-        {networks.map((network) => (
+        {visibleNetworks.map((network) => (
           <li
             key={network.id}
             className="scale-100 hover:scale-125 transition-all duration-300 ease-in-out"

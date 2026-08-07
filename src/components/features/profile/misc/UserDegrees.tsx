@@ -6,7 +6,7 @@ import Card from '../../../common/Card';
 import Divider from '../../../common/Divider';
 import Icon from '../../../common/icon/Icon';
 import Text from '../../../common/Text';
-import { AppIconSvg } from '../../../../enums';
+import { AppIconSvg } from '@app-portfolio/enums';
 
 /**
  * Composant des certifications de l'utilisateur
@@ -26,11 +26,11 @@ const UserDegrees = (): React.JSX.Element => {
               <Icon name={AppIconSvg.DEGREE} size="30" color="var(--primary)" className="mt-2" />
               <div className="flex grow flex-col gap-4">
                 <div className="flex flex-col flex-wrap sm:h-[4.3rem] lg:h-auto">
-                  <Text as="p" className="font-text-bold">
+                  <Text as="p" className="font-title-bold text-lg text-primary">
                     {degree.label}
                   </Text>
 
-                  <Text as="p" className="text-sm truncate text-text-secondary">
+                  <Text as="p" className="text-sm truncate text-text-primary">
                     {degree.degree}
                   </Text>
                 </div>

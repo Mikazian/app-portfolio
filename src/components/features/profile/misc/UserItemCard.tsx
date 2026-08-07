@@ -1,4 +1,4 @@
-import { AppIconSvgType } from '../../../../enums';
+import { AppIconSvgType } from '@app-portfolio/enums';
 
 import Card from '../../../common/Card';
 import Divider from '../../../common/Divider';
@@ -32,13 +32,15 @@ const UserItemCard = <T extends Item>({ item }: UserItemCardProps<T>): React.JSX
     <Card key={item.id} additionalClass="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-2 py-2">
         <Icon name={item.icon.name} size="30" color={item.icon.color} />
-        <Text as="p" className="font-text-bold translate-y-[2px] text-center">
+        <Text as="p" className="font-title-bold text-lg translate-y-[2px] text-center text-primary">
           {item.label}
         </Text>
 
-        <Text as="p" className="text-sm text-center text-text-secondary">
-          {item.caption}
-        </Text>
+        {item?.caption ? (
+          <Text as="p" className="text-sm text-center text-text-secondary">
+            {item.caption}
+          </Text>
+        ) : null}
       </div>
 
       {item.description ? (

@@ -1,5 +1,5 @@
-import { AppIconSvgType } from '../../../../enums';
-import { DesignSkill, DevelopmentSkill } from '../../../../types';
+import { AppIconSvgType } from '@app-portfolio/enums';
+import { DesignSkill, DevelopmentSkill } from '@app-portfolio/shared';
 
 import Card from '../../../common/Card';
 import Icon from '../../../common/icon/Icon';

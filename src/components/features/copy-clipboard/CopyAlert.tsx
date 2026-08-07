@@ -1,5 +1,5 @@
 import { useCopy } from '../../../contexts/CopyContext';
-import { AppIconSvg } from '../../../enums';
+import { AppIconSvg } from '@app-portfolio/enums';
 import Alert from '../../common/Alert';
 
 /**
