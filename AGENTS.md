@@ -29,7 +29,7 @@ TypeScript must compile before Vite bundles. The `build` script handles this: `t
 
 `src/router.tsx` uses `createBrowserRouter` with `basename: import.meta.env.BASE_URL`.
 
-**Critical**: Vite config sets `base: '/app-portfolio/'` for GitHub Pages. All routes must work under this base path.
+**Critical**: Vite config sets `base: '/mykebook/'` for GitHub Pages. All routes must work under this base path.
 
 Routes: `/`, `/resume`
 
