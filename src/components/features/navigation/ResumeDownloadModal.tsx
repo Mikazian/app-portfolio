@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   AppIconSvg,
   ResumeFileType,
@@ -6,7 +6,7 @@ import {
   ResumeMode,
   ResumeModeI18n,
 } from '@app-portfolio/enums';
-import { downloadResume } from '@app-portfolio/react-pdf';
+import { downloadResume, renderResumePreview } from '@app-portfolio/react-pdf';
 import Button from '../../common/Button';
 import Icon from '../../common/icon/Icon';
 import PopOver from '../../common/PopOver';
@@ -25,6 +25,26 @@ const ResumeDownloadModal = (): React.JSX.Element => {
   const [fileType, setFileType] = useState<ResumeFileType>(ResumeFileType.PDF);
   const [mode, setMode] = useState<ResumeMode>(ResumeMode.INTERACTIVE);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    let cancelled = false;
+    setIsPreviewLoading(true);
+    renderResumePreview(mode)
+      .then((dataUrl) => {
+        if (cancelled) return;
+        setPreviewUrl(dataUrl);
+        setIsPreviewLoading(false);
+      })
+      .catch(() => {
+        if (!cancelled) setIsPreviewLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen, mode]);
 
   const handleDownload = async () => {
     setIsDownloading(true);
@@ -59,6 +79,19 @@ const ResumeDownloadModal = (): React.JSX.Element => {
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         additionalClass="p-6"
       >
+        <p className="text-text-secondary uppercase text-xs font-bold tracking-widest mb-2">
+          Aperçu du fichier
+        </p>
+        <div className="mb-5 border border-divider bg-background overflow-y-auto flex items-start justify-center min-w-64">
+          {previewUrl ? (
+            <img src={previewUrl} alt="Aperçu du CV" className="w-64 h-auto" />
+          ) : (
+            <p className="text-text-secondary text-xs py-8">
+              {isPreviewLoading ? 'Génération de l\u2019aperçu...' : 'Aperçu indisponible'}
+            </p>
+          )}
+        </div>
+
         <p className="text-text-secondary uppercase text-xs font-bold tracking-widest mb-2">
           Type de fichier
         </p>
