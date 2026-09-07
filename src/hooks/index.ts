@@ -7,4 +7,5 @@ export * from './useLanguage';
 export * from './useProfile';
 export * from './useSkill';
 export * from './useSocialNetworks';
+export * from './useScrollLock';
 export * from './useSpeciality';

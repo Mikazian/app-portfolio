@@ -34,7 +34,7 @@ const Button = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       disabled={disabled}
-      className={`text-primary uppercase text-xs font-bold px-4 pt-1.5 pb-1 border-2 border-primary font-title-bold tracking-widest ${additionalClass} hover:bg-primary hover:text-background transition-all duration-300 ease-in-out`}
+      className={`text-primary uppercase text-xs font-bold px-4 pt-1.5 pb-1 border-2 border-primary font-title-bold tracking-widest cursor-pointer ${additionalClass} hover:bg-primary hover:text-background transition-all duration-300 ease-in-out`}
     >
       {children}
     </button>

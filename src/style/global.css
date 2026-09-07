@@ -4,6 +4,7 @@
 @import './navbar.css';
 @import './progress-bar.css';
 @import './button.css';
+@import './scroll-bar.css';
 @import './vertical-timeline.css';
 
 @theme {

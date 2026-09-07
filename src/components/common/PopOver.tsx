@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { useScrollLock } from '../../hooks';
 
 type OriginX = 'left' | 'center' | 'right';
 type OriginY = 'top' | 'center' | 'bottom';
@@ -53,6 +54,8 @@ const PopOver = ({
   const [rendered, setRendered] = useState(open);
   const [position, setPosition] = useState({ top: 0, left: 0 });
 
+  useScrollLock(open);
+
   const computePosition = useCallback(() => {
     if (!anchorEl || !popOverRef.current) return;
 
@@ -87,7 +90,7 @@ const PopOver = ({
     if (top + popRect.height > innerHeight) top = anchorRect.top - popRect.height - GAP;
     if (top < GAP) top = GAP;
 
-    setPosition({ top, left });
+    setPosition((prev) => (prev.top === top && prev.left === left ? prev : { top, left }));
   }, [anchorEl, anchorOrigin, transformOrigin]);
 
   useEffect(() => {
@@ -106,35 +109,6 @@ const PopOver = ({
       window.removeEventListener('resize', computePosition);
     };
   }, [rendered, computePosition]);
-
-  useEffect(() => {
-    if (!open) return;
-
-    // Désactive le scroll sans masquer la barre de défilement du navigateur :
-    // poser un overflow sur body/html se propagerait au viewport et cacherait la scrollbar.
-    const preventScroll = (event: WheelEvent | TouchEvent) => {
-      const target = event.target as Node | null;
-      if (target && popOverRef.current?.contains(target)) return;
-      event.preventDefault();
-    };
-
-    const preventScrollKey = (event: KeyboardEvent) => {
-      const scrollKeys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '];
-      if (scrollKeys.includes(event.key)) {
-        event.preventDefault();
-      }
-    };
-
-    window.addEventListener('wheel', preventScroll, { passive: false });
-    window.addEventListener('touchmove', preventScroll, { passive: false });
-    window.addEventListener('keydown', preventScrollKey);
-
-    return () => {
-      window.removeEventListener('wheel', preventScroll);
-      window.removeEventListener('touchmove', preventScroll);
-      window.removeEventListener('keydown', preventScrollKey);
-    };
-  }, [open]);
 
   useEffect(() => {
     if (!rendered) return;

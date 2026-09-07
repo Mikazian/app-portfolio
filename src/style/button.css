@@ -1,10 +1,14 @@
 @layer components {
   .btn {
-    @apply relative rounded-md border border-divider bg-foreground p-1 transition-all duration-300 ease-in-out;
+    @apply relative rounded-md border border-divider bg-foreground p-1 transition-all duration-300 ease-in-out cursor-pointer;
   }
 
   .btn:hover {
     @apply bg-primary;
+  }
+
+  .btn.unactive {
+    @apply cursor-not-allowed;
   }
 
   .btn.active {
