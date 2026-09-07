@@ -30,11 +30,11 @@ const NavbarOptionListItem = ({
 
   if (onClick) {
     return (
-      <li className="w-full">
+      <li className="w-full group">
         <button
           type="button"
           onClick={onClick}
-          className={`${rowClass} cursor-pointer transition-colors duration-200 hover:text-primary`}
+          className={`${rowClass} cursor-pointer transition-colors duration-200`}
         >
           {children}
         </button>
@@ -42,7 +42,7 @@ const NavbarOptionListItem = ({
     );
   }
 
-  return <li className={rowClass}>{children}</li>;
+  return <li className={`${rowClass} group transition-colors duration-200`}>{children}</li>;
 };
 
 export default NavbarOptionListItem;

@@ -1,12 +1,15 @@
 import { Text as RPDFText, View } from '@react-pdf/renderer';
 import { resumeColors } from '../styles';
-import { resumeData } from '../data/resume';
+import { getResumeData } from '../data/resume';
+import type { Locale } from '@app-portfolio/enums';
 import Avatar from './common/Avatar';
 import Text from './common/Text';
 
-const ResumeHeader = () => {
+type ResumeHeaderProps = { locale: Locale };
+
+const ResumeHeader = ({ locale }: ResumeHeaderProps) => {
   const colors = resumeColors;
-  const { profile, jobs } = resumeData;
+  const { profile, jobs } = getResumeData(locale);
 
   return (
     <View

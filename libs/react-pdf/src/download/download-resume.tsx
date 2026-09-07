@@ -1,6 +1,6 @@
 import { pdf } from '@react-pdf/renderer';
 import { GlobalWorkerOptions, getDocument } from 'pdfjs-dist';
-import { ResumeFileType, ResumeMode } from '@app-portfolio/enums';
+import { ResumeFileType, ResumeMode, type Locale } from '@app-portfolio/enums';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 import ResumeDocument from '../components/ResumeDocument';
 import { resumeColors } from '../styles';
@@ -12,6 +12,7 @@ const IMAGE_SCALE = 2;
 type DownloadResumeParams = {
   fileType: ResumeFileType;
   mode: ResumeMode;
+  locale: Locale;
 };
 
 const getResumeFileName = (fileType: ResumeFileType, mode: ResumeMode): string => {
@@ -78,14 +79,18 @@ const renderPdfToImage = async (pdfBlob: Blob, mimeType: string): Promise<Blob> 
  * @param {ResumeMode} mode - Préréglage du CV
  * @returns {Promise<string>} - Data URL PNG de l'aperçu
  */
-export const renderResumePreview = async (mode: ResumeMode): Promise<string> => {
-  const pdfBlob = await pdf(<ResumeDocument mode={mode} />).toBlob();
+export const renderResumePreview = async (mode: ResumeMode, locale: Locale): Promise<string> => {
+  const pdfBlob = await pdf(<ResumeDocument mode={mode} locale={locale} />).toBlob();
   const canvas = await renderPdfFirstPage(pdfBlob, PREVIEW_SCALE);
   return canvas.toDataURL('image/png');
 };
 
-export const downloadResume = async ({ fileType, mode }: DownloadResumeParams): Promise<void> => {
-  const pdfBlob = await pdf(<ResumeDocument mode={mode} />).toBlob();
+export const downloadResume = async ({
+  fileType,
+  mode,
+  locale,
+}: DownloadResumeParams): Promise<void> => {
+  const pdfBlob = await pdf(<ResumeDocument mode={mode} locale={locale} />).toBlob();
 
   if (fileType === ResumeFileType.PDF) {
     triggerDownload(pdfBlob, getResumeFileName(fileType, mode));

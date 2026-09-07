@@ -1,7 +1,8 @@
 import { useExperience } from '../../../../hooks';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { aboutSections } from '../../navigation/about-sections';
+import { useLanguage } from '../../../../contexts';
+import { aboutSections, getSectionLabel } from '../../navigation/about-sections';
 
 import SectionLayout from '../../../layout/SectionLayout';
 import Image from '../../../common/Image';
@@ -9,10 +10,11 @@ import UserExtendedItemCard from './UserExtendedItemCard';
 
 const UserExperience = () => {
   const { userExperiences } = useExperience();
+  const { locale } = useLanguage();
   const section = aboutSections.find((s) => s.id === 'experiences')!;
 
   return (
-    <SectionLayout id={section.id} title={section.label}>
+    <SectionLayout id={section.id} title={getSectionLabel(section, locale)}>
       <VerticalTimeline lineColor="var(--secondary)" layout="1-column-left">
         {userExperiences.map((experience, index) => (
           <VerticalTimelineElement

@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 interface CopyContextValue {
   isCopied: boolean;
@@ -36,15 +36,12 @@ export const CopyProvider = ({ children }: CopyProviderProps) => {
     }
   };
 
-  const value = useMemo(
-    () => ({
-      isCopied,
-      showCopyAlert,
-      copyToClipboard,
-      error,
-    }),
-    [isCopied, showCopyAlert, error],
-  );
+  const value: CopyContextValue = {
+    isCopied,
+    showCopyAlert,
+    copyToClipboard,
+    error,
+  };
 
   return <CopyContext.Provider value={value}>{children}</CopyContext.Provider>;
 };

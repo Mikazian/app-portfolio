@@ -1,3 +1,5 @@
+import type { Locale } from './locale.enum';
+
 export enum StackCategory {
   FRONTEND = 'frontend',
   BACKEND = 'backend',
@@ -7,11 +9,11 @@ export enum StackCategory {
   UX_UI = 'ux-ui',
 }
 
-export const StackCategoryI18n: Record<StackCategory, string> = {
-  [StackCategory.FRONTEND]: 'Frontend',
-  [StackCategory.BACKEND]: 'Backend',
-  [StackCategory.DEV_OPS]: 'DevOps',
-  [StackCategory.CLOUD]: 'Cloud',
-  [StackCategory.TOOLS]: 'Outils',
-  [StackCategory.UX_UI]: 'UX/UI',
+export const StackCategoryI18n: Record<StackCategory, Record<Locale, string>> = {
+  [StackCategory.FRONTEND]: { fr: 'Frontend', en: 'Frontend' },
+  [StackCategory.BACKEND]: { fr: 'Backend', en: 'Backend' },
+  [StackCategory.DEV_OPS]: { fr: 'DevOps', en: 'DevOps' },
+  [StackCategory.CLOUD]: { fr: 'Cloud', en: 'Cloud' },
+  [StackCategory.TOOLS]: { fr: 'Outils', en: 'Tools' },
+  [StackCategory.UX_UI]: { fr: 'UX/UI', en: 'UX/UI' },
 };

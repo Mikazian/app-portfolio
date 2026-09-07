@@ -9,7 +9,7 @@ const UserTaskListItem = ({ title, description }: UserTaskListItemProps) => {
   return (
     <li>
       <div className="bg-foreground border border-divider border-l-[4px] border-l-[color:var(--primary)] flex flex-col p-4 gap-4">
-        <Text as="p" className="text-sm! text-primary">
+        <Text as="p" className="text-md! font-title-bold text-primary">
           {title}
         </Text>
 

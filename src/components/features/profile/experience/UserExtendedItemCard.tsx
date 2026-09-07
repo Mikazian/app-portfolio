@@ -1,6 +1,7 @@
 import { AppIconSvg } from '@app-portfolio/enums';
 import { ExperienceType, TrainingType } from '@app-portfolio/shared';
 import { formatDuration } from '@app-portfolio/helpers';
+import { useLanguage } from '../../../../contexts';
 import Article from '../../../common/Article';
 import ButtonCard from '../../../common/ButtonCard';
 import Card from '../../../common/Card';
@@ -19,6 +20,8 @@ interface UserExtendedItemCardProps<T> {
 const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
   item,
 }: UserExtendedItemCardProps<T>): React.JSX.Element => {
+  const { translate } = useLanguage();
+
   return (
     <Card key={item.id} additionalClass="flex flex-col gap-4">
       <header className="flex flex-col gap-4">
@@ -40,11 +43,11 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
 
           <div className="flex flex-wrap justify-between">
             <Text as="p" className="text-xs! text-text-secondary">
-              {`${item.start_date} - ${item.end_date ?? "Aujourd'hui"}`}
+              {`${item.start_date} - ${item.end_date ?? translate('experience.today')}`}
             </Text>
 
             <Text as="p" className="text-xs! text-text-secondary">
-              {`Durée : ${formatDuration(Number(item.duration))}`}
+              {translate('experience.duration', { duration: formatDuration(Number(item.duration)) })}
             </Text>
           </div>
         </div>
@@ -80,7 +83,7 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                     <div className="w-8 h-8 shrink-0 rounded-md overflow-hidden">
                       <Image
                         src={project.logo}
-                        alt={`Logo de ${project.name}`}
+                        alt={translate('experience.logo', { name: project.name })}
                         className="object-cover w-full h-full"
                       />
                     </div>

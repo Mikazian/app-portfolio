@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
-import { ResumeMode, ResumeModeI18n } from '@app-portfolio/enums';
-import { socialNetworks } from '@app-portfolio/data';
+import { ResumeMode, ResumeModeI18n, type Locale } from '@app-portfolio/enums';
+import { getResumeData } from '../data/resume';
+import { pdfT } from '../i18n';
 import ResumeDocument from '../components/ResumeDocument';
 
 const MODES: ResumeMode[] = [ResumeMode.INTERACTIVE, ResumeMode.PRINT];
 
-const ResumeViewer = () => {
+type ResumeViewerProps = { locale?: Locale };
+
+const ResumeViewer = ({ locale = 'fr' }: ResumeViewerProps) => {
   const [mode, setMode] = useState<ResumeMode>(ResumeMode.INTERACTIVE);
+  const { socialNetworks } = getResumeData(locale);
 
   return (
     <div className="min-h-screen flex flex-col items-center gap-6 px-4 py-10 bg-background">
-      <h1 className="text-2xl font-title-bold text-text-primary">Mon CV</h1>
+      <h1 className="text-2xl font-title-bold text-text-primary">{pdfT(locale, 'viewer.title')}</h1>
 
       <div className="flex items-center gap-1 rounded-full border border-divider p-1">
         {MODES.map((modeValue) => (
@@ -25,20 +29,20 @@ const ResumeViewer = () => {
                 : 'text-text-secondary hover:text-text-primary'
             }`}
           >
-            {ResumeModeI18n[modeValue]}
+            {ResumeModeI18n[modeValue][locale]}
           </button>
         ))}
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-6">
         <PDFDownloadLink
-          document={<ResumeDocument mode={mode} />}
+          document={<ResumeDocument mode={mode} locale={locale} />}
           fileName={
             mode === ResumeMode.PRINT ? 'cv-mike-xiong-impression.pdf' : 'cv-mike-xiong.pdf'
           }
           className="bg-primary text-background font-title-bold uppercase px-8 py-3 text-sm tracking-widest hover:opacity-90 transition-opacity"
         >
-          {({ loading }) => (loading ? 'Génération du PDF...' : 'Télécharger le CV')}
+          {({ loading }) => (loading ? pdfT(locale, 'viewer.generating') : pdfT(locale, 'viewer.download'))}
         </PDFDownloadLink>
 
         {socialNetworks.map((network) => (
@@ -55,7 +59,7 @@ const ResumeViewer = () => {
       </div>
 
       <PDFViewer style={{ width: '100%', height: '80vh', maxWidth: 800 }}>
-        <ResumeDocument mode={mode} />
+        <ResumeDocument mode={mode} locale={locale} />
       </PDFViewer>
     </div>
   );

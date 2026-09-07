@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useTheme } from '../../../contexts';
+import { useTheme, useLanguage } from '../../../contexts';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavbarOptions from './NavbarOptions';
+import LanguageSwitcher from './LanguageSwitcher';
 import ResumeDownloadModal from './ResumeDownloadModal';
 import { AppIconSvg } from '@app-portfolio/enums';
-import { aboutSections } from './about-sections';
+import { aboutSections, getSectionLabel } from './about-sections';
 import { getNavbarOffset } from '@app-portfolio/helpers';
 import Logo from '../../common/Logo';
 
@@ -21,6 +22,7 @@ const OBSERVER_OPTIONS: IntersectionObserverInit = {
 const Navbar = (): React.JSX.Element => {
   const navigate = useNavigate();
   const { theme, setTheme } = useTheme();
+  const { locale } = useLanguage();
 
   const navRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLUListElement>(null);
@@ -113,13 +115,13 @@ const Navbar = (): React.JSX.Element => {
                 type="button"
                 data-section={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`uppercase text-sm bg-transparent cursor-pointer transition-colors duration-200 ${
+                className={`uppercase text-sm bg-transparent cursor-pointer transition-colors duration-200 font-title-bold ${
                   activeSection === section.id
                     ? 'text-primary'
                     : 'text-text-primary hover:text-primary'
                 }`}
               >
-                {section.label}
+                {getSectionLabel(section, locale)}
               </button>
             </li>
           ))}
@@ -132,6 +134,8 @@ const Navbar = (): React.JSX.Element => {
             icon={theme === 'dark' ? AppIconSvg.MOON : AppIconSvg.SUN}
             onClick={toggleTheme}
           />
+
+          <LanguageSwitcher />
         </div>
 
         <div className="md:hidden shrink-0 h-12 flex items-center">

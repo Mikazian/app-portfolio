@@ -12,15 +12,18 @@ import './style/global.css';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { CopyProvider } from './contexts/CopyContext';
 import { ContactProvider } from './contexts/ContactContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider>
-      <CopyProvider>
-        <ContactProvider>
-          <RouterProvider router={router} />
-        </ContactProvider>
-      </CopyProvider>
+      <LanguageProvider>
+        <CopyProvider>
+          <ContactProvider>
+            <RouterProvider router={router} />
+          </ContactProvider>
+        </CopyProvider>
+      </LanguageProvider>
     </ThemeProvider>
   </React.StrictMode>,
 );

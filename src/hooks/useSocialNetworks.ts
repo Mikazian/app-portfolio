@@ -1,5 +1,6 @@
 import { socialNetworks } from '@app-portfolio/data';
 import { AppIconSvgType } from '@app-portfolio/enums';
+import { useLanguage } from '../contexts';
 
 type IconNameType = AppIconSvgType;
 
@@ -11,7 +12,8 @@ interface SocialNetworksType {
 }
 
 export const useSocialNetworks = () => {
-  const networks: SocialNetworksType[] = socialNetworks.map((network) => ({
+  const { locale } = useLanguage();
+  const networks: SocialNetworksType[] = socialNetworks[locale].map((network) => ({
     id: network.id,
     name: network.name,
     url: network.url,
