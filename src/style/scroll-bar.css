@@ -1,0 +1,31 @@
+/* Scrollbars globales : page + éléments (6px, thumb thémé, hover primary).
+   Placées dans la couche base pour pouvoir être surchargées par les composants. */
+
+@layer base {
+  ::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track,
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb,
+  *::-webkit-scrollbar-thumb {
+    background: var(--dividerlight);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover,
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dividerlight) transparent;
+  }
+}

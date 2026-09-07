@@ -46,7 +46,7 @@ const UserProfile = (): React.JSX.Element => {
         <Divider />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <UserButtonCard text={profile.phone} icon={AppIconSvg.MOBILE} />
+          <UserButtonCard text={profile.phone} icon={AppIconSvg.PHONE} />
           <UserButtonCard text={profile.email} icon={AppIconSvg.MAIL_ROUNDED} />
         </div>
 
