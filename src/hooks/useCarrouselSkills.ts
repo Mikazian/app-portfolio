@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SkillType as Skill, skillValues } from '@app-portfolio/enums';
 import { SkillCategoryList } from '@app-portfolio/shared';
 
@@ -24,17 +24,13 @@ export const useCarouselSkills = (userSkills: SkillCategoryList) => {
   const [activeTab, setActiveTab] = useState<Skill>(Object.keys(userSkills)[0] as Skill);
   const [carouselIndex, setCarouselIndex] = useState<number>(0);
 
-  const activeSkills = useMemo(() => {
-    return activeTab === Object.keys(userSkills)[0] ? userSkills.development : userSkills.design;
-  }, [activeTab, userSkills]);
+  const activeSkills =
+    activeTab === Object.keys(userSkills)[0] ? userSkills.development : userSkills.design;
 
-  const pages = useMemo(() => {
-    const chunks = [];
-    for (let i = 0; i < activeSkills.length; i += screen.skillsPerPage) {
-      chunks.push(activeSkills.slice(i, i + screen.skillsPerPage));
-    }
-    return chunks;
-  }, [activeSkills, screen.skillsPerPage]);
+  const pages = [];
+  for (let i = 0; i < activeSkills.length; i += screen.skillsPerPage) {
+    pages.push(activeSkills.slice(i, i + screen.skillsPerPage));
+  }
 
   // Mise à jour de la largeur de l'écran et du nombre de skills par page
   useEffect(() => {

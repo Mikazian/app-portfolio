@@ -4,6 +4,8 @@ export const AppImg = {
   LOGO_WHITE: 'img-logo-white',
   LOGO_BLACK: 'img-logo-black',
   PRIMA: 'img-prima',
+  PHOTO: 'img-photo',
+  HEADER_BACKGROUND: 'img-header-background',
   WILD: 'img-wild',
   ARSONVAL: 'img-arsonval',
   LISAA: 'img-lisaa',

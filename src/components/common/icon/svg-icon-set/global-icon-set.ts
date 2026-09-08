@@ -8,6 +8,7 @@ import GlobeSvg from '../../../../assets/icons/global/globe.svg';
 import MailSvg from '../../../../assets/icons/global/mail.svg';
 import MailRoundedSvg from '../../../../assets/icons/global/mail-rounded.svg';
 import MapPinSvg from '../../../../assets/icons/global/map-pin.svg';
+import MenuSvg from '../../../../assets/icons/global/menu.svg';
 import MoonSvg from '../../../../assets/icons/global/moon.svg';
 import PhoneSvg from '../../../../assets/icons/global/phone.svg';
 import SunSvg from '../../../../assets/icons/global/sun.svg';
@@ -23,6 +24,7 @@ export const globalIcons = {
   'svg-mail': MailSvg,
   'svg-mail-rounded': MailRoundedSvg,
   'svg-map-pin': MapPinSvg,
+  'svg-menu': MenuSvg,
   'svg-moon': MoonSvg,
   'svg-phone': PhoneSvg,
   'svg-sun': SunSvg,

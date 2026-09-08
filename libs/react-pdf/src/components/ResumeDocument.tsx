@@ -3,7 +3,8 @@ import { ResumeMode } from '@app-portfolio/enums';
 import { resumeColors } from '../styles';
 import ResumeHeader from './ResumeHeader';
 import ResumeExperience from './ResumeExperience';
-import { resumeData } from '../data/resume';
+import { getResumeData } from '../data/resume';
+import type { Locale } from '@app-portfolio/enums';
 import Grid from './common/Grid';
 import Card from './common/Card';
 import ResumeDegree from './ResumeDegree';
@@ -13,10 +14,11 @@ import ResumeHobby from './ResumeHobby';
 
 type ResumeDocumentProps = {
   mode?: ResumeMode;
+  locale?: Locale;
 };
 
-const ResumeDocument = ({ mode = ResumeMode.INTERACTIVE }: ResumeDocumentProps) => {
-  const { experiences, degrees } = resumeData;
+const ResumeDocument = ({ mode = ResumeMode.INTERACTIVE, locale = 'fr' }: ResumeDocumentProps) => {
+  const { experiences, degrees } = getResumeData(locale);
 
   return (
     <Document>
@@ -28,7 +30,7 @@ const ResumeDocument = ({ mode = ResumeMode.INTERACTIVE }: ResumeDocumentProps) 
           backgroundColor: resumeColors.background,
         }}
       >
-        <ResumeHeader />
+        <ResumeHeader locale={locale} />
 
         <Grid container>
           <Grid size={4}>
@@ -42,9 +44,9 @@ const ResumeDocument = ({ mode = ResumeMode.INTERACTIVE }: ResumeDocumentProps) 
                 height: '100%',
               }}
             >
-              <ResumeContact mode={mode} />
-              <ResumeSkill />
-              <ResumeHobby />
+              <ResumeContact mode={mode} locale={locale} />
+              <ResumeSkill locale={locale} />
+              <ResumeHobby locale={locale} />
             </Card>
           </Grid>
 
@@ -58,8 +60,8 @@ const ResumeDocument = ({ mode = ResumeMode.INTERACTIVE }: ResumeDocumentProps) 
               paddingVertical: 28,
             }}
           >
-            <ResumeExperience experiences={experiences} />
-            <ResumeDegree degrees={degrees} />
+            <ResumeExperience experiences={experiences} locale={locale} />
+            <ResumeDegree degrees={degrees} locale={locale} />
           </Grid>
         </Grid>
       </Page>

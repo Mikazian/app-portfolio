@@ -1,19 +1,40 @@
-[
-  {
-    "firstName": "Mike",
-    "lastName": "Xiong",
-    "birthDate": "1993-09-07",
-    "email": "tchylon.xiong@gmail.com",
-    "phone": "+33 7 63 78 26 21",
-    "nationality": "Français",
-    "biography": "Développeur Full Stack Web & Mobile, je participe à la conception et au développement d'applications en prenant en compte aussi bien les aspects techniques que l'expérience utilisateur.\n\nGrâce à mon parcours mêlant développement et design, j'interviens sur différentes étapes de création d'un produit numérique : compréhension des besoins, conception des maquettes UI/UX, développement des fonctionnalités et amélioration continue des applications.\n\n J'accorde une attention particulière à l'ergonomie des interfaces, à la qualité du code et à la création d'expériences simples, efficaces et agréables à utiliser.",
-    "shortBiography": "Passionné par le développement, je conçois et développe des applications web et mobiles en alliant compétences techniques et UI/UX. J'accorde une attention particulière à la qualité du code, à l'ergonomie, à la performance et à la maintenabilité des applications.",
-    "headline": "React • React Native • TypeScript • NestJS",
-    "picture": "img-profile.jpg",
-    "address": {
-      "address": "1217 route Nationale 20 Bâtiment 2000",
-      "city": "Saran",
-      "postalCode": "45770"
+{
+  "fr": [
+    {
+      "firstName": "Mike",
+      "lastName": "Xiong",
+      "birthDate": "1993-09-07",
+      "email": "tchylon.xiong@gmail.com",
+      "phone": "+33 7 63 78 26 21",
+      "nationality": "Français",
+      "biography": "Développeur Full Stack Web & Mobile, je participe à la conception et au développement d'applications en prenant en compte aussi bien les aspects techniques que l'expérience utilisateur.\n\nGrâce à mon parcours mêlant développement et design, j'interviens sur différentes étapes de création d'un produit numérique : compréhension des besoins, conception des maquettes UI/UX, développement des fonctionnalités et amélioration continue des applications.\n\n J'accorde une attention particulière à l'ergonomie des interfaces, à la qualité du code et à la création d'expériences simples, efficaces et agréables à utiliser.",
+      "shortBiography": "Passionné par le développement, je conçois et développe des applications web et mobiles en alliant compétences techniques et UI/UX. J'accorde une attention particulière à la qualité du code, à l'ergonomie, à la performance et à la maintenabilité des applications.",
+      "headline": "React • React Native • TypeScript • NestJS",
+      "picture": "img-profile.jpg",
+      "address": {
+        "address": "1217 route Nationale 20 Bâtiment 2000",
+        "city": "Saran",
+        "postalCode": "45770"
+      }
     }
-  }
-]
+  ],
+  "en": [
+    {
+      "firstName": "Mike",
+      "lastName": "Xiong",
+      "birthDate": "1993-09-07",
+      "email": "tchylon.xiong@gmail.com",
+      "phone": "+33 7 63 78 26 21",
+      "nationality": "French",
+      "biography": "Full Stack Web & Mobile Developer, I take part in the design and development of applications, taking into account both the technical aspects and the user experience.\n\nThanks to my background combining development and design, I work on the different stages of creating a digital product: understanding needs, designing UI/UX mockups, developing features and continuously improving applications.\n\nI pay particular attention to interface ergonomics, code quality and the creation of simple, efficient and pleasant experiences.",
+      "shortBiography": "Passionate about development, I design and develop web and mobile applications combining technical skills and UI/UX. I pay particular attention to code quality, ergonomics, performance and maintainability of applications.",
+      "headline": "React • React Native • TypeScript • NestJS",
+      "picture": "img-profile.jpg",
+      "address": {
+        "address": "1217 route Nationale 20 Bâtiment 2000",
+        "city": "Saran",
+        "postalCode": "45770"
+      }
+    }
+  ]
+}

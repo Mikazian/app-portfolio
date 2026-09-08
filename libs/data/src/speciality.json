@@ -1,38 +1,78 @@
-[
-  {
-    "id": 1,
-    "label": "Développement Web",
-    "icon": "svg-code",
-    "description": "Conception et développement d'applications web modernes, performantes et évolutives."
-  },
-  {
-    "id": 2,
-    "label": "Développement Mobile",
-    "icon": "svg-mobile",
-    "description": "Développement d'applications mobiles multiplateformes pour Android et iOS avec React Native."
-  },
-  {
-    "id": 3,
-    "label": "Développement Frontend",
-    "icon": "svg-responsive",
-    "description": "Développement d'interfaces interactives, responsives et de composants réutilisables."
-  },
-  {
-    "id": 4,
-    "label": "Développement Backend & API",
-    "icon": "svg-api",
-    "description": "Conception d'API REST, développement de la logique métier et des services backend."
-  },
-  {
-    "id": 5,
-    "label": "Gestion de base de données",
-    "icon": "svg-database",
-    "description": "Conception, modélisation et gestion de bases de données relationnelles."
-  },
-  {
-    "id": 6,
-    "label": "Conception UI/UX",
-    "icon": "svg-ui-ux",
-    "description": "Conception d'interfaces ergonomiques, intuitives et centrées sur l'expérience utilisateur."
-  }
-]
+{
+  "fr": [
+    {
+      "id": 1,
+      "label": "Développement Web",
+      "icon": "svg-code",
+      "description": "Conception et développement d'applications web modernes, performantes et évolutives."
+    },
+    {
+      "id": 2,
+      "label": "Développement Mobile",
+      "icon": "svg-mobile",
+      "description": "Développement d'applications mobiles multiplateformes pour Android et iOS avec React Native."
+    },
+    {
+      "id": 3,
+      "label": "Développement Frontend",
+      "icon": "svg-responsive",
+      "description": "Développement d'interfaces interactives, responsives et de composants réutilisables."
+    },
+    {
+      "id": 4,
+      "label": "Développement Backend & API",
+      "icon": "svg-api",
+      "description": "Conception d'API REST, développement de la logique métier et des services backend."
+    },
+    {
+      "id": 5,
+      "label": "Gestion de base de données",
+      "icon": "svg-database",
+      "description": "Conception, modélisation et gestion de bases de données relationnelles."
+    },
+    {
+      "id": 6,
+      "label": "Conception UI/UX",
+      "icon": "svg-ui-ux",
+      "description": "Conception d'interfaces ergonomiques, intuitives et centrées sur l'expérience utilisateur."
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "label": "Web Development",
+      "icon": "svg-code",
+      "description": "Design and development of modern, performant and scalable web applications."
+    },
+    {
+      "id": 2,
+      "label": "Mobile Development",
+      "icon": "svg-mobile",
+      "description": "Development of cross-platform mobile applications for Android and iOS with React Native."
+    },
+    {
+      "id": 3,
+      "label": "Frontend Development",
+      "icon": "svg-responsive",
+      "description": "Development of interactive, responsive interfaces and reusable components."
+    },
+    {
+      "id": 4,
+      "label": "Backend & API Development",
+      "icon": "svg-api",
+      "description": "REST API design, business logic and backend service development."
+    },
+    {
+      "id": 5,
+      "label": "Database Management",
+      "icon": "svg-database",
+      "description": "Design, modelling and management of relational databases."
+    },
+    {
+      "id": 6,
+      "label": "UI/UX Design",
+      "icon": "svg-ui-ux",
+      "description": "Design of ergonomic, intuitive interfaces focused on the user experience."
+    }
+  ]
+}

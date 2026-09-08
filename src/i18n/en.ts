@@ -1,0 +1,51 @@
+export const en: Record<string, string> = {
+  'header.hello': "Hey! I'm",
+  'header.role': 'Full Stack Developer & UX/UI Designer',
+
+  'nav.options.theme': 'Theme',
+  'nav.options.download': 'Download CV',
+  'nav.options.language': 'Language',
+  'nav.lang.fr': 'French',
+  'nav.lang.en': 'English',
+
+  'resume.preview.title': 'File preview',
+  'resume.fileType.title': 'File type',
+  'resume.preset.title': 'Preset',
+  'resume.download': 'Download',
+  'resume.downloading': 'Downloading...',
+  'resume.preview.unavailable': 'Preview unavailable',
+  'resume.preview.generating': 'Generating preview...',
+
+  'contact.name': 'Name',
+  'contact.namePlaceholder': 'Your name',
+  'contact.email': 'Email',
+  'contact.emailPlaceholder': 'your@email.com',
+  'contact.message': 'Message',
+  'contact.messagePlaceholder': 'Your message...',
+  'contact.submit': 'Send',
+  'contact.sending': 'Sending...',
+  'contact.success': 'Message sent successfully',
+  'contact.error': 'Error sending the message',
+
+  'copy.copied': 'Copied to clipboard',
+
+  'article.seeMore': 'show more',
+  'article.seeLess': 'show less',
+
+  'task.achievements': 'Main achievements',
+  'experience.today': 'Today',
+  'experience.duration': 'Duration: {duration}',
+  'experience.logo': '{name} logo',
+  'degree.year': 'Year: {year}',
+  'skill.tab.development': 'Development',
+  'skill.tab.design': 'Design',
+
+  'section.profil': 'Profile',
+  'section.certifications': 'Education',
+  'section.specialites': 'Specialties',
+  'section.competences': 'Skills',
+  'section.experiences': 'Experience',
+  'section.langues': 'Languages',
+  'section.centres-interet': 'Interests',
+  'section.contact': 'Contact',
+};

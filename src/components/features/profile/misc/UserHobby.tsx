@@ -1,17 +1,19 @@
 import { useHobby } from '../../../../hooks';
 import { AppIconSvgType } from '@app-portfolio/enums';
-import { aboutSections } from '../../navigation/about-sections';
+import { useLanguage } from '../../../../contexts';
+import { aboutSections, getSectionLabel } from '../../navigation/about-sections';
 
 import SectionLayout from '../../../layout/SectionLayout';
 import UserItemCard from './UserItemCard';
 
 const UserHobby = () => {
   const { userHobbies } = useHobby();
+  const { locale } = useLanguage();
 
   const section = aboutSections.find((s) => s.id === 'centres-interet')!;
 
   return (
-    <SectionLayout id={section.id} title={section.label}>
+    <SectionLayout id={section.id} title={getSectionLabel(section, locale)}>
       <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
         {userHobbies.map((hobby) => (
           <UserItemCard

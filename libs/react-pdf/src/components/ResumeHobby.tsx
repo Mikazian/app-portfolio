@@ -1,16 +1,20 @@
 import { View } from '@react-pdf/renderer';
 import { resumeColors } from '../styles';
-import { resumeData } from '../data/resume';
+import { getResumeData } from '../data/resume';
+import { pdfT } from '../i18n';
+import type { Locale } from '@app-portfolio/enums';
 import Image from './common/Image';
 import ResumeSection from './ResumeSection';
 import Text from './common/Text';
 
-const ResumeHobby = () => {
+type ResumeHobbyProps = { locale: Locale };
+
+const ResumeHobby = ({ locale }: ResumeHobbyProps) => {
   const colors = resumeColors;
-  const { hobbies } = resumeData;
+  const { hobbies } = getResumeData(locale);
 
   return (
-    <ResumeSection title="Centres d'intérêt" lineLength="short">
+    <ResumeSection title={pdfT(locale, 'section.hobbies')} lineLength="short">
       {hobbies.map((hobby) => (
         <View
           key={hobby.id}

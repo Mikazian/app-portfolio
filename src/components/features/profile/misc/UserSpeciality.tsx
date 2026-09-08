@@ -1,6 +1,7 @@
 import { useSpeciality } from '../../../../hooks';
 import { AppIconSvgType } from '@app-portfolio/enums';
-import { aboutSections } from '../../navigation/about-sections';
+import { useLanguage } from '../../../../contexts';
+import { aboutSections, getSectionLabel } from '../../navigation/about-sections';
 
 import SectionLayout from '../../../layout/SectionLayout';
 import UserItemCard from './UserItemCard';
@@ -11,11 +12,12 @@ import UserItemCard from './UserItemCard';
  */
 const UserSpeciality = (): React.JSX.Element => {
   const { userSpecialities } = useSpeciality();
+  const { locale } = useLanguage();
 
   const section = aboutSections.find((s) => s.id === 'specialites')!;
 
   return (
-    <SectionLayout id={section.id} title={section.label}>
+    <SectionLayout id={section.id} title={getSectionLabel(section, locale)}>
       <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
         {userSpecialities.map((speciality) => (
           <UserItemCard

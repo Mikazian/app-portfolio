@@ -1,105 +1,212 @@
-[
-  {
-    "id": 7,
-    "job": "Développeur Full Stack",
-    "contract": "CDI",
-    "start_date": "2024-05",
-    "end_date": null,
-    "company": {
-      "name": "Piazy",
-      "logo": "img-piazy",
-      "location": {
-        "city": "Orléans",
-        "zip_code": "45000",
-        "country": "France"
-      }
+{
+  "fr": [
+    {
+      "id": 7,
+      "job": "Développeur Full Stack",
+      "contract": "CDI",
+      "start_date": "2024-05",
+      "end_date": null,
+      "company": {
+        "name": "Piazy",
+        "logo": "img-piazy",
+        "location": {
+          "city": "Orléans",
+          "zip_code": "45000",
+          "country": "France"
+        }
+      },
+      "description": "Au sein d'une petite équipe, je participe au développement et à l'évolution de plusieurs applications web et mobiles ainsi que du back-office associé.\n\nMon rôle consiste à concevoir et développer de nouvelles fonctionnalités, améliorer les applications existantes et accompagner leur évolution au quotidien. J'interviens aussi bien sur la partie interface que sur les fonctionnalités côté serveur et la gestion des données.\n\nJe réalise également les maquettes et la conception des interfaces afin de proposer des applications simples, intuitives et adaptées aux besoins des utilisateurs.\n\nEn complément du développement, je m'occupe des déploiements, des mises en production, de la publication des applications sur les stores ainsi que de la maintenance de l'environnement technique. Je travaille également sur des sujets liés à l'IoT et au suivi d'équipements connectés.\n\nCette expérience m'a permis de développer une grande polyvalence et d'avoir une vision complète d'un projet, de la conception à la mise en production.",
+      "shortDescription": "Conception et développement d'applications mobiles Android/iOS, web et backend : nouvelles fonctionnalités, API REST, gestion des données et optimisation des performances.\nDéveloppement de plusieurs modules métier : système d'abonnements, notifications push, applications White Label, parcours de paiement et solutions IoT.\nConception UI/UX des interfaces : maquettes et prototypes sur Figma, design system et amélioration des parcours utilisateurs.\nDéploiements, publication sur les stores Apple et Google Play et maintenance corrective et évolutive des applications.",
+      "projects": [],
+      "tasks": [
+        {
+          "title": "Refonte UI/UX Mobile & Back-Office",
+          "description": "Modernisation complète de l’expérience utilisateur sur les applications mobiles et l’administration : conception d’un design system, création des maquettes et prototypes interactifs sur Figma, refonte des parcours utilisateurs et workflows métier, amélioration des parcours de paiement, écrans métiers, tickets de reçu et modèles d’emails."
+        },
+        {
+          "title": "Nouvelles applications mobiles White Label",
+          "description": "Architecture et développement d’applications mobiles en marque blanche : architecture multi-environnement, personnalisation iOS/Android, gestion des thèmes, services et contenus, configuration d’équipements connectés, automatisation des processus de build et déploiement, publication et suivi des applications sur les stores Apple et Google Play."
+        },
+        {
+          "title": "Module d'abonnements",
+          "description": "Conception et développement d’un système complet de gestion d’abonnements configurable depuis l’administration et disponible dans les applicatpions mobiles : gestion des offres, règles métier, activation/résiliation, automatisation des cycles d’abonnement, génération et envoi automatique de factures PDF par email, suivi et historique des paiements."
+        },
+        {
+          "title": "Système de campagnes de Notification Push",
+          "description": "Conception et développement d’un système de notifications push cross-platform (Android/iOS) avec Firebase Cloud Messaging et Notifee, incluant la gestion des campagnes, listes de diffusion, notifications ciblées par application et suivi des statistiques."
+        }
+      ],
+      "stacks": [
+        "typescript",
+        "nestJs",
+        "reactNative",
+        "react",
+        "nodeJs",
+        "redis",
+        "typeOrm",
+        "mySql",
+        "zod",
+        "mui",
+        "googleCloud",
+        "firebase",
+        "docker",
+        "kubernetes",
+        "androidStudio",
+        "xCode",
+        "figma"
+      ]
     },
-    "description": "Au sein d'une petite équipe, je participe au développement et à l'évolution de plusieurs applications web et mobiles ainsi que du back-office associé.\n\nMon rôle consiste à concevoir et développer de nouvelles fonctionnalités, améliorer les applications existantes et accompagner leur évolution au quotidien. J'interviens aussi bien sur la partie interface que sur les fonctionnalités côté serveur et la gestion des données.\n\nJe réalise également les maquettes et la conception des interfaces afin de proposer des applications simples, intuitives et adaptées aux besoins des utilisateurs.\n\nEn complément du développement, je m'occupe des déploiements, des mises en production, de la publication des applications sur les stores ainsi que de la maintenance de l'environnement technique. Je travaille également sur des sujets liés à l'IoT et au suivi d'équipements connectés.\n\nCette expérience m'a permis de développer une grande polyvalence et d'avoir une vision complète d'un projet, de la conception à la mise en production.",
-    "shortDescription": "Conception et développement d'applications mobiles Android/iOS, web et backend : nouvelles fonctionnalités, API REST, gestion des données et optimisation des performances.\nDéveloppement de plusieurs modules métier : système d'abonnements, notifications push, applications White Label, parcours de paiement et solutions IoT.\nConception UI/UX des interfaces : maquettes et prototypes sur Figma, design system et amélioration des parcours utilisateurs.\nDéploiements, publication sur les stores Apple et Google Play et maintenance corrective et évolutive des applications.",
-    "projects": [],
-    "tasks": [
-      {
-        "title": "Refonte UI/UX Mobile & Back-Office",
-        "description": "Modernisation complète de l’expérience utilisateur sur les applications mobiles et l’administration : conception d’un design system, création des maquettes et prototypes interactifs sur Figma, refonte des parcours utilisateurs et workflows métier, amélioration des parcours de paiement, écrans métiers, tickets de reçu et modèles d’emails."
+    {
+      "id": 6,
+      "job": "Développeur Full Stack",
+      "contract": "Stage",
+      "start_date": "2024-03",
+      "end_date": "2024-04",
+      "company": {
+        "name": "Piazy",
+        "logo": "img-piazy",
+        "location": {
+          "city": "Orléans",
+          "zip_code": "45000",
+          "country": "France"
+        }
       },
-      {
-        "title": "Nouvelles applications mobiles White Label",
-        "description": "Architecture et développement d’applications mobiles en marque blanche : architecture multi-environnement, personnalisation iOS/Android, gestion des thèmes, services et contenus, configuration d’équipements connectés, automatisation des processus de build et déploiement, publication et suivi des applications sur les stores Apple et Google Play."
+      "description": "Lors de mon stage en tant que Développeur Full Stack, j’ai participé au développement et à l’évolution des applications mobiles au sein d’une équipe.\n\nJ’ai contribué à la conception de nouvelles fonctionnalités en réalisant des maquettes et prototypes UI/UX afin de définir les parcours utilisateurs et les interfaces avant leur développement.\n\nEn collaboration avec les différents membres de l’équipe, j’ai participé aux différentes étapes de réalisation des projets, de l’analyse des besoins à l’intégration technique des fonctionnalités.\n\nCette expérience m’a permis de renforcer mes compétences en conception d’interfaces, développement mobile et développement backend, tout en découvrant le fonctionnement d’un projet mené en équipe.",
+      "shortDescription": "Conception et développement de fonctionnalités mobiles Android/iOS et backend en collaboration avec l'équipe.\nDéveloppement d'un module de gestion des véhicules : modélisation des données, migrations, API REST et interfaces mobiles.\nConception de l'interface du workflow de ravitaillement en carburant : parcours utilisateur et écrans de transaction.\nCorrection d'anomalies et intégration technique des fonctionnalités.",
+      "tasks": [
+        {
+          "title": "Module de gestion des véhicules",
+          "description": "Conception et développement d’un module complet de gestion des véhicules : modélisation des données, migrations de base de données, développement des API REST, création des interfaces mobiles avec formulaires avancés, gestion des référentiels et validation des immatriculations."
+        },
+        {
+          "title": "Workflow de ravitaillement en carburant",
+          "description": "Conception et développement de l’interface mobile du service de distribution de carburant : création du parcours utilisateur, écrans de transaction, composants de suivi d’état et de progression, gestion du workflow et intégration avec les données des véhicules."
+        }
+      ],
+      "stacks": [
+        "typescript",
+        "nestJs",
+        "reactNative",
+        "react",
+        "nodeJs",
+        "redis",
+        "typeOrm",
+        "mySql",
+        "zod",
+        "mui",
+        "googleCloud",
+        "firebase",
+        "docker",
+        "kubernetes",
+        "androidStudio",
+        "xCode",
+        "figma"
+      ]
+    }
+  ],
+  "en": [
+    {
+      "id": 7,
+      "job": "Full Stack Developer",
+      "contract": "Permanent",
+      "start_date": "2024-05",
+      "end_date": null,
+      "company": {
+        "name": "Piazy",
+        "logo": "img-piazy",
+        "location": {
+          "city": "Orléans",
+          "zip_code": "45000",
+          "country": "France"
+        }
       },
-      {
-        "title": "Module d'abonnements",
-        "description": "Conception et développement d’un système complet de gestion d’abonnements configurable depuis l’administration et disponible dans les applicatpions mobiles : gestion des offres, règles métier, activation/résiliation, automatisation des cycles d’abonnement, génération et envoi automatique de factures PDF par email, suivi et historique des paiements."
-      },
-      {
-        "title": "Système de campagnes de Notification Push",
-        "description": "Conception et développement d’un système de notifications push cross-platform (Android/iOS) avec Firebase Cloud Messaging et Notifee, incluant la gestion des campagnes, listes de diffusion, notifications ciblées par application et suivi des statistiques."
-      }
-    ],
-    "stacks": [
-      "typescript",
-      "nestJs",
-      "reactNative",
-      "react",
-      "nodeJs",
-      "redis",
-      "typeOrm",
-      "mySql",
-      "zod",
-      "mui",
-      "googleCloud",
-      "firebase",
-      "docker",
-      "kubernetes",
-      "androidStudio",
-      "xCode",
-      "figma"
-    ]
-  },
-  {
-    "id": 6,
-    "job": "Développeur Full Stack",
-    "contract": "Stage",
-    "start_date": "2024-03",
-    "end_date": "2024-04",
-    "company": {
-      "name": "Piazy",
-      "logo": "img-piazy",
-      "location": {
-        "city": "Orléans",
-        "zip_code": "45000",
-        "country": "France"
-      }
+      "description": "Within a small team, I take part in the development and evolution of several web and mobile applications as well as the associated back-office.\n\nMy role consists in designing and developing new features, improving existing applications and supporting their daily evolution. I work both on the interface side and on server-side features and data management.\n\nI also produce the mockups and interface design in order to offer simple, intuitive applications suited to users' needs.\n\nIn addition to development, I handle deployments, production releases, publishing applications on the stores as well as maintaining the technical environment. I also work on topics related to IoT and connected equipment monitoring.\n\nThis experience enabled me to develop great versatility and to have a complete view of a project, from design to production release.",
+      "shortDescription": "Design and development of Android/iOS mobile, web and backend applications: new features, REST APIs, data management and performance optimisation.\nDevelopment of several business modules: subscription system, push notifications, White Label applications, payment flows and IoT solutions.\nUI/UX interface design: mockups and prototypes in Figma, design system and user journey improvements.\nDeployments, publishing on the Apple and Google Play stores and corrective and evolving maintenance of applications.",
+      "projects": [],
+      "tasks": [
+        {
+          "title": "Mobile & Back-Office UI/UX redesign",
+          "description": "Complete modernisation of the user experience on the mobile applications and the administration: design system design, creation of mockups and interactive prototypes in Figma, redesign of user journeys and business workflows, improvement of payment flows, business screens, receipt tickets and email templates."
+        },
+        {
+          "title": "New White Label mobile applications",
+          "description": "Architecture and development of white-label mobile applications: multi-environment architecture, iOS/Android customisation, theme management, services and content, connected equipment configuration, automation of build and deployment processes, publishing and monitoring of applications on the Apple and Google Play stores."
+        },
+        {
+          "title": "Subscriptions module",
+          "description": "Design and development of a complete subscription management system configurable from the administration and available in the mobile applications: offer management, business rules, activation/cancellation, subscription cycle automation, automatic PDF invoice generation and sending by email, payment tracking and history."
+        },
+        {
+          "title": "Push Notification campaign system",
+          "description": "Design and development of a cross-platform (Android/iOS) push notification system with Firebase Cloud Messaging and Notifee, including campaign management, broadcast lists, per-application targeted notifications and statistics tracking."
+        }
+      ],
+      "stacks": [
+        "typescript",
+        "nestJs",
+        "reactNative",
+        "react",
+        "nodeJs",
+        "redis",
+        "typeOrm",
+        "mySql",
+        "zod",
+        "mui",
+        "googleCloud",
+        "firebase",
+        "docker",
+        "kubernetes",
+        "androidStudio",
+        "xCode",
+        "figma"
+      ]
     },
-    "description": "Lors de mon stage en tant que Développeur Full Stack, j’ai participé au développement et à l’évolution des applications mobiles au sein d’une équipe.\n\nJ’ai contribué à la conception de nouvelles fonctionnalités en réalisant des maquettes et prototypes UI/UX afin de définir les parcours utilisateurs et les interfaces avant leur développement.\n\nEn collaboration avec les différents membres de l’équipe, j’ai participé aux différentes étapes de réalisation des projets, de l’analyse des besoins à l’intégration technique des fonctionnalités.\n\nCette expérience m’a permis de renforcer mes compétences en conception d’interfaces, développement mobile et développement backend, tout en découvrant le fonctionnement d’un projet mené en équipe.",
-    "shortDescription": "Conception et développement de fonctionnalités mobiles Android/iOS et backend en collaboration avec l'équipe.\nDéveloppement d'un module de gestion des véhicules : modélisation des données, migrations, API REST et interfaces mobiles.\nConception de l'interface du workflow de ravitaillement en carburant : parcours utilisateur et écrans de transaction.\nCorrection d'anomalies et intégration technique des fonctionnalités.",
-    "tasks": [
-      {
-        "title": "Module de gestion des véhicules",
-        "description": "Conception et développement d’un module complet de gestion des véhicules : modélisation des données, migrations de base de données, développement des API REST, création des interfaces mobiles avec formulaires avancés, gestion des référentiels et validation des immatriculations."
+    {
+      "id": 6,
+      "job": "Full Stack Developer",
+      "contract": "Internship",
+      "start_date": "2024-03",
+      "end_date": "2024-04",
+      "company": {
+        "name": "Piazy",
+        "logo": "img-piazy",
+        "location": {
+          "city": "Orléans",
+          "zip_code": "45000",
+          "country": "France"
+        }
       },
-      {
-        "title": "Workflow de ravitaillement en carburant",
-        "description": "Conception et développement de l’interface mobile du service de distribution de carburant : création du parcours utilisateur, écrans de transaction, composants de suivi d’état et de progression, gestion du workflow et intégration avec les données des véhicules."
-      }
-    ],
-    "stacks": [
-      "typescript",
-      "nestJs",
-      "reactNative",
-      "react",
-      "nodeJs",
-      "redis",
-      "typeOrm",
-      "mySql",
-      "zod",
-      "mui",
-      "googleCloud",
-      "firebase",
-      "docker",
-      "kubernetes",
-      "androidStudio",
-      "xCode",
-      "figma"
-    ]
-  }
-]
+      "description": "During my internship as a Full Stack Developer, I took part in the development and evolution of mobile applications within a team.\n\nI contributed to the design of new features by producing UI/UX mockups and prototypes to define the user journeys and interfaces before their development.\n\nIn collaboration with the different team members, I took part in the various stages of the projects, from requirements analysis to the technical integration of features.\n\nThis experience enabled me to strengthen my skills in interface design, mobile development and backend development, while discovering how a team project works.",
+      "shortDescription": "Design and development of Android/iOS mobile and backend features in collaboration with the team.\nDevelopment of a vehicle management module: data modelling, migrations, REST APIs and mobile interfaces.\nDesign of the fuel refuelling workflow interface: user journey and transaction screens.\nBug fixing and technical integration of features.",
+      "tasks": [
+        {
+          "title": "Vehicle management module",
+          "description": "Design and development of a complete vehicle management module: data modelling, database migrations, REST API development, creation of mobile interfaces with advanced forms, reference management and licence plate validation."
+        },
+        {
+          "title": "Fuel refuelling workflow",
+          "description": "Design and development of the mobile interface of the fuel distribution service: user journey creation, transaction screens, status and progress tracking components, workflow management and integration with vehicle data."
+        }
+      ],
+      "stacks": [
+        "typescript",
+        "nestJs",
+        "reactNative",
+        "react",
+        "nodeJs",
+        "redis",
+        "typeOrm",
+        "mySql",
+        "zod",
+        "mui",
+        "googleCloud",
+        "firebase",
+        "docker",
+        "kubernetes",
+        "androidStudio",
+        "xCode",
+        "figma"
+      ]
+    }
+  ]
+}

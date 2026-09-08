@@ -1,5 +1,6 @@
 export * from './app-icon.enum';
 export * from './app-img.enum';
+export * from './locale.enum';
 export * from './resume-file-type.enum';
 export * from './resume-mode.enum';
 export * from './skill.enum';

@@ -2,11 +2,13 @@ import { experiences, trainingData } from '@app-portfolio/data';
 import { calculateDurationInMonth, convertDate } from '@app-portfolio/helpers';
 import { AppImgType, Stack } from '@app-portfolio/enums';
 import { ExperienceType } from '@app-portfolio/shared';
+import { useLanguage } from '../contexts';
 
 const toAppImg = (logo: string): AppImgType => logo as AppImgType;
 
 export const useExperience = () => {
-  const allItems = [...experiences, ...trainingData].sort(
+  const { locale } = useLanguage();
+  const allItems = [...experiences[locale], ...trainingData[locale]].sort(
     (a, b) => new Date(b.start_date).getTime() - new Date(a.start_date).getTime(),
   );
 

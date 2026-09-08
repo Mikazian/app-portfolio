@@ -1,5 +1,6 @@
 import { useDegree } from '../../../../hooks';
-import { aboutSections } from '../../navigation/about-sections';
+import { useLanguage } from '../../../../contexts';
+import { aboutSections, getSectionLabel } from '../../navigation/about-sections';
 
 import SectionLayout from '../../../layout/SectionLayout';
 import Card from '../../../common/Card';
@@ -14,11 +15,12 @@ import { AppIconSvg } from '@app-portfolio/enums';
  */
 const UserDegrees = (): React.JSX.Element => {
   const { userDegrees } = useDegree();
+  const { locale, translate } = useLanguage();
 
   const section = aboutSections.find((s) => s.id === 'certifications')!;
 
   return (
-    <SectionLayout id={section.id} title={section.label}>
+    <SectionLayout id={section.id} title={getSectionLabel(section, locale)}>
       <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
         {userDegrees.map((degree) => (
           <Card key={degree.id} additionalClass="flex flex-col gap-4">
@@ -40,7 +42,7 @@ const UserDegrees = (): React.JSX.Element => {
             <Divider />
 
             <Text as="p" className="text-sm text-text-secondary">
-              {`Année : ${degree.year}`}
+              {translate('degree.year', { year: degree.year })}
             </Text>
           </Card>
         ))}

@@ -1,15 +1,34 @@
 import { z } from 'zod';
+import type { Locale } from '@app-portfolio/enums';
 
-export const contactSchema = z.object({
-  name: z
-    .string()
-    .min(1, 'Le nom est requis')
-    .max(100, 'Le nom ne peut pas dépasser 100 caractères'),
-  email: z.email("L'email est requis"),
-  message: z
-    .string()
-    .min(1, 'Le message est requis')
-    .max(2000, 'Le message ne peut pas dépasser 2000 caractères'),
-});
+const MESSAGES: Record<
+  Locale,
+  { nameRequired: string; nameMax: string; emailRequired: string; messageRequired: string; messageMax: string }
+> = {
+  fr: {
+    nameRequired: 'Le nom est requis',
+    nameMax: 'Le nom ne peut pas dépasser 100 caractères',
+    emailRequired: "L'email est requis",
+    messageRequired: 'Le message est requis',
+    messageMax: 'Le message ne peut pas dépasser 2000 caractères',
+  },
+  en: {
+    nameRequired: 'Name is required',
+    nameMax: 'Name cannot exceed 100 characters',
+    emailRequired: 'Email is required',
+    messageRequired: 'Message is required',
+    messageMax: 'Message cannot exceed 2000 characters',
+  },
+};
 
-export type ContactForm = z.infer<typeof contactSchema>;
+export const createContactSchema = (locale: Locale) => {
+  const m = MESSAGES[locale];
+
+  return z.object({
+    name: z.string().min(1, m.nameRequired).max(100, m.nameMax),
+    email: z.email(m.emailRequired),
+    message: z.string().min(1, m.messageRequired).max(2000, m.messageMax),
+  });
+};
+
+export type ContactForm = z.infer<ReturnType<typeof createContactSchema>>;

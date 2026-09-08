@@ -1,6 +1,7 @@
 import { AppIconSvg } from '@app-portfolio/enums';
 import { ExperienceType, TrainingType } from '@app-portfolio/shared';
 import { formatDuration } from '@app-portfolio/helpers';
+import { useLanguage } from '../../../../contexts';
 import Article from '../../../common/Article';
 import ButtonCard from '../../../common/ButtonCard';
 import Card from '../../../common/Card';
@@ -19,6 +20,8 @@ interface UserExtendedItemCardProps<T> {
 const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
   item,
 }: UserExtendedItemCardProps<T>): React.JSX.Element => {
+  const { translate } = useLanguage();
+
   return (
     <Card key={item.id} additionalClass="flex flex-col gap-4">
       <header className="flex flex-col gap-4">
@@ -40,11 +43,11 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
 
           <div className="flex flex-wrap justify-between">
             <Text as="p" className="text-xs! text-text-secondary">
-              {`${item.start_date} - ${item.end_date ?? "Aujourd'hui"}`}
+              {`${item.start_date} - ${item.end_date ?? translate('experience.today')}`}
             </Text>
 
             <Text as="p" className="text-xs! text-text-secondary">
-              {`Durée : ${formatDuration(Number(item.duration))}`}
+              {translate('experience.duration', { duration: formatDuration(Number(item.duration)) })}
             </Text>
           </div>
         </div>
@@ -68,34 +71,45 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
 
           <footer className="flex flex-col gap-4">
             {item.projects?.map((project, index) => (
-              <ButtonCard
-                key={index}
-                onClick={() =>
-                  project.url && window.open(project.url, '_blank', 'noopener,noreferrer')
-                }
-                additionalClass="flex grow justify-between items-center text-start px-2 py-2 gap-2"
-              >
-                <div className="flex gap-2 items-center">
-                  <div className="w-8 h-8 shrink-0 rounded-md overflow-hidden">
-                    <Image
-                      src={project.logo}
-                      alt={`Logo de ${project.name}`}
-                      className="object-cover w-full h-full"
-                    />
+              <div key={index} className="flex gap-2 items-stretch">
+                <ButtonCard
+                  onClick={() =>
+                    project.repository &&
+                    window.open(project.repository, '_blank', 'noopener,noreferrer')
+                  }
+                  additionalClass="flex grow justify-between items-center text-start px-2 h-12 gap-2"
+                >
+                  <div className="flex gap-2 items-center">
+                    <div className="w-8 h-8 shrink-0 rounded-md overflow-hidden">
+                      <Image
+                        src={project.logo}
+                        alt={translate('experience.logo', { name: project.name })}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+
+                    <div className="flex flex-col justify-between">
+                      <Text as="p" className="text-sm!">
+                        {project.name}
+                      </Text>
+                      <Text as="p" className="text-xs! text-text-secondary">
+                        {project.type}
+                      </Text>
+                    </div>
                   </div>
 
-                  <div className="flex flex-col justify-between">
-                    <Text as="p" className="text-sm!">
-                      {project.name}
-                    </Text>
-                    <Text as="p" className="text-xs! text-text-secondary">
-                      {project.type}
-                    </Text>
-                  </div>
-                </div>
+                  <Icon name={AppIconSvg.ARROW_LEFT} size="20" />
+                </ButtonCard>
 
-                <Icon name={AppIconSvg.ARROW_LEFT} size="20" />
-              </ButtonCard>
+                {project.figma ? (
+                  <ButtonCard
+                    onClick={() => window.open(project.figma, '_blank', 'noopener,noreferrer')}
+                    additionalClass="shrink-0 w-12 h-12 grid place-items-center"
+                  >
+                    <Icon name={AppIconSvg.FIGMA_FILLED} size="20" />
+                  </ButtonCard>
+                ) : null}
+              </div>
             ))}
 
             <StackList stacks={item.stacks} />

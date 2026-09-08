@@ -17,7 +17,8 @@ export type ProjectType = {
   name: string;
   type: string;
   logo: AppImgType;
-  url: string;
+  repository: string;
+  figma?: string;
 };
 
 export type ExperienceType = {

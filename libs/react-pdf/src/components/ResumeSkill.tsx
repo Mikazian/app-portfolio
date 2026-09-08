@@ -9,7 +9,9 @@ import {
 } from '@app-portfolio/enums';
 import type { SkillShortList } from '@app-portfolio/shared';
 import { resumeColors } from '../styles';
-import { resumeData } from '../data/resume';
+import { getResumeData } from '../data/resume';
+import { pdfT } from '../i18n';
+import type { Locale } from '@app-portfolio/enums';
 import LabelIcon from './common/LabelIcon';
 import ResumeSection from './ResumeSection';
 import Text from './common/Text';
@@ -26,12 +28,14 @@ const CATEGORIES: { key: keyof SkillShortList; category: StackCategory }[] = [
 const getStack = (key: string): Stack | undefined =>
   Object.values(Stack).find((value) => value.toLowerCase() === key.toLowerCase());
 
-const ResumeSkill = () => {
+type ResumeSkillProps = { locale: Locale };
+
+const ResumeSkill = ({ locale }: ResumeSkillProps) => {
   const colors = resumeColors;
-  const { skills } = resumeData.skills.shortList;
+  const { skills } = getResumeData(locale).skills.shortList;
 
   return (
-    <ResumeSection title="Compétences" lineLength="short">
+    <ResumeSection title={pdfT(locale, 'section.skills')} lineLength="short">
       <View style={{ flexDirection: 'column', gap: 12 }}>
         {CATEGORIES.map(({ key, category }) => {
           const group = skills[key];
@@ -43,7 +47,7 @@ const ResumeSkill = () => {
           return (
             <View key={category}>
               <Text variant="h5" color={colors.primary} fontWeight={700} style={{ lineHeight: 1 }}>
-                {StackCategoryI18n[category]}
+                {StackCategoryI18n[category][locale]}
               </Text>
 
               <View
