@@ -1,14 +1,30 @@
-[
-  {
-    "id": 1,
-    "label": "Français",
-    "icon": "svg-circle-flags-fr",
-    "caption": "Langue maternelle"
-  },
-  {
-    "id": 2,
-    "label": "Anglais",
-    "icon": "svg-circle-flags-en",
-    "caption": "Intermédiaire"
-  }
-]
+{
+  "fr": [
+    {
+      "id": 1,
+      "label": "Français",
+      "icon": "svg-circle-flags-fr",
+      "caption": "Langue maternelle"
+    },
+    {
+      "id": 2,
+      "label": "Anglais",
+      "icon": "svg-circle-flags-en",
+      "caption": "Intermédiaire"
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "label": "French",
+      "icon": "svg-circle-flags-fr",
+      "caption": "Native language"
+    },
+    {
+      "id": 2,
+      "label": "English",
+      "icon": "svg-circle-flags-en",
+      "caption": "Intermediate"
+    }
+  ]
+}

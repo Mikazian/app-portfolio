@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 type AlertType = 'success' | 'error';
 
@@ -30,15 +30,12 @@ export const ContactProvider = ({ children }: ContactProviderProps) => {
     }, 3000);
   };
 
-  const value = useMemo(
-    () => ({
-      showContactAlert,
-      alertMessage,
-      alertType,
-      triggerContactAlert,
-    }),
-    [showContactAlert, alertMessage, alertType],
-  );
+  const value: ContactContextValue = {
+    showContactAlert,
+    alertMessage,
+    alertType,
+    triggerContactAlert,
+  };
 
   return <ContactContext.Provider value={value}>{children}</ContactContext.Provider>;
 };

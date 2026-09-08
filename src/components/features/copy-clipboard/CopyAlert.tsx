@@ -1,4 +1,5 @@
 import { useCopy } from '../../../contexts/CopyContext';
+import { useLanguage } from '../../../contexts';
 import { AppIconSvg } from '@app-portfolio/enums';
 import Alert from '../../common/Alert';
 
@@ -8,14 +9,9 @@ import Alert from '../../common/Alert';
  */
 const CopyAlert = (): React.JSX.Element => {
   const { showCopyAlert } = useCopy();
+  const { translate } = useLanguage();
 
-  return (
-    <Alert
-      show={showCopyAlert}
-      icon={AppIconSvg.COPY}
-      message="Copié dans le presse-papier"
-    />
-  );
+  return <Alert show={showCopyAlert} icon={AppIconSvg.COPY} message={translate('copy.copied')} />;
 };
 
 export default CopyAlert;

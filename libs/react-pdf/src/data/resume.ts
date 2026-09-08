@@ -9,6 +9,7 @@ import {
   hobbies,
   socialNetworks,
 } from '@app-portfolio/data';
+import type { Locale } from '@app-portfolio/enums';
 import type {
   ProfileType,
   JobType,
@@ -31,14 +32,14 @@ export type ResumeData = {
   socialNetworks: { id: number; name: string; url: string; icon: string }[];
 };
 
-export const resumeData: ResumeData = {
-  profile: personalInfos[0] as ProfileType,
-  jobs: jobs as JobType[],
-  experiences: experiences as ExperienceType[],
-  formations: trainingData as ExperienceType[],
-  degrees: degrees as DegreeType[],
-  skills: skillsData[0] as SkillType,
-  languages: languages as LanguageType[],
-  hobbies: hobbies.map((h) => ({ ...h, icon: h.logo })) as HobbyType[],
-  socialNetworks: socialNetworks as ResumeData['socialNetworks'],
-};
+export const getResumeData = (locale: Locale): ResumeData => ({
+  profile: personalInfos[locale][0] as ProfileType,
+  jobs: jobs[locale] as JobType[],
+  experiences: experiences[locale] as ExperienceType[],
+  formations: trainingData[locale] as ExperienceType[],
+  degrees: degrees[locale] as DegreeType[],
+  skills: skillsData[locale][0] as SkillType,
+  languages: languages[locale] as LanguageType[],
+  hobbies: hobbies[locale].map((h) => ({ ...h, icon: h.logo })) as HobbyType[],
+  socialNetworks: socialNetworks[locale] as ResumeData['socialNetworks'],
+});

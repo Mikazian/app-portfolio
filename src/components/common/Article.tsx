@@ -1,5 +1,6 @@
 import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import TruncateMarkup from 'react-truncate-markup';
+import { useLanguage } from '../../contexts';
 
 interface ArticleProps {
   text: string;
@@ -13,6 +14,7 @@ const Article = ({
   className,
   children,
 }: PropsWithChildren<ArticleProps>): React.JSX.Element => {
+  const { translate } = useLanguage();
   const [expanded, setExpanded] = useState(false);
   const [remountKey, setRemountKey] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,7 +53,7 @@ const Article = ({
           onClick={() => setExpanded(false)}
           className="ml-1 whitespace-nowrap text-xs font-bold text-primary cursor-pointer"
         >
-          ... voir moins
+          ... {translate('article.seeLess')}
         </button>
       </article>
     );
@@ -70,7 +72,7 @@ const Article = ({
               onClick={() => setExpanded(true)}
               className="whitespace-nowrap text-xs font-bold text-primary cursor-pointer"
             >
-              ... voir plus
+              ... {translate('article.seeMore')}
             </button>
           </span>
         }

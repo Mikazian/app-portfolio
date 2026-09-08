@@ -1,10 +1,22 @@
-[
-  {
-    "id": 1,
-    "label": "Développeur Full Stack"
-  },
-  {
-    "id": 2,
-    "label": "UI/UX Designer"
-  }
-]
+{
+  "fr": [
+    {
+      "id": 1,
+      "label": "Développeur Full Stack"
+    },
+    {
+      "id": 2,
+      "label": "UI/UX Designer"
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "label": "Full Stack Developer"
+    },
+    {
+      "id": 2,
+      "label": "UI/UX Designer"
+    }
+  ]
+}

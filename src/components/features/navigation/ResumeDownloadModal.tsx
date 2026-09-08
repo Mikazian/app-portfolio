@@ -8,6 +8,7 @@ import {
 } from '@app-portfolio/enums';
 import { downloadResume, renderResumePreview } from '@app-portfolio/react-pdf';
 import { useScrollLock } from '../../../hooks';
+import { useLanguage } from '../../../contexts';
 import Button from '../../common/Button';
 import Icon from '../../common/icon/Icon';
 import PopOver from '../../common/PopOver';
@@ -32,6 +33,7 @@ const ResumeDownloadModal = ({
   onOpenChange,
 }: ResumeDownloadModalProps): React.JSX.Element | null => {
   const anchorRef = useRef<HTMLDivElement>(null);
+  const { locale, translate } = useLanguage();
   const [internalOpen, setInternalOpen] = useState(false);
   const [fileType, setFileType] = useState<ResumeFileType>(ResumeFileType.PDF);
   const [mode, setMode] = useState<ResumeMode>(ResumeMode.INTERACTIVE);
@@ -56,7 +58,7 @@ const ResumeDownloadModal = ({
     if (!isOpen) return;
     let cancelled = false;
     setIsPreviewLoading(true);
-    renderResumePreview(mode)
+    renderResumePreview(mode, locale)
       .then((dataUrl) => {
         if (cancelled) return;
         setPreviewUrl(dataUrl);
@@ -86,7 +88,7 @@ const ResumeDownloadModal = ({
   const handleDownload = async () => {
     setIsDownloading(true);
     try {
-      await downloadResume({ fileType, mode });
+      await downloadResume({ fileType, mode, locale });
       handleOpenChange(false);
     } finally {
       setIsDownloading(false);
@@ -96,20 +98,20 @@ const ResumeDownloadModal = ({
   const renderContent = () => (
     <>
       <p className="text-text-secondary uppercase text-xs font-bold tracking-widest mb-2">
-        Aperçu du fichier
+        {translate('resume.preview.title')}
       </p>
       <div className="mb-5 border border-divider bg-background overflow-y-auto flex items-start justify-center min-w-64">
         {previewUrl ? (
           <img src={previewUrl} alt="Aperçu du CV" className="w-64 h-auto" />
         ) : (
           <p className="text-text-secondary text-xs py-8">
-            {isPreviewLoading ? 'Génération de l\u2019aperçu...' : 'Aperçu indisponible'}
+            {isPreviewLoading ? translate('resume.preview.generating') : translate('resume.preview.unavailable')}
           </p>
         )}
       </div>
 
       <p className="text-text-secondary uppercase text-xs font-bold tracking-widest mb-2">
-        Type de fichier
+        {translate('resume.fileType.title')}
       </p>
       <div className="flex gap-2 mb-5">
         {FILE_TYPES.map((type) => (
@@ -129,7 +131,7 @@ const ResumeDownloadModal = ({
       </div>
 
       <p className="text-text-secondary uppercase text-xs font-bold tracking-widest mb-2">
-        Préréglage
+        {translate('resume.preset.title')}
       </p>
       <div className="flex gap-2 mb-6">
         {MODES.map((resumeMode) => (
@@ -143,7 +145,7 @@ const ResumeDownloadModal = ({
                 : 'border-divider text-text-secondary hover:border-text-secondary'
             }`}
           >
-            {ResumeModeI18n[resumeMode]}
+            {ResumeModeI18n[resumeMode][locale]}
           </button>
         ))}
       </div>
@@ -154,7 +156,7 @@ const ResumeDownloadModal = ({
         disabled={isDownloading}
         additionalClass="w-full h-12 cursor-pointer"
       >
-        {isDownloading ? 'Téléchargement...' : 'Télécharger'}
+        {isDownloading ? translate('resume.downloading') : translate('resume.download')}
       </Button>
     </>
   );
@@ -186,12 +188,12 @@ const ResumeDownloadModal = ({
 
   return (
     <div ref={anchorRef} className="relative">
-      <Button
-        type="button"
-        onClick={() => handleOpenChange(!isOpen)}
-        additionalClass="flex items-center gap-2 pr-2"
-      >
-        Télécharger CV
+        <Button
+          type="button"
+          onClick={() => handleOpenChange(!isOpen)}
+          additionalClass="flex items-center gap-2 pr-2"
+        >
+          {translate('nav.options.download')}
         <Icon
           name={isOpen ? AppIconSvg.CHEVRON_UP : AppIconSvg.CHEVRON_DOWN}
           size="14"

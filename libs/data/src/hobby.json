@@ -1,22 +1,46 @@
-[
-  {
-    "id": 1,
-    "label": "Développement",
-    "logo": "svg-code"
-  },
-  {
-    "id": 2,
-    "label": "Création numérique",
-    "logo": "svg-digital-art"
-  },
-  {
-    "id": 3,
-    "label": "Jeux vidéo",
-    "logo": "svg-gaming"
-  },
-  {
-    "id": 4,
-    "label": "Mangas et animation japonaise",
-    "logo": "svg-book"
-  }
-]
+{
+  "fr": [
+    {
+      "id": 1,
+      "label": "Développement",
+      "logo": "svg-code"
+    },
+    {
+      "id": 2,
+      "label": "Création numérique",
+      "logo": "svg-digital-art"
+    },
+    {
+      "id": 3,
+      "label": "Jeux vidéo",
+      "logo": "svg-gaming"
+    },
+    {
+      "id": 4,
+      "label": "Mangas et animation japonaise",
+      "logo": "svg-book"
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "label": "Development",
+      "logo": "svg-code"
+    },
+    {
+      "id": 2,
+      "label": "Digital creation",
+      "logo": "svg-digital-art"
+    },
+    {
+      "id": 3,
+      "label": "Video games",
+      "logo": "svg-gaming"
+    },
+    {
+      "id": 4,
+      "label": "Manga and Japanese animation",
+      "logo": "svg-book"
+    }
+  ]
+}

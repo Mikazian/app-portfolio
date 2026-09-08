@@ -1,6 +1,8 @@
 import { View } from '@react-pdf/renderer';
 import { DegreeType } from '@app-portfolio/shared';
+import type { Locale } from '@app-portfolio/enums';
 import { resumeColors } from '../styles';
+import { pdfT } from '../i18n';
 import Card from './common/Card';
 import Grid from './common/Grid';
 import Image from './common/Image';
@@ -9,9 +11,10 @@ import Text from './common/Text';
 
 type ResumeDegreeProps = {
   degrees: DegreeType[];
+  locale: Locale;
 };
 
-const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
+const ResumeDegree = ({ degrees, locale }: ResumeDegreeProps) => {
   const colors = resumeColors;
 
   if (!degrees) {
@@ -19,7 +22,7 @@ const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
   }
 
   return (
-    <ResumeSection title="Formations">
+    <ResumeSection title={pdfT(locale, 'section.formations')}>
       <Grid container spacing={16} style={{ alignItems: 'stretch' }}>
         {degrees.map((degree) => (
           <Grid key={degree.id} size={6} style={{ display: 'flex', flexDirection: 'column' }}>
@@ -68,7 +71,8 @@ const ResumeDegree = ({ degrees }: ResumeDegreeProps) => {
                   fontWeight={400}
                   style={{ lineHeight: 1, marginTop: 4 }}
                 >
-                  {`Année : ${degree.year}`}
+                  {locale === 'fr' ? 'Année : ' : 'Year: '}
+                  {degree.year}
                 </Text>
               </View>
             </Card>

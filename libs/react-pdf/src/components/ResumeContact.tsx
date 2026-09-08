@@ -1,22 +1,25 @@
 import { View } from '@react-pdf/renderer';
 import { ResumeMode } from '@app-portfolio/enums';
 import { formatAddress, formatUrl } from '@app-portfolio/helpers';
-import { resumeData } from '../data/resume';
+import { getResumeData } from '../data/resume';
+import { pdfT } from '../i18n';
+import type { Locale } from '@app-portfolio/enums';
 import ContactItem from './common/ContactItem';
 import ResumeSection from './ResumeSection';
 
 type ResumeContactProps = {
   mode?: ResumeMode;
+  locale: Locale;
 };
 
-const ResumeContact = ({ mode = ResumeMode.INTERACTIVE }: ResumeContactProps) => {
-  const { profile, socialNetworks } = resumeData;
+const ResumeContact = ({ mode = ResumeMode.INTERACTIVE, locale }: ResumeContactProps) => {
+  const { profile, socialNetworks } = getResumeData(locale);
   const portfolio = socialNetworks.find((social) => social.name === 'Portfolio');
   const github = socialNetworks.find((social) => social.name === 'GitHub');
   const linkedin = socialNetworks.find((social) => social.name === 'LinkedIn');
 
   return (
-    <ResumeSection title="Contact" lineLength="short">
+    <ResumeSection title={pdfT(locale, 'section.contact')} lineLength="short">
       <View style={{ flexDirection: 'column', gap: 12 }}>
         <ContactItem icon="svg-map-pin" value={formatAddress(profile.address)} />
         <ContactItem icon="svg-mail" value={profile.email} />
