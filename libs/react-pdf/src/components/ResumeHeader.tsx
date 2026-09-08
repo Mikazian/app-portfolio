@@ -4,6 +4,7 @@ import { getResumeData } from '../data/resume';
 import type { Locale } from '@app-portfolio/enums';
 import Avatar from './common/Avatar';
 import Text from './common/Text';
+import ProfilePhoto from '../../../../src/assets/images/photo.jpg';
 
 type ResumeHeaderProps = { locale: Locale };
 
@@ -25,7 +26,7 @@ const ResumeHeader = ({ locale }: ResumeHeaderProps) => {
         borderColor: colors.secondary,
       }}
     >
-      <Avatar size={140} style={{ backgroundColor: 'white' }} />
+      <Avatar src={ProfilePhoto} size={140} style={{ backgroundColor: 'white' }} />
 
       <View style={{ flex: 1, flexDirection: 'column', gap: 12 }}>
         <View>

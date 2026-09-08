@@ -1,5 +1,5 @@
 import { useJob, useProfile } from '../../../../hooks';
-import { AppIconSvg } from '@app-portfolio/enums';
+import { AppIconSvg, AppImg } from '@app-portfolio/enums';
 import { aboutSections } from '../../navigation/about-sections';
 
 import Card from '../../../common/Card';
@@ -7,6 +7,7 @@ import Text from '../../../common/Text';
 import Divider from '../../../common/Divider';
 import UserButtonCard from './UserButtonCard';
 import Article from '../../../common/Article';
+import Image from '../../../common/Image';
 
 /**
  * Composant carte profil utilisateur
@@ -22,7 +23,13 @@ const UserProfile = (): React.JSX.Element => {
     <Card id={section.id}>
       <section className="flex flex-col grow gap-8">
         <header className="flex flex-col gap-6 sm:flex-row sm:items-center">
-          <div className="h-40 w-40 rounded-full bg-primary self-center">{/* image */}</div>
+          <div className="h-40 w-40 rounded-full bg-primary self-center overflow-hidden">
+            <Image
+              src={AppImg.PHOTO}
+              alt="Photo de profil"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div>
             <Text
               as="p"
@@ -30,6 +37,7 @@ const UserProfile = (): React.JSX.Element => {
             >
               {profile.firstName} {profile.lastName}
             </Text>
+
             {userJobs.map((job, index) => (
               <Text
                 key={job.id}
