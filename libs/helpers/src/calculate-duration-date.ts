@@ -1,10 +1,18 @@
 export const calculateDurationInMonth = (start: string, end: string | null): number => {
-  const startDate = new Date(start);
-  const endDate = end ? new Date(end) : new Date();
+  const [startYear, startMonth] = start.split('-').map(Number);
 
-  const years = endDate.getFullYear() - startDate.getFullYear();
-  const months = endDate.getMonth() - startDate.getMonth();
-  const extraMonth = endDate.getDate() >= startDate.getDate() ? 1 : 0;
+  let endYear: number;
+  let endMonth: number;
 
-  return years * 12 + months + extraMonth + (months < 0 ? 12 : 0);
+  if (end) {
+    [endYear, endMonth] = end.split('-').map(Number);
+  } else {
+    const now = new Date();
+    endYear = now.getFullYear();
+    endMonth = now.getMonth() + 1;
+  }
+
+  const months = (endYear - startYear) * 12 + (endMonth - startMonth) + 1;
+
+  return Math.max(0, months);
 };
