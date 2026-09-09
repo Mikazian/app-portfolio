@@ -5,7 +5,7 @@
       "job": "CAP Signalétique enseignes et décor",
       "contract": "Formation",
       "start_date": "2010-09",
-      "end_date": "2011-08",
+      "end_date": "2012-08",
       "company": {
         "name": "Lycée Professionnel d'Arsonval",
         "logo": "img-arsonval",
@@ -25,8 +25,8 @@
       "id": 2,
       "job": "BAC PRO Communication graphique",
       "contract": "Formation",
-      "start_date": "2011-09",
-      "end_date": "2012-08",
+      "start_date": "2012-09",
+      "end_date": "2014-08",
       "company": {
         "name": "Lycée Professionnel d'Arsonval",
         "logo": "img-arsonval",
@@ -47,8 +47,8 @@
       "id": 3,
       "job": "Année préparatoire Animation 2D/3D et jeux vidéo",
       "contract": "Formation",
-      "start_date": "2012-09",
-      "end_date": "2012-08",
+      "start_date": "2014-09",
+      "end_date": "2015-08",
       "company": {
         "name": "École supérieur des métiers artistiques et créatifs LISAA",
         "logo": "img-lisaa",
@@ -117,7 +117,7 @@
       "job": "Concepteur d'application (CAD) BAC+4",
       "contract": "Formation",
       "start_date": "2023-09",
-      "end_date": "2023-03",
+      "end_date": "2024-02",
       "company": {
         "name": "Wild Code School",
         "logo": "img-wild",
@@ -163,7 +163,7 @@
       "job": "CAP Signage, signage and decor",
       "contract": "Training",
       "start_date": "2010-09",
-      "end_date": "2011-08",
+      "end_date": "2012-08",
       "company": {
         "name": "Lycée Professionnel d'Arsonval",
         "logo": "img-arsonval",
@@ -183,8 +183,8 @@
       "id": 2,
       "job": "BAC PRO Graphic Communication",
       "contract": "Training",
-      "start_date": "2011-09",
-      "end_date": "2012-08",
+      "start_date": "2012-09",
+      "end_date": "2014-08",
       "company": {
         "name": "Lycée Professionnel d'Arsonval",
         "logo": "img-arsonval",
@@ -205,8 +205,8 @@
       "id": 3,
       "job": "Preparatory year 2D/3D Animation and video games",
       "contract": "Training",
-      "start_date": "2012-09",
-      "end_date": "2012-08",
+      "start_date": "2014-09",
+      "end_date": "2015-08",
       "company": {
         "name": "École supérieur des métiers artistiques et créatifs LISAA",
         "logo": "img-lisaa",
@@ -275,7 +275,7 @@
       "job": "Application Designer (CAD) BAC+4",
       "contract": "Training",
       "start_date": "2023-09",
-      "end_date": "2023-03",
+      "end_date": "2024-02",
       "company": {
         "name": "Wild Code School",
         "logo": "img-wild",
