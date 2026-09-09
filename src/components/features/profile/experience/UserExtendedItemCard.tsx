@@ -47,7 +47,9 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
             </Text>
 
             <Text as="p" className="text-xs! text-text-secondary">
-              {translate('experience.duration', { duration: formatDuration(Number(item.duration)) })}
+              {translate('experience.duration', {
+                duration: formatDuration(Number(item.duration)),
+              })}
             </Text>
           </div>
         </div>
@@ -77,9 +79,9 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                     project.repository &&
                     window.open(project.repository, '_blank', 'noopener,noreferrer')
                   }
-                  additionalClass="flex grow justify-between items-center text-start px-2 h-12 gap-2"
+                  additionalClass="flex grow min-w-0 justify-between items-center text-start px-2 h-12 gap-2"
                 >
-                  <div className="flex gap-2 items-center">
+                  <div className="flex flex-1 gap-2 items-center min-w-0">
                     <div className="w-8 h-8 shrink-0 rounded-md overflow-hidden">
                       <Image
                         src={project.logo}
@@ -88,11 +90,11 @@ const UserExtendedItemCard = <T extends ExperienceType | TrainingType>({
                       />
                     </div>
 
-                    <div className="flex flex-col justify-between">
-                      <Text as="p" className="text-sm!">
+                    <div className="flex flex-col justify-between min-w-0">
+                      <Text as="p" className="text-sm! truncate">
                         {project.name}
                       </Text>
-                      <Text as="p" className="text-xs! text-text-secondary">
+                      <Text as="p" className="text-xs! truncate text-text-secondary">
                         {project.type}
                       </Text>
                     </div>
